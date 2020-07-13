@@ -2,7 +2,7 @@
 #
 # Installs the staticweb tool for blackbox testing an HTTP server.
 #
-class staticweb(
+class web(
     Stdlib::Unixpath $install_dir = '/var/www/',
 ){
  
