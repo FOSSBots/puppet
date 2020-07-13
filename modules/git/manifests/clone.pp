@@ -63,11 +63,12 @@ define git::clone(
     $recurse_submodules=false,
     $umask=undef,
     $mode=undef,
-    $source='gerrit') {
+    $source='github') {
 
     require_package('git')
 
     $default_url_format = $source ? {
+        'github'     =>  'https://github.com/%s.git',
         default      => 'https://github.com/%s.git',
     }
 
