@@ -9,5 +9,6 @@ class web(
     git::clone { 'MirahezeBots/bots-web':
         directory => $install_dir,
         branch    => 'master',
+        recurse_submodules => true,
     }
 }
