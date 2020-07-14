@@ -1,4 +1,4 @@
 node '100.node4.net.fosshost.org' {
-  role(bots)
+  include ::profile:web
   include cron-puppet
 }
