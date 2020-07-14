@@ -2,7 +2,7 @@
 #
 # Installs the staticweb tool for blackbox testing an HTTP server.
 #
-class web(
+class profile::web(
     $install_dir = '/var/www/',
 ){
  
