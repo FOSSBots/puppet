@@ -12,8 +12,7 @@ users:
     name: RhinosF1
     realname: RhinosF1
     ssh_keys: [ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCy+UkDFOQICFKTy69caP40DYMkc17OVCFRzagfuAckJouNwZQxy2bWcUiSRJZOM8xjeWr3viQPytZyWQLZQCco4XHL8fRaLhGfkpf5OdtndCSciLFaeE7XXzKUMTm9WCe41KfrdrfoWbKDXwSWRKnOKBI3N1lsr/jKH0w+VTMlwfXsCRWo9v/kRJWpGcbdc1b6XbN0b7ORSs5lVvaKoINcTNiguUBF40BcOn+U9LQ7cFirWM+LlVbrb0JK2in6puBYfez9GQqGgqoeCpj7OTVlW7PsPZlYUwJIqpG7GHepi3HxXbBOf47LeU/NVijEmXiLMCu7L8/Fnr8HIwYRNjAbFotQTT9G0/jsndsePl7sHnC8x8MC05Fy5hOW5dGo6nipYO4BMj8haRrZZLkvNe003c64mXygvAsAj/5u8Llc1uLINxkcdtvSp5/fz9SG6rhngc9h9kZkCz6RFJnsxlCymjNyBOq3a/qBr9FvomeRXXzsV6nsg2obTOWkrO9xugvOpZGztFEwIe++cKZx7IuMswk/rgGBITHA2Y5TKdFPU3Bwor7X4YedvfUBSGs2/LHhb95dSB7imtgHCosBNiHedWkVziN0MJCIwW6AWC3qm01sj7Hjm055B7rcZIDWqeyScmSTKfvBKWkjUki40+ewq7igiN87MD7NwupAzdmP6w== rhinosf1@miraheze.org]
-
-users:
+    
   macfan:
     ensure: present
     uid: 1001
