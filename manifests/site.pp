@@ -1,5 +1,6 @@
 node '100.node4.net.fosshost.org' {
   include role::webserver
+  include users
   include cron_puppet
 }
 node '112.node1.net.fosshost.org' {
