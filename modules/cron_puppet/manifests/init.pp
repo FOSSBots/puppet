@@ -7,11 +7,17 @@ class cron_puppet {
         owner   => root,
         group   => root,
     }
-    cron { 'puppet-apply':
+    cron { 'puppet-pull':
         ensure  => present,
         command => "cd /etc/puppet/code ; /usr/bin/git pull",
         user    => root,
         minute  => '*/10',
         require => File['post-hook'],
+    }
+    cron { 'puppet-apply':
+        ensure  => present,
+        command => "sudo /usr/bin/puppet apply /etc/puppet/code/manifests/site.pp",
+        user    => root,
+        minute  => '*/15',
     }
 }
