@@ -1,6 +1,6 @@
 # == Class staticweb
 #
-# Installs the staticweb tool for blackbox testing an HTTP server.
+# Installs the staticweb repo.
 #
 class profile::web(
     $install_dir = '/var/www/',
