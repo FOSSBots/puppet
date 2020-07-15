@@ -7,6 +7,7 @@ class profile::web(
 ){
  
     git::clone { 'MirahezeBots/bots-web':
+        ensure    => 'latest',
         directory => $install_dir,
         branch    => 'master',
         recurse_submodules => true,
