@@ -11,4 +11,10 @@ class profile::autopip(
         directory => $install_dir,
         branch    => 'master',
     }
+    cron { 'update-pip':
+        ensure  => present,
+        command => "/usr/bin/pip3 install -U -r /srv/pip/requirements.txt",
+        user    => root,
+        minute  => '*/20',
+    }
 }
