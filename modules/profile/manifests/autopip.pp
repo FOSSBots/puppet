@@ -1,6 +1,6 @@
 # == Class autopip
 #
-# Installs the staticweb repo.
+# Installs the automatic pypi deployment infrastructure.
 #
 class profile::autopip(
     $install_dir = '/srv/pip',
@@ -15,6 +15,6 @@ class profile::autopip(
         ensure  => present,
         command => "/usr/bin/pip3 install -U -r /srv/pip/requirements.txt",
         user    => root,
-        minute  => '*/20',
+        minute  => '*/10'
     }
 }
