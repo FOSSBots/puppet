@@ -6,6 +6,7 @@ class profile::phabdigest(
         ensure    => 'latest',
         directory => $install_dir,
         branch    => 'master',
+        shared    => true,
     }
     cron { 'phabdigest-bots-weekly':
         ensure      => present,
