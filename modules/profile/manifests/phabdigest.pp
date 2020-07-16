@@ -1,4 +1,4 @@
-class profile::web(
+class profile::phabdigest(
     $install_dir = '/srv/phabdigest',
 ){
  
