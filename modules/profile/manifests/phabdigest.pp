@@ -11,7 +11,7 @@ class profile::phabdigest(
         ensure      => present,
         command     => " cd /srv/phabdigest ; sudo python3 /srv/phabdigest/script.py weekly bots",
         user        => root,
-        minute      => '0'
+        minute      => '0',
         hour        => '15',
         monthday    => '*',
         month       => '*',
