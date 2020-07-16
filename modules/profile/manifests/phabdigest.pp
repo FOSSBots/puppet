@@ -13,7 +13,7 @@ class profile::phabdigest(
         user        => root,
         minute      => '0',
         hour        => '15',
-        monthday    => '*',
+        monthday    => '1',
         month       => '*',
         weekday     => '*',
     }
