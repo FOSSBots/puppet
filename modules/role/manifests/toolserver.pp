@@ -1,3 +1,3 @@
-class role::webserver {	
+class role::toolserver {	
     include ::profile::phabdigest
 }
