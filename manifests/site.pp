@@ -9,4 +9,5 @@ node '112.node1.net.fosshost.org' {
   include users
   include role::webserver
   include motd
+  include role::toolserver
 }
