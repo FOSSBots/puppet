@@ -1,0 +1,9 @@
+---
+version: 5
+backends: yaml
+
+yaml:
+  datadir: /etc/puppet/code/hieradata
+
+hierarchy:
+ - "private/common"
