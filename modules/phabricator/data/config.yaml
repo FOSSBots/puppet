@@ -20,7 +20,6 @@ repository.default-local-path: "/var/phab/repos/"
 policy.allow-public: true
 user.require-real-name: false
 storage.local-disk.path: "/var/phab/"
-load-libraries: ['phabricator-extensions']
 
 # Maniphest priorities
 maniphest.priorities:
