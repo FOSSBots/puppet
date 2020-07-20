@@ -23,7 +23,7 @@ class phabricator {
 
     file {'remove_phab_ext_dir_if_no_git':
         ensure  => absent,
-        path    => '/var/phabricator/src/phabricator-extensions',
+        path    => '/var/phabricator/src/extensions',
         recurse => true,
         purge   => true,
         force   => true,
@@ -32,8 +32,8 @@ class phabricator {
 
     git::clone { 'phabricator-extensions':
         ensure    => latest,
-        directory => '/var/phabricator-extensions',
-        origin    => 'https://github.com/test-wiki/phabricator-extensions.git',
+        directory => '/var/phabricator/src/extensions',
+        origin    => 'https://github.com/miraheze/phabricator-extensions.git',
     }
 
     file { '/var/phab':
