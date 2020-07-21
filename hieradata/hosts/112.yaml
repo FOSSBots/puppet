@@ -1,31 +1,17 @@
-ufw::allow { 'ssh':
-  port => '22'
-}
-
-ufw::allow { 'http':
-  port => '443'
-}
-
-ufw::allow { 'https':
-  port => '80'
-}
-
-ufw::allow { 'icinga':
-  port => '5665'
-}
-
-ufw::allow { 'ssh/tcp':
-  port => '22/tcp'
-}
-
-ufw::allow { 'http/tcp':
-  port => '443'
-}
-
-ufw::allow { 'https/tcp':
-  port => '80/tcp'
-}
-
-ufw::allow { 'http/https/tcp':
-  port => '80,443/tcp'
-}
+ufw::allow:
+  'ssh':
+    port: '22'
+  'http':
+    port: '443'
+  'https':
+    port: '80'
+  'icinga':
+    port: '5665'
+  'ssh/tcp':
+    port: '22/tcp'
+  'http/tcp':
+    port: '443'
+  'https/tcp':
+    port: '80/tcp'
+  'http/https/tcp':
+    port: '80,443/tcp'
