@@ -6,4 +6,5 @@ yaml:
   datadir: /etc/puppet/code/hieradata
 
 hierarchy:
+ - "hosts/%{::hostname}"
  - "private/common"
