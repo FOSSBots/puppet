@@ -1,17 +1,11 @@
-ufw::allow { 'ssh':
-  port => '22'
-}
-
-ufw::allow { 'ssh/tcp':
-  port => '22/tcp'
-}
-
-ufw::allow { 'mariadb/bots1':
-  port => '3306',
-  from => '198.255.68.179'
-}
-
-ufw::allow { 'mariadb/tools1':
-  port => '3306',
-  from => '82.145.63.172' 
-}
+ufw::allow:
+  'ssh':
+    port: '22'
+  'ssh/tcp':
+    port: '22/tcp'
+  'mariadb/bots1':
+    port: '3306',
+    from: '198.255.68.179'
+  'mariadb/tools1':
+    port: '3306',
+    from: '82.145.63.172' 
