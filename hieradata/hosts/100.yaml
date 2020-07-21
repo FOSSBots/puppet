@@ -1,3 +1,5 @@
+class { 'ufw': }
+
 ufw::allow { 'ssh':
   port => '22'
 }
