@@ -1,5 +1,4 @@
 # MySQL
-mysql.port: 3306
 mysql.user: 'phabricator'
 mysql.host: 'db1.miraheze.wiki'
 storage.mysql-engine.max-size: 0
