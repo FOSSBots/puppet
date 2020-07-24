@@ -15,7 +15,7 @@ class profile::sopelshared(
     file { 'wikiconfig':
         ensure  => file,
         path    => '/srv/sopelbots/statuswikis.csv',
-        source  => 'puppet://modules/profile//statuswikis.csv',
+        source  => 'puppet://modules/profile/statuswikis.csv',
         mode    => '2755',
         owner   => root,
         group   => root,
