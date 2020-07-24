@@ -12,4 +12,20 @@ class profile::sopelshared(
         owner   => root,
         group   => root,
     }
+    file { 'wikiconfig':
+        ensure  => file,
+        path    => '/srv/sopelbots/statuswikis.csv',
+        source  => 'puppet:///modules/profile/files/statuswikis.csv',
+        mode    => 0755,
+        owner   => root,
+        group   => root,
+    }
+    file { 'cloakconfig':
+        ensure  => file,
+        path    => '/srv/sopelbots/cloaks.csv',
+        source  => 'puppet:///modules/profile/files/cloaks.csv',
+        mode    => 0755,
+        owner   => root,
+        group   => root,
+    }
 }
