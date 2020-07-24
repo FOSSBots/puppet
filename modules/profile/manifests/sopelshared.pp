@@ -7,7 +7,7 @@ class profile::sopelshared(
   file { 'userconfig':
         ensure  => file,
         path    => '/srv/sopelbots/users.csv',
-        source  => 'puppet://modules/profile/users.csv',
+        source  => 'puppet:///modules/profile/users.csv',
         mode    => '2755',
         owner   => root,
         group   => root,
@@ -15,7 +15,7 @@ class profile::sopelshared(
     file { 'wikiconfig':
         ensure  => file,
         path    => '/srv/sopelbots/statuswikis.csv',
-        source  => 'puppet://modules/profile/statuswikis.csv',
+        source  => 'puppet:///modules/profile/statuswikis.csv',
         mode    => '2755',
         owner   => root,
         group   => root,
@@ -23,7 +23,7 @@ class profile::sopelshared(
     file { 'cloakconfig':
         ensure  => file,
         path    => '/srv/sopelbots/cloaks.csv',
-        source  => 'puppet://modules/profile/cloaks.csv',
+        source  => 'puppet:///modules/profile/cloaks.csv',
         mode    => '2755',
         owner   => root,
         group   => root,
