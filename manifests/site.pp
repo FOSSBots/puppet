@@ -4,6 +4,7 @@ node '100.node4.net.fosshost.org' {
   include cron_puppet
   include motd
   include ufw
+  include role::sopeltest
 }
 node '112.node1.net.fosshost.org' {
   include cron_puppet
