@@ -65,7 +65,7 @@ class phabricator {
                 'options'      => {
                     'host'     => 'smtp.gmail.com',
                     'port'     => 465,
-                    'user'     => 'mirahezebots@gmail.com',
+                    'user'     => 'noreply.mirahezebots@gmail.com',
                     'password' => lookup('passwords::mail::gmail'),
                     'protocol' => 'ssl',
                 },
