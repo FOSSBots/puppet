@@ -3,7 +3,7 @@ mysql.user: 'phabricator'
 mysql.host: 'db1.miraheze.wiki'
 storage.mysql-engine.max-size: 0
 
-metamta.default-address: 'mirahezebots@gmail.com'
+metamta.default-address: 'noreply.mirahezebots@gmail.com'
 
 # Auth
 auth.lock-config: true
