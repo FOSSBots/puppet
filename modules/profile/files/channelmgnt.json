@@ -1,0 +1,10 @@
+{
+  "channels": {
+    "#miraheze-cvt-private": {
+      "inherits-from": ["#miraheze-cvt"]
+      },
+      "#miraheze-cvt": {
+        "chanops" : ["Zppix", "Reception123"]
+    }
+  }
+}
