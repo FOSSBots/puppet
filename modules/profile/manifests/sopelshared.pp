@@ -28,4 +28,12 @@ class profile::sopelshared(
         owner   => root,
         group   => root,
     }
+    file { 'channelmgnt':
+        ensure  => file,
+        path    => '/srv/sopelbots/channelmgnt.json',
+        source  => 'puppet:///modules/profile/channelmgnt.json',
+        mode    => '2755',
+        owner   => root,
+        group   => root,
+    }
 }
