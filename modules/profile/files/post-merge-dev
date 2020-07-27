@@ -1,2 +1,3 @@
 #!/bin/bash -e
+/srv/sopelbots/devvenv/bin/pip3.7 install -U -r /srv/sopelbots/devrequire.txt
 cd /srv/sopelbots/devcode && /srv/sopelbots/devvenv/bin/pip3.7 install .
