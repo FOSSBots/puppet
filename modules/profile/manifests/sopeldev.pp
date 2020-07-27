@@ -20,6 +20,5 @@ class profile::sopeldev(
         ensure    => 'latest',
         directory => '/srv/sopelbots/devcode',
         branch    => 'dev',
-        require => File['post-dev-hook', 'dev-require'],
     }
 }
