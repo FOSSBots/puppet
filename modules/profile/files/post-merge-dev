@@ -1,0 +1,2 @@
+#!/bin/bash -e
+cd /srv/sopelbots/devcode && /srv/sopelbots/devvenv/bin/pip3.7 install .
