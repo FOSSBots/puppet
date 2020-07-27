@@ -15,10 +15,12 @@ class profile::sopeldev(
         mode    => '0755',
         owner   => root,
         group   => root,
+        require => File['dev-require']
     }
     git::clone { 'MirahezeBots/MirahezeBots':
         ensure    => 'latest',
         directory => '/srv/sopelbots/devcode',
         branch    => 'dev',
+        require => File['post-dev-hook'],
     }
 }
