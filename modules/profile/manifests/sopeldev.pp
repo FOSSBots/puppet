@@ -1,6 +1,6 @@
 class profile::sopeldev(
 ){
-  file { 'userconfig':
+  file { 'dev-require':
         ensure  => file,
         path    => '/srv/sopelbots/devrequire.txt',
         source  => 'puppet:///modules/profile/devrequire.txt',
@@ -8,7 +8,7 @@ class profile::sopeldev(
         owner   => root,
         group   => root,
     }
-  file { 'post-hook':
+  file { 'post-dev-hook':
         ensure  => file,
         path    => '/srv/sopelbots/devcode/.git/hooks/post-merge',
         source  => 'puppet:///modules/profile/post-merge-dev',
