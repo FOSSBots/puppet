@@ -1,4 +1,4 @@
-class profile::sopelshared(
+class profile::sopeldev(
 ){
   file { 'userconfig':
         ensure  => file,
