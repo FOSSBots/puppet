@@ -12,7 +12,7 @@ class profile::sopeldev(
         ensure  => file,
         path    => '/srv/sopelbots/devcode/.git/hooks/post-merge',
         source  => 'puppet:///modules/profile/post-merge-dev',
-        mode    => 0755,
+        mode    => '0755',
         owner   => root,
         group   => root,
     }
