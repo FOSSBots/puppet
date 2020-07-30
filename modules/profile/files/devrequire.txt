@@ -1,5 +1,5 @@
 sopel==7.0.5
-sopel-modules.quotes==1.1.0
+sopel-modules.quotes==1.1.1
 sopel-modules.twitter==0.3.2
 sopel-modules.weather==1.2.2
 sopel-modules.youtube==0.3.1
