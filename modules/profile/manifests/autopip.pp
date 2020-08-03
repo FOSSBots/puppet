@@ -13,7 +13,7 @@ class profile::autopip(
     }
     cron { 'update-pip':
         ensure  => present,
-        command => "/usr/bin/pip3 install -U -r /srv/pip/requirements.txt",
+        command => "sudo /usr/bin/pip3 install -U -r /srv/pip/requirements.txt",
         user    => root,
         minute  => '*/10'
     }
