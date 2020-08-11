@@ -14,6 +14,7 @@ auth.require-email-verification: true
 phabricator.show-prototypes: true
 phabricator.base-uri: "https://phab.bots.miraheze.wiki/"
 phabricator.timezone: 'UTC'
+security.alternate-file-domain: "https://phab-storage.bots.miraheze.wiki/"
 security.require-https: true
 security.strict-transport-security: true
 repository.default-local-path: "/var/phab/repos/"
