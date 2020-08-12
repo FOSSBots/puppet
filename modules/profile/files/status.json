@@ -3,10 +3,46 @@
       "mhmeta":{
          "sulgroup":"miraheze",
          "url":"meta.miraheze.org"
+      },
+      "mhtest":{
+         "sulgroup":"miraheze",
+         "url":"publictestwiki.com"
+      },
+      "quirc":{
+         "sulgroup":"miraheze",
+         "url":"quirc.miraheze.org"
+      },
+      "rf1bot":{
+         "sulgroup":"miraheze",
+         "url":"rf1bot.miraheze.org"
+      },
+      "login":{
+         "sulgroup":"miraheze",
+         "url":"login.miraheze.org"
+      },
+      "sariowiki":{
+         "sulgroup":"sario",
+         "url":"sariowiki.miraheze.org"
       }
    },
    "users":{
       "Sario528":{
+         "groups":{
+            "miraheze":"Sario528",
+            "sario":"Sario528"
+         }
+      },
+      "paladox":{
+         "groups":{
+            "miraheze":"Paladox"
+         }
+      },
+      "MacFan4000":{
+         "groups":{
+            "miraheze":"MacFan4000"
+         }
+      },
+      "quirc":{
          "groups":{
             "miraheze":"Sario528",
             "sario":"Sario528"
@@ -17,6 +53,11 @@
       "miraheze":{
          "cloaks":[
             "miraheze"
+         ]
+      },
+      "sario":{
+         "cloaks":[
+
          ]
       }
    }
