@@ -141,4 +141,9 @@
          "#miraheze-bots"
       ]
    }
+   "#miraheze-bots-testing":{
+      "inherits-from":[
+         "#miraheze-bots"
+      ]
+   }
 }
