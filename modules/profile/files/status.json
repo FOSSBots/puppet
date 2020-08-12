@@ -1,21 +1,23 @@
 {
-  "wikis":{
-    "mhmeta":{
-      "sulgroup":"miraheze",
-      "url":"meta.miraheze.org"
+   "wikis":{
+      "mhmeta":{
+         "sulgroup":"miraheze",
+         "url":"meta.miraheze.org"
       }
-  }
-  "users":{
-    "Sario528":{
-      "groups":{
-        "miraheze": "Sario528",
-        "sario": "Sario528"
-        }
+   },
+   "users":{
+      "Sario528":{
+         "groups":{
+            "miraheze":"Sario528",
+            "sario":"Sario528"
+         }
+      }
+   },
+   "sulgroups":{
+      "miraheze":{
+         "cloaks":[
+            "miraheze"
+         ]
+      }
    }
-  }
-  "sulgroups":{
-    "miraheze":{
-      "cloaks": ["miraheze"]
-      ]
-  }
 }
