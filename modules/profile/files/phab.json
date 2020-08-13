@@ -1,2 +1,14 @@
 {
-"channel"
+   "default":{
+      "host":"https://phabricator.miraheze.org/api"
+   },
+   "#miraheze-bots":{
+      "host":"https://phab.bots.miraheze.wiki/api"
+   },
+   "https://phabricator.miraheze.org/api":{
+      "arraypos":"0"
+   },
+   "https://phab.bots.miraheze.wiki/api":{
+      "arraypos":"0"
+   }
+}
