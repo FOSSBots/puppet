@@ -5,6 +5,9 @@
    "#miraheze-bots":{
       "host":"https://phab.bots.miraheze.wiki/api"
    },
+   "#miraheze-bots-testing":{
+      "host":"https://phab.bots.miraheze.wiki/api"
+   },
    "https://phabricator.miraheze.org/api":{
       "arraypos":"0"
    },
