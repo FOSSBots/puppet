@@ -1,0 +1,26 @@
+{
+   "content":{
+      "hotchoc":{
+         "input":{
+            "commands":[
+               "hotchoc",
+               "hotchocolate"
+            ],
+            "regex":[
+                "^(i|I) (want|would like)( some | )(hot choc$|hot chocolate$)"
+            ]
+         },
+         "output":{
+            "first":[
+               "gives",
+               "passes"
+            ],
+            "a-an":"a",
+            "types":[
+               "creamy salted caramel hot cholate",
+               "rich, dark hot chocolate"
+            ]
+         }
+      }
+   }
+}
