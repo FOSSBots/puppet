@@ -43,5 +43,13 @@ class profile::sopelshared(
         mode    => '2755',
         owner   => root,
         group   => root,
-    }  
+    } 
+    file { 'phabconfig':
+        ensure  => file,
+        path    => '/srv/sopelbots/phab.json',
+        source  => 'puppet:///modules/profile/phab.json',
+        mode    => '2755',
+        owner   => root,
+        group   => root,
+    } 
 }
