@@ -53,7 +53,7 @@ class profile::sopelshared(
         group   => root,
     }
     file { 'wikimgntconfig':
-        ensure  => file,
+        ensure  => absent,
         path    => '/srv/sopelbots/wikimgnt.json',
         source  => 'puppet:///modules/profile/wikimgnt.json',
         mode    => '2755',
