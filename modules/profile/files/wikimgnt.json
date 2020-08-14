@@ -12,7 +12,7 @@
    "users":{
       "RhinosF1":{
          "groups":{
-            "ops":"RhinosF1"
+            "ops":"RhinosF1",
             "bots":"RhinosF1"
          }
       },
@@ -33,7 +33,7 @@
       },
       "Voidwalker":{
          "groups":{
-            "ops":"Void"
+            "ops":"Void",
             "bots":"Void"
          }
       }
