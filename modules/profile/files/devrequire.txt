@@ -5,3 +5,4 @@ sopel-modules.twitter==0.3.2
 sopel-modules.weather==1.2.2
 sopel-modules.youtube==0.3.1
 sopel-modules.stocks==1.1.2
+sopel-modules.chanlogs==0.2.0
