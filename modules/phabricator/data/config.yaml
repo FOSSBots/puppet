@@ -2,7 +2,7 @@
 mysql.user: 'phabricator'
 mysql.host: 'db1.miraheze.wiki'
 storage.mysql-engine.max-size: 0
-
+cluster.read-only: true
 metamta.default-address: 'noreply.mirahezebots@gmail.com'
 
 # Auth
