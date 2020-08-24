@@ -60,14 +60,14 @@ class phabricator {
         # smtp
         'cluster.mailers'      => [
             {
-                'key'          => 'mirahezebots-gmail',
+                'key'          => 'mirahezebots-smtp',
                 'type'         => 'smtp',
                 'options'      => {
-                    'host'     => 'smtp.gmail.com',
-                    'port'     => 465,
-                    'user'     => 'noreply.mirahezebots@gmail.com',
-                    'password' => lookup('passwords::mail::gmail'),
-                    'protocol' => 'ssl',
+                    'host'     => 'mail.miraheze.org',
+                    'port'     => 587,
+                    'user'     => 'bots',
+                    'password' => lookup('passwords::mail::phab'),
+                    'protocol' => 'tls',
                 },
             },
         ],
