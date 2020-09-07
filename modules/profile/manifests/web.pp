@@ -13,3 +13,11 @@ class profile::web(
         recurse_submodules => true,
     }
 }
+
+  file { 'post-dev-hook':
+        ensure  => file,
+        path    => '/var/www/.git/hooks/post-merge',
+        source  => 'puppet:///modules/profile/post-merge-web',
+        mode    => '0755',
+        owner   => root,
+        group   => root,
