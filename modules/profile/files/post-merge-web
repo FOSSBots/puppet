@@ -1,2 +1,2 @@
 #!/bin/bash -e
-cd /var/www && sudo npm install
+cd /var/www && sudo npm install && sudo npm ci
