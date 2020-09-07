@@ -12,7 +12,6 @@ class profile::web(
         branch    => 'master',
         recurse_submodules => true,
     }
-}
 
   file { 'post-dev-hook':
         ensure  => file,
@@ -21,3 +20,5 @@ class profile::web(
         mode    => '0755',
         owner   => root,
         group   => root,
+    }
+}
