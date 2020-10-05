@@ -18,7 +18,12 @@ class profile::sopeldev(
     }
     git::clone { 'MirahezeBots/MirahezeBots':
         ensure    => 'latest',
-        directory => '/srv/sopelbots/devcode',
+        directory => '/srv/sopelbots/devcode/core',
+        branch    => 'dev',
+    }
+    git::clone { 'MirahezeBots/adminlist':
+        ensure    => 'latest',
+        directory => '/srv/sopelbots/devcode/adminlist',
         branch    => 'dev',
     }
 }
