@@ -46,7 +46,7 @@ class profile::sopeldev(
     }
     git::clone { 'MirahezeBots/sopel-adminlist':
         ensure    => 'latest',
-        directory => '/srv/sopelbots/devcode/adminlist',
+        directory => '/srv/sopelbots/devcode/sopel-adminlist',
         branch    => 'dev',
     }
     git::clone { 'MirahezeBots/jsonparser':
