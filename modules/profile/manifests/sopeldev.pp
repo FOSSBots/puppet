@@ -24,6 +24,14 @@ class profile::sopeldev(
         owner   => root,
         group   => root,
     }
+    file { 'post-dev-jsonparser-hook':
+        ensure  => file,
+        path    => '/srv/sopelbots/devcode/jsonparser/.git/hooks/post-merge',
+        source  => 'puppet:///modules/profile/post-merge-dev-jsonparser',
+        mode    => '0755',
+        owner   => root,
+        group   => root,
+    }
     file { 'post-dev-adminlist-hook':
         ensure  => directory,
         path    => '/srv/sopelbots/devcode/',
@@ -39,6 +47,11 @@ class profile::sopeldev(
     git::clone { 'MirahezeBots/adminlist':
         ensure    => 'latest',
         directory => '/srv/sopelbots/devcode/adminlist',
+        branch    => 'dev',
+    }
+    git::clone { 'MirahezeBots/jsonparser':
+        ensure    => 'latest',
+        directory => '/srv/sopelbots/devcode/jsonparser',
         branch    => 'dev',
     }
 }
