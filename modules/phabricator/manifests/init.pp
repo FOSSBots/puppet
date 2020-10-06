@@ -65,7 +65,7 @@ class phabricator {
                 'options'      => {
                     'host'     => 'mail.miraheze.org',
                     'port'     => 587,
-                    'user'     => 'bots',
+                    'user'     => 'noreply-bots',
                     'password' => lookup('passwords::mail::phab'),
                     'protocol' => 'tls',
                 },
