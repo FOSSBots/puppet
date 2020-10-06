@@ -18,7 +18,7 @@ class profile::sopeldev(
     }
     file { 'post-dev-adminlist-hook':
         ensure  => file,
-        path    => '/srv/sopelbots/devcode/adminlist/.git/hooks/post-merge',
+        path    => '/srv/sopelbots/devcode/sopel-adminlist/.git/hooks/post-merge',
         source  => 'puppet:///modules/profile/post-merge-dev-adminlist',
         mode    => '0755',
         owner   => root,
@@ -44,7 +44,7 @@ class profile::sopeldev(
         directory => '/srv/sopelbots/devcode/core',
         branch    => 'dev',
     }
-    git::clone { 'MirahezeBots/adminlist':
+    git::clone { 'MirahezeBots/sopel-adminlist':
         ensure    => 'latest',
         directory => '/srv/sopelbots/devcode/adminlist',
         branch    => 'dev',
