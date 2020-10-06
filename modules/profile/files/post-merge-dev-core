@@ -1,0 +1,3 @@
+#!/bin/bash -e
+sudo /srv/sopelbots/devvenv/bin/pip3.7 install -U -r /srv/sopelbots/devrequire.txt --no-dependancies
+cd /srv/sopelbots/devcode/core && sudo /srv/sopelbots/devvenv/bin/pip3.7 install .
