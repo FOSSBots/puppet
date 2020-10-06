@@ -8,50 +8,17 @@ class profile::sopeldev(
         owner   => root,
         group   => root,
     }
-  file { 'post-dev-core-hook':
+  file { 'post-dev-hook':
         ensure  => file,
-        path    => '/srv/sopelbots/devcode/core/.git/hooks/post-merge',
-        source  => 'puppet:///modules/profile/post-merge-dev-core',
-        mode    => '0755',
-        owner   => root,
-        group   => root,
-    }
-    file { 'post-dev-adminlist-hook':
-        ensure  => file,
-        path    => '/srv/sopelbots/devcode/adminlist/.git/hooks/post-merge',
-        source  => 'puppet:///modules/profile/post-merge-dev-adminlist',
-        mode    => '0755',
-        owner   => root,
-        group   => root,
-    }
-    file { 'post-dev-jsonparser-hook':
-        ensure  => file,
-        path    => '/srv/sopelbots/devcode/jsonparser/.git/hooks/post-merge',
-        source  => 'puppet:///modules/profile/post-merge-dev-jsonparser',
-        mode    => '0755',
-        owner   => root,
-        group   => root,
-    }
-    file { 'post-dev-adminlist-hook':
-        ensure  => directory,
-        path    => '/srv/sopelbots/devcode/',
+        path    => '/srv/sopelbots/devcode/.git/hooks/post-merge',
+        source  => 'puppet:///modules/profile/post-merge-dev',
         mode    => '0755',
         owner   => root,
         group   => root,
     }
     git::clone { 'MirahezeBots/MirahezeBots':
         ensure    => 'latest',
-        directory => '/srv/sopelbots/devcode/core',
-        branch    => 'dev',
-    }
-    git::clone { 'MirahezeBots/adminlist':
-        ensure    => 'latest',
-        directory => '/srv/sopelbots/devcode/adminlist',
-        branch    => 'dev',
-    }
-    git::clone { 'MirahezeBots/jsonparser':
-        ensure    => 'latest',
-        directory => '/srv/sopelbots/devcode/jsonparser',
+        directory => '/srv/sopelbots/devcode',
         branch    => 'dev',
     }
 }
