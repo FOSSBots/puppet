@@ -32,7 +32,7 @@ class profile::sopeldev(
         owner   => root,
         group   => root,
     }
-    file { 'post-dev-adminlist-hook':
+    file { 'dev-directory':
         ensure  => directory,
         path    => '/srv/sopelbots/devcode/',
         mode    => '0755',
