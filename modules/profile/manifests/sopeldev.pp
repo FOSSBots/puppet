@@ -51,20 +51,24 @@ class profile::sopeldev(
         ensure    => 'latest',
         directory => '/srv/sopelbots/devcode/core',
         branch    => 'dev',
+        recurse_submodules => true,
     }
     git::clone { 'MirahezeBots/sopel-adminlist':
         ensure    => 'latest',
         directory => '/srv/sopelbots/devcode/sopel-adminlist',
         branch    => 'dev',
+        recurse_submodules => true,
     }
     git::clone { 'MirahezeBots/sopel-channelmgnt':
         ensure    => 'latest',
         directory => '/srv/sopelbots/devcode/sopel-channelmgnt',
         branch    => 'dev',
+        recurse_submodules => true,
     }
     git::clone { 'MirahezeBots/jsonparser':
         ensure    => 'latest',
         directory => '/srv/sopelbots/devcode/jsonparser',
         branch    => 'dev',
+        recurse_submodules => true,
     }
 }
