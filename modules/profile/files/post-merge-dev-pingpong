@@ -1,0 +1,1 @@
+cd /srv/sopelbots/devcode/sopel-pingpong && sudo /srv/sopelbots/devvenv/bin/pip3.7 install . --no-dependencies
