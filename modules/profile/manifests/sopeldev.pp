@@ -40,6 +40,14 @@ class profile::sopeldev(
         owner   => root,
         group   => root,
     }
+    file { 'post-dev-pingpong-hook':
+        ensure  => file,
+        path    => '/srv/sopelbots/devcode/sopel-pingpong/.git/hooks/post-merge',
+        source  => 'puppet:///modules/profile/post-merge-dev-pingpong',
+        mode    => '0755',
+        owner   => root,
+        group   => root,
+    }
     file { 'dev-directory':
         ensure  => directory,
         path    => '/srv/sopelbots/devcode/',
@@ -68,6 +76,12 @@ class profile::sopeldev(
     git::clone { 'MirahezeBots/jsonparser':
         ensure    => 'latest',
         directory => '/srv/sopelbots/devcode/jsonparser',
+        branch    => 'dev',
+        recurse_submodules => true,
+    }
+    git::clone { 'MirahezeBots/sopel-pingpong':
+        ensure    => 'latest',
+        directory => '/srv/sopelbots/devcode/sopel-pingpong',
         branch    => 'dev',
         recurse_submodules => true,
     }
