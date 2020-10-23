@@ -52,12 +52,4 @@ class profile::sopelshared(
         owner   => root,
         group   => root,
     }
-    file { 'wikimgntconfig':
-        ensure  => absent,
-        path    => '/srv/sopelbots/wikimgnt.json',
-        source  => 'puppet:///modules/profile/wikimgnt.json',
-        mode    => '2755',
-        owner   => root,
-        group   => root,
-    }
 }
