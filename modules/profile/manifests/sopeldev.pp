@@ -48,6 +48,14 @@ class profile::sopeldev(
         owner   => root,
         group   => root,
     }
+    file { 'post-dev-joinall-hook':
+        ensure  => file,
+        path    => '/srv/sopelbots/devcode/sopel-joinall/.git/hooks/post-merge',
+        source  => 'puppet:///modules/profile/post-merge-dev-joinall',
+        mode    => '0755',
+        owner   => root,
+        group   => root,
+    }
     file { 'dev-directory':
         ensure  => directory,
         path    => '/srv/sopelbots/devcode/',
@@ -82,6 +90,12 @@ class profile::sopeldev(
     git::clone { 'MirahezeBots/sopel-pingpong':
         ensure    => 'latest',
         directory => '/srv/sopelbots/devcode/sopel-pingpong',
+        branch    => 'dev',
+        recurse_submodules => true,
+    }
+    git::clone { 'MirahezeBots/sopel-joinall':
+        ensure    => 'latest',
+        directory => '/srv/sopelbots/devcode/sopel-joinall',
         branch    => 'dev',
         recurse_submodules => true,
     }
