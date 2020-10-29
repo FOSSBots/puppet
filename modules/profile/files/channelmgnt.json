@@ -6,51 +6,48 @@
    },
    "#miraheze-cvt":{
       "chanops":[
-         "NDKilla",
-         "Voidwalker",
-         "Reception123",
-         "The_Pionner",
-         "JohnLewis",
-         "Zppix"
+         "ndkilla",
+         "voidwalker",
+         "reception123",
+         "the_pionner",
+         "johnlewis",
+         "zppix"
       ]
    },
    "##RhinosF1":{
       "chanops":[
-         "RhinosF1",
-         "Zppix",
-         "Reception123",
-         "LakesideMiners",
-         "Vermont",
-         "TheSandDoctor",
-         "Kb03",
-         "Qui",
-         "Southparkfan",
-         "MacFan4000"
+         "rhinosf1",
+         "zppix",
+         "reception123",
+         "lakesideminers",
+         "vermont",
+         "thesanddoctor",
+         "kb03",
+         "southparkfan",
+         "macfan4000"
       ]
    },
    "#MacFan4000":{
       "chanops":[
-         "MacFan4000"
+         "macfan4000"
       ]
    },
    "##acme":{
       "chanops":[
-         "RhinosF1",
-         "tex",
-         "BlackOp"
+         "rhinosf1",
+         "blackOp"
       ]
    },
    "#miraheze":{
       "chanops":[
-         "Southparkfan",
-         "Zppix",
-         "NDKilla",
-         "Reception123",
-         "Voidwalker",
-         "Void|bot",
-         "JohnLewis",
+         "southparkfan",
+         "zppix",
+         "ndkilla",
+         "reception123",
+         "voidwalker",
+         "johnlewis",
          "paladox",
-         "RhinosF1"
+         "rhinosf1"
       ]
    },
    "#miraheze-offtopic":{
@@ -60,80 +57,80 @@
    },
    "#miraheze-testwiki":{
       "chanops":[
-         "Reception123",
-         "NDKilla",
-         "Voidwalker",
-         "Zppix",
-         "RhinosF1"
+         "reception123",
+         "ndkilla",
+         "voidwalker",
+         "zppix",
+         "rhinosf1"
       ]
    },
    "#miraheze-testwiki-es":{
       "chanops":[
-         "Reception123",
-         "NDKilla",
-         "Voidwalker"
+         "reception123",
+         "ndkilla",
+         "voidwalker"
       ]
    },
    "#testadminwiki":{
       "chanops":[
-         "MacFan4000",
-         "Voidwalker"
+         "macfan4000",
+         "voidwalker"
       ]
    },
    "##CyberBogan":{
       "chanops":[
-         "NeoBogan",
-         "Oshwah",
+         "neobogan",
+         "oshwah",
          "enterprisey",
-         "Havyk",
-         "Athyria",
-         "LakesideMiners",
+         "havyk",
+         "athyria",
+         "lakesideminers",
          "foks",
-         "Jobe",
-         "MarxLenin99",
-         "SQLDb",
-         "TxHadriel",
-         "ShakespeareFan00",
-         "Zppix",
-         "KSFT"
+         "jobe",
+         "marxlenin99",
+         "sqldb",
+         "txhadriel",
+         "shakespearefan00",
+         "zppix",
+         "ksft"
       ]
    },
    "##Zppix-Wikipedia":{
       "chanops":[
-         "Zppix",
+         "zppix",
          "tom29739",
-         "SwisterTwister",
-         "Snowycats",
-         "DatGuy",
+         "swistertwister",
+         "snowycats",
+         "datguy",
          "mattwj2002"
       ]
    },
    "#ays":{
       "chanops":[
-         "Mbrt",
-         "Arifys",
-         "Murbaut"
+         "mbrt",
+         "arifys",
+         "murbaut"
       ]
    },
    "#miraheze-botlogs":{
       "chanops":[
-         "MacFan4000",
-         "Zppix",
-         "RhinosF1",
-         "Reception123",
-         "Voidwalker"
+         "macfan4000",
+         "zppix",
+         "rhinosf1",
+         "reception123",
+         "voidwalker"
       ]
    },
    "#miraheze-bots":{
       "chanops":[
-         "MacFan4000",
-         "Zppix",
-         "RhinosF1",
-         "Reception123",
-         "Voidwalker",
-         "SPF|Cloud",
-         "PuppyKun",
-         "JohnLewis"
+         "macfan4000",
+         "zppix",
+         "rhinosf1",
+         "reception123",
+         "voidwalker",
+         "spf|cloud",
+         "puppykun",
+         "johnlewis"
       ]
    },
    "#miraheze-bot-alerts":{
