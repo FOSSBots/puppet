@@ -1,0 +1,10 @@
+version: 2
+updates:
+  - package-ecosystem: pip
+    directory: "/modules/profile/files"
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 10
+    labels:
+      - "merge when green"
+      - "dependencies"
