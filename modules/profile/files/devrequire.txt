@@ -1,4 +1,4 @@
-sopel==7.0.6
+sopel==7.0.7
 sopel-help==0.1.0
 sopel-modules.quotes==1.2.1
 sopel-modules.twitter==0.3.2
