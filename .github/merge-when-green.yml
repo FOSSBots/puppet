@@ -1,2 +1,2 @@
 requiredChecks:
-  - travis-ci
+  - github-actions
