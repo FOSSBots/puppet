@@ -146,5 +146,30 @@
       "inherits-from":[
          "#miraheze-bots"
       ]
+   },
+    "#miraheze-feed-commons":{
+      "chanops":[
+         "demhus",
+         "hispano76",
+         "MacFan4000",
+         "Reception123"
+      ]
+   },
+    "#miraheze-feed-dev":{
+      "chanops":[
+         "dmehus",
+         "MacFan4000",
+         "Naleksuh",
+         "Reception123",
+         "Universal_Omega"
+      ]
+   },
+    "#miraheze-feed-login":{
+      "chanops":[
+         "dmehus",
+         "MacFan4000",
+         "Reception123",
+         "Universal_Omega"
+      ]
    }
 }
