@@ -63,9 +63,9 @@ class phabricator {
                 'key'          => 'mirahezebots-smtp',
                 'type'         => 'smtp',
                 'options'      => {
-                    'host'     => 'mail1.miraheze.org',
+                    'host'     => 'mail.miraheze.org',
                     'port'     => 587,
-                    'user'     => 'noreply-bots',
+                    'user'     => 'bots-noreply',
                     'password' => lookup('passwords::mail::phab'),
                     'protocol' => 'tls',
                 },
