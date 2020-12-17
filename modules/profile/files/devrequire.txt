@@ -1,4 +1,4 @@
-requests==2.25.0
+requests==2.25.1
 sopel==7.0.7
 sopel-help==0.1.0
 sopel-modules.quotes==1.2.1
