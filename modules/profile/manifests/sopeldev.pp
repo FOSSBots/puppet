@@ -56,6 +56,14 @@ class profile::sopeldev(
         owner   => root,
         group   => root,
     }
+    file { 'post-dev-chanlogs-hook':
+        ensure  => file,
+        path    => '/srv/sopelbots/devcode/sopel-chanlogs/.git/hooks/post-merge',
+        source  => 'puppet:///modules/profile/post-merge-dev-chanlogs',
+        mode    => '0755',
+        owner   => root,
+        group   => root,
+    }
     file { 'dev-directory':
         ensure  => directory,
         path    => '/srv/sopelbots/devcode/',
@@ -97,6 +105,12 @@ class profile::sopeldev(
         ensure    => 'latest',
         directory => '/srv/sopelbots/devcode/sopel-joinall',
         branch    => 'dev',
+        recurse_submodules => true,
+    }
+    git::clone { 'sopel-irc/sopel-chanlogs':
+        ensure    => 'latest',
+        directory => '/srv/sopelbots/devcode/sopel-chanlogs',
+        branch    => 'master',
         recurse_submodules => true,
     }
 }
