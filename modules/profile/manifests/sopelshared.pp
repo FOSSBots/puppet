@@ -5,7 +5,7 @@
 class profile::sopelshared(
 ){
   file { 'userconfig':
-        ensure  => file,
+        ensure  => absent,
         path    => '/srv/sopelbots/users.csv',
         source  => 'puppet:///modules/profile/users.csv',
         mode    => '2755',
@@ -13,7 +13,7 @@ class profile::sopelshared(
         group   => root,
     }
     file { 'wikiconfig':
-        ensure  => file,
+        ensure  => absent,
         path    => '/srv/sopelbots/statuswikis.csv',
         source  => 'puppet:///modules/profile/statuswikis.csv',
         mode    => '2755',
@@ -21,7 +21,7 @@ class profile::sopelshared(
         group   => root,
     }
     file { 'cloakconfig':
-        ensure  => file,
+        ensure  => absent,
         path    => '/srv/sopelbots/cloaks.csv',
         source  => 'puppet:///modules/profile/cloaks.csv',
         mode    => '2755',

@@ -6,6 +6,6 @@ sopel-modules.twitter==0.3.2
 sopel-modules.weather==1.2.2
 sopel-modules.youtube==0.4.0
 sopel-modules.stocks==1.1.3
-pipdeptree==1.0.0
+pipdeptree==2.0.0
 feedparser==6.0.2
-SQLAlchemy==1.3.21
+SQLAlchemy==1.3.22
