@@ -3,12 +3,11 @@
 # Installs the staticweb repo.
 #
 class profile::web(
-    $install_dir = '/var/www/',
 ){
  
     git::clone { 'MirahezeBots/bots-web':
         ensure    => 'latest',
-        directory => $install_dir,
+        directory => '/var/www/',
         branch    => 'master',
         recurse_submodules => true,
     }
@@ -20,5 +19,13 @@ class profile::web(
         mode    => '0755',
         owner   => root,
         group   => root,
+    }
+    {
+ 
+    git::clone { 'MirahezeBots/mirahezebots.org':
+        ensure    => 'latest',
+        directory => $install_dir,
+        branch    => 'dev',
+        recurse_submodules => true,
     }
 }
