@@ -37,4 +37,20 @@ class profile::web(
         owner   => www-data,
         group   => www-data,
     }
+    file { 'flask-config':
+        ensure  => file,
+        path    => '/var/flask/config.json',
+        source  => 'puppet:///modules/profile/webconfig.json',
+        mode    => '0755',
+        owner   => www-data,
+        group   => www-data,
+    }
+    file { 'flask-config':
+        ensure  => file,
+        path    => '/var/flask/mhbots.wsgi',
+        source  => 'puppet:///modules/profile/mhbots.wsgi',
+        mode    => '0755',
+        owner   => www-data,
+        group   => www-data,
+    }
 }
