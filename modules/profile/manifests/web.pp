@@ -3,12 +3,11 @@
 # Installs the staticweb repo.
 #
 class profile::web(
-    $install_dir = '/var/www/',
 ){
  
     git::clone { 'MirahezeBots/bots-web':
         ensure    => 'latest',
-        directory => $install_dir,
+        directory => '/var/www/',
         branch    => 'master',
         recurse_submodules => true,
     }
@@ -20,5 +19,23 @@ class profile::web(
         mode    => '0755',
         owner   => root,
         group   => root,
+    }
+    {
+ 
+    git::clone { 'MirahezeBots/mirahezebots.org':
+        ensure    => 'latest',
+        directory => '/var/flask',
+        branch    => 'dev',
+        owner     => www-data,
+        group     => www-data,
+        recurse_submodules => true,
+    }
+    file { 'post-web-hook':
+        ensure  => file,
+        path    => '/var/flask/.git/hooks/post-merge',
+        source  => 'puppet:///modules/profile/post-merge-flask',
+        mode    => '0755',
+        owner   => www-data,
+        group   => www-data,
     }
 }
