@@ -45,7 +45,7 @@ class profile::web(
         owner   => www-data,
         group   => www-data,
     }
-    file { 'flask-config':
+    file { 'flask-wsgi':
         ensure  => file,
         path    => '/var/flask/mhbots.wsgi',
         source  => 'puppet:///modules/profile/mhbots.wsgi',
