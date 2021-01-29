@@ -38,11 +38,4 @@ class profile::web(
         owner   => www-data,
         group   => www-data,
     }
-    file { 'flaskenv':
-        ensure  => directory,
-        path    => '/var/flaskenv/',
-        mode    => '0755',
-        owner   => www-data,
-        group   => www-data,
-    }
 }
