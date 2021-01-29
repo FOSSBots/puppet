@@ -20,7 +20,6 @@ class profile::web(
         owner   => root,
         group   => root,
     }
-    {
  
     git::clone { 'MirahezeBots/mirahezebots.org':
         ensure    => 'latest',
@@ -30,7 +29,7 @@ class profile::web(
         group     => www-data,
         recurse_submodules => true,
     }
-    file { 'post-web-hook':
+    file { 'post-flask-hook':
         ensure  => file,
         path    => '/var/flask/.git/hooks/post-merge',
         source  => 'puppet:///modules/profile/post-merge-flask',
