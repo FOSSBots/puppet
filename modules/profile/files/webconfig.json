@@ -1,0 +1,26 @@
+{
+   "templatedpages":{
+      "about":"templates/about.html",
+      "contribs":"templates/contribs.html",
+      "documentation":"templates/documentation.html",
+      "index":"templates/index.html",
+      "privacy":"templates/privacy.html",
+      "terms":"templates/terms.html"
+   },
+   "directshow":{
+      "robots.txt":"templates/robots.txt",
+      "sitemap.xml":"templates/sitemap.xml",
+      "css/common.css":"assets/common.css",
+      "logo.png":"assets/logo.png",
+      "favicon.png":"assets/favicon.png",
+      "fosshost.png":"assets/fosshost.png"
+   },
+   "font-awesome-url":"Font-Awesome",
+   "Font-awesome-path":"Font-Awesome",
+   "canonical-prefix":"https://bots.miraheze.wiki/",
+   "rendertemplates":{
+      "navbar":"templates/navbar.html",
+      "footer":"templates/footer.html",
+      "head":"templates/head.html"
+   }
+}
