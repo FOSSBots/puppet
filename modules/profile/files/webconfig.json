@@ -15,6 +15,14 @@
       "favicon.png":"/var/flask/assets/favicon.png",
       "fosshost.png":"/var/flask/assets/fosshost.png"
    },
+   "title":{
+       "index":"Home - MirahezeBot",
+       "about":"About - MirahezeBot",
+       "documentation":"Documentation - MirahezeBot",
+       "contribs":"Contributions - MirahezeBot",
+       "privacy":"Privacy - MirahezeBot",
+       "terms":"Terms - MirahezeBot"
+   },
    "font-awesome-url":"Font-Awesome",
    "Font-awesome-path":"/var/flask/Font-Awesome",
    "canonical-prefix":"https://bots.miraheze.wiki/",
