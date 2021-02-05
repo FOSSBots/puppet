@@ -3,15 +3,15 @@
       "host":"https://phabricator.miraheze.org/api"
    },
    "#miraheze-bots":{
-      "host":"https://phab.bots.miraheze.wiki/api"
+      "host":"https://phab.mirahezebots.org/api"
    },
    "#miraheze-bots-testing":{
-      "host":"https://phab.bots.miraheze.wiki/api"
+      "host":"https://phab.mirahezebots.org/api"
    },
    "https://phabricator.miraheze.org/api":{
       "arraypos":"0"
    },
-   "https://phab.bots.miraheze.wiki/api":{
+   "https://phab.mirahezebots.org/api":{
       "arraypos":"1"
    }
 }
