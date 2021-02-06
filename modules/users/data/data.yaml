@@ -21,7 +21,7 @@ users:
     uid: 1002
     name: RhinosF1
     realname: RhinosF1
-    ssh_keys: []
+    ssh_keys: [ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGiq54OYNxhcxAHOvAWed8B07/sfFB/gbwZ64KHv0N4E rhinosf1@miraheze.org]
 
   zppix:
     ensure: present
