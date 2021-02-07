@@ -58,6 +58,11 @@
          "#miraheze"
       ]
    },
+   "#miraheze-sre":{
+      "inherits-from":[
+         "#miraheze"
+      ]
+   },
    "#miraheze-testwiki":{
       "chanops":[
          "Reception123",
