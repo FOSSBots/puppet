@@ -4,30 +4,6 @@
 #
 class profile::sopelshared(
 ){
-  file { 'userconfig':
-        ensure  => absent,
-        path    => '/srv/sopelbots/users.csv',
-        source  => 'puppet:///modules/profile/users.csv',
-        mode    => '2755',
-        owner   => root,
-        group   => root,
-    }
-    file { 'wikiconfig':
-        ensure  => absent,
-        path    => '/srv/sopelbots/statuswikis.csv',
-        source  => 'puppet:///modules/profile/statuswikis.csv',
-        mode    => '2755',
-        owner   => root,
-        group   => root,
-    }
-    file { 'cloakconfig':
-        ensure  => absent,
-        path    => '/srv/sopelbots/cloaks.csv',
-        source  => 'puppet:///modules/profile/cloaks.csv',
-        mode    => '2755',
-        owner   => root,
-        group   => root,
-    }
     file { 'channelmgnt':
         ensure  => file,
         path    => '/srv/sopelbots/channelmgnt.json',
