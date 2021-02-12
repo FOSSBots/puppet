@@ -6,10 +6,10 @@
       "ircNickColor":false,
       "channelMapping":{
          "435711390544560128":"#miraheze",
-         "#cvt":"#miraheze-cvt",
-         "#cvt-private":"#miraheze-cvt-private",
+         "443926951292567562":"#miraheze-cvt",
+         "450276085708619786":"#miraheze-cvt-private",
          "615786602454581249":"#miraheze-offtopic",
-         "#cvt-feed":"#miraheze-cvt-feed",
+         "743072681057845378":"#miraheze-cvt-feed",
          "808001911868489748":"#miraheze-sre"
       },
       "commandCharacters": [".",","],
