@@ -19,7 +19,7 @@
          "debug":false,
          "port":"7070",
          "userName":"FosshostRelay",
-         "password":"<%= @discordmh_password %>",
+         "password":"<%= @discordfh_password %>",
          "secure":true,
          "sasl":true,
          "millisecondsOfSilenceBeforePingSent":"3600000"
