@@ -6,14 +6,14 @@
       "ircNickColor":false,
       "channelMapping":{
          "#fosshost" : "#fosshost",
-	       "#fosshost-volunteers" : "#fosshost-volunteers",
+	 "#fosshost-volunteers" : "#fosshost-volunteers",
          "#webhook": "#fosshost-engine"
       },
      "commandCharacters": [".",",","$","!"],
       "ircOptions":{
          "channels":[
             "#fosshost",
-	          "#fosshost-volunteers",
+	    "#fosshost-volunteers",
             "#fosshost-engine"
          ],
          "debug":false,
