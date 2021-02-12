@@ -13,3 +13,4 @@ class profile::discordirc{
         ensure  => present,
         content => template('profile/fhconfig.json'),
     }
+}
