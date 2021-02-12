@@ -1,0 +1,28 @@
+[
+   {
+      "nickname":"FosshostRelay",
+      "server":"chat.freenode.net",
+      "discordToken":"<%= @discordfh_token %>",
+      "ircNickColor":false,
+      "channelMapping":{
+         "#fosshost" : "#fosshost",
+         "#fosshost-volunteers" : "#fosshost-volunteers",
+         "#webhook": "#fosshost-engine"
+      },
+     "commandCharacters": [".",",","$","!"],
+      "ircOptions":{
+         "channels":[
+            "#fosshost",
+            "#fosshost-volunteers",
+            "#fosshost-engine"
+         ],
+         "debug":false,
+         "port":"7070",
+         "userName":"FosshostRelay",
+         "password":"<%= @discordfh_password %>",
+         "secure":true,
+         "sasl":true,
+         "millisecondsOfSilenceBeforePingSent":"3600000"
+      }
+   }
+]
