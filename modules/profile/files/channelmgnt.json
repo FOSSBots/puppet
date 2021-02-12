@@ -160,13 +160,18 @@
          "Reception123"
       ]
    },
-    "#miraheze-feed-dev":{
+    "#miraheze-dev":{
       "chanops":[
          "dmehus",
          "MacFan4000",
          "Naleksuh",
          "Reception123",
          "Universal_Omega"
+      ]
+   },
+   "#miraheze-feed-dev":{
+      "inherits-from":[
+         "#miraheze-dev"
       ]
    },
     "#miraheze-feed-login":{
