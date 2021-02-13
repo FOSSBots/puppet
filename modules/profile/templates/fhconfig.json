@@ -5,11 +5,16 @@
       "discordToken":"<%= @discordfh_token %>",
       "ircNickColor":false,
       "channelMapping":{
-         "#fosshost" : "#fosshost",
-         "#fosshost-volunteers" : "#fosshost-volunteers",
-         "#webhook": "#fosshost-engine"
+         "#fosshost":"#fosshost",
+         "#fosshost-volunteers":"#fosshost-volunteers",
+         "#webhook":"#fosshost-engine"
       },
-     "commandCharacters": [".",",","$","!"],
+      "commandCharacters":[
+         ".",
+         ",",
+         "$",
+         "!"
+      ],
       "ircOptions":{
          "channels":[
             "#fosshost",
