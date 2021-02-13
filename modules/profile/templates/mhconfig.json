@@ -12,11 +12,14 @@
          "743072681057845378":"#miraheze-cvt-feed",
          "808001911868489748":"#miraheze-sre"
       },
-      "commandCharacters": [".",","],
+      "commandCharacters":[
+         ".",
+         ","
+      ],
       "ignoreUsers":{
          "irc":[
             "icinga-miraheze",
-	    "mirahezebots_",
+            "mirahezebots_",
             "ZppixBot",
             "Cocopuff2018",
             "blackwidowmovie0"
@@ -37,7 +40,7 @@
             "#miraheze-sre"
          ],
          "debug":false,
-	 "parallelPingFix": true,
+         "parallelPingFix":true,
          "port":"7070",
          "userName":"MH-Discord",
          "password":"<%= @discordmh_password %>",
