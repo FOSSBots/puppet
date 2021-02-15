@@ -2,7 +2,7 @@ groups:
   ops:
     gid: 2000
     description: roots, sudo everywhere
-    members: [rhinosf1, macfan, reception, void, zppix, eth]
+    members: [rhinosf1, macfan, reception, void, eth]
     privileges: ['ALL = (ALL) NOPASSWD: ALL']             
 
 users:
