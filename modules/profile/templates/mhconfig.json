@@ -1,0 +1,52 @@
+[
+   {
+      "nickname":"MH-Discord",
+      "server":"chat.freenode.net",
+      "discordToken":"<%= @discordmh_token %>",
+      "ircNickColor":false,
+      "channelMapping":{
+         "435711390544560128":"#miraheze",
+         "443926951292567562":"#miraheze-cvt",
+         "450276085708619786":"#miraheze-cvt-private",
+         "615786602454581249":"#miraheze-offtopic",
+         "743072681057845378":"#miraheze-cvt-feed",
+         "808001911868489748":"#miraheze-sre"
+      },
+      "commandCharacters":[
+         ".",
+         ","
+      ],
+      "ignoreUsers":{
+         "irc":[
+            "icinga-miraheze",
+            "mirahezebots_",
+            "ZppixBot",
+            "Cocopuff2018",
+            "blackwidowmovie0"
+         ]
+      },
+      "rIngoreUsers":{
+         "irc":[
+            "^Not-.{4}$"
+         ]
+      },
+      "ircOptions":{
+         "channels":[
+            "#miraheze",
+            "#miraheze-cvt",
+            "#miraheze-cvt-private",
+            "#miraheze-cvt-feed",
+            "#miraheze-offtopic",
+            "#miraheze-sre"
+         ],
+         "debug":false,
+         "parallelPingFix":true,
+         "port":"7070",
+         "userName":"MH-Discord",
+         "password":"<%= @discordmh_password %>",
+         "secure":true,
+         "sasl":true,
+         "millisecondsOfSilenceBeforePingSent":"3600000"
+      }
+   }
+]

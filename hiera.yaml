@@ -1,9 +1,11 @@
----
-:backends: yaml
+version: 5
 
-:yaml:
-   :datadir: /etc/puppet/code/hieradata
+defaults:
+   datadir: /etc/puppet/code/hieradata
+   data_hash: yaml_data
 
-:hierarchy:
-  - "hosts/%{::hostname}"
-  - "private/common"
+hierarchy:
+  - name: "per-host Yaml data"
+    path: "hosts/%{::hostname}.yaml"
+  - name: "private yaml"
+    path: "private/common.yaml"
