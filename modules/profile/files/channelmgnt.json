@@ -1,4 +1,19 @@
 {
+   "default"
+      "chanops":[
+         "MacFan4000",
+         "RhinosF1",
+         "Reception123",
+         "Voidwalker",
+         "dmehus",
+         "NDKilla",
+         "JohnLewis",
+         "Southparkfan",
+         "paladox",
+         "Universal_Omega"
+      ],
+      "log_channel":"#miraheze-bot-alerts"
+   },
    "#miraheze-cvt-private":{
       "inherits-from":[
          "#miraheze-cvt"
