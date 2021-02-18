@@ -1,1 +1,2 @@
-cd /srv/sopelbots/devcode/sopel-joinall && pyproject-build --wheel --outdir dist . && find dist -name "*.whl" | xargs pip3 install
+cd /srv/sopelbots/devcode/sopel-joinall && sudo /srv/sopelbots/devvenv/bin/pyproject-build --wheel --outdir dist . && find dist -name "*.whl" | xargs sudo /srv/sopelbots/devvenv/bin/pip3.7 install
+
