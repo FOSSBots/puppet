@@ -1,2 +1,4 @@
 auth.conf
 puppet.conf
+.DS_Store
+*/.DS_Store
