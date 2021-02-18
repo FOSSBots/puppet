@@ -1,3 +1,2 @@
 #!/bin/bash -e
-sudo /srv/sopelbots/devvenv/bin/pip3.7 install -U -r /srv/sopelbots/devrequire.txt
-cd /srv/sopelbots/devcode/core && sudo /srv/sopelbots/devvenv/bin/pip3.7 install . --no-dependencies
+sudo /srv/sopelbots/devvenv/bin/pip3.7 install -U -r /srv/sopelbots/devrequire.txt && cd /srv/sopelbots/devcode/core && pyproject-build --wheel --outdir dist . && find dist -name "*.whl" | xargs pip3 install
