@@ -7,7 +7,7 @@ groups:
   botroots:
     gid: 2001
     description: root on bots1
-    members: []
+    members: [sario]
     privileges: ['ALL = (ALL) NOPASSWD: ALL']           
 
 users:
@@ -59,3 +59,10 @@ users:
     name: eth01
     realname: eth01
     ssh_keys: [ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDL5566QMxUoMCliDJPzVGaB2vqgHpangFXUyBiQk8XR6QH8ZuvzM47nCrRasHZC46U5QxOqZSaHfEvgPSHSMMefDvMDRstzVl8Ctn3HklqTXT/w31/RtoV6A5B+76M/4Jy3LGq7wX4y6yOtytCvBWMAel302yKbHW/rfDR2SVmlbJjQ6Qpq+AJChKR/wbEyze1FYq/tySCdsY+jI8Jn0aJJGfzUuVSKm5WJ4zrnONbDQhnLEL0Uk+3EKW4Ksr09uLKWFs9KArsYa4tLtg8lNoxpft67OlZVIzUh3G3ZM7eWlRceTGc5xpmvBxxUOr8DV+FxUQ4vIsk1bmuYu89/5hB/nGu8jXEbivzNPcg1ZFFT3QrdFg/KOn1jESdBgIob9KtJgAhJvn8YeozhC4OvHFrR/fvtl8s9L13GOQ1bHBn5/fzZqreX0Z/WPnCjpqY5HE2BuZ7OgNjMiMID2aKZksiKVmPX/g48Hlz2BeB85a2hNQ/Zkf+qNyAy8IIys1q60HRIIUwjuiixpEXDDBIG1/5xp4AnLTO7puyHdREpmVr/H3+9HmDtZsWaTBgfxZSh/HDaq1KawompZly7o35syJImHeBpF3QKuvBESwmTz1HVQgEjeHLyf+2VgorWrustkRrP0FOuief4bI5hNnvy6jTtrfGcEk3ZOlZdnif2/rVWw== eth01@eth01]
+
+  sario:
+    ensure: present
+    uid: 1006
+    name: Sario528
+    realname: Sario528
+    ssh_keys: [ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCasBlmfMFw1DAH/t8KVJNKYwkmoxlpiwV75N7wpbk0jPcGtdDkk6z8DaQJSaQoNrqG03ge1eGHfYxDUF9zc1mxhOttLS39Dvp0dGYI/O+yLE2Iv+42mY9xvXQeITTrAQypTcLwCVYT9/9MyWoz2tztnhwl0SdH/NxJQWyS6Q1Q9VpIO/N76HgyavPP6V3+n7D3+ML0rvg0b1Ps4HOp+8X5ogeewo3I6+L0O319EPwHA+Oo1PlFAKZL7FXc2O/3dMqUaB2TdxuXTIwQpdLFs0Rq+1PeY3aPqp6+ro2I6OO/g5HGgXdU8B3YWdAyWm5120J0yzUI9NlrjetLZk3wx5QsPRwKkFxGhK8C8RnscqWE9o6UC1cBm522BJ+yAANs5gjLdWF1xslQo1Wq7+LQRymEnTQd0hhEryORDhakTaIFwM1gwoh8MW9kIx2SAX0VvejShXyPIBBZ2VX3eHD+UTS/Zp1tWeL68ubdIN9rvwiEnU0KGjYQO/3eXuwJHMGuUu/LVbFt+42j2HjmjoG42e0qJcQ03d4Apk31lKm8xZACUmjLDxgM2WPAVYh5tR8puOt8SzVoeEGW6nvL29/TW67+FH82/ZYWvBbEGUMV2SwWYWXoOMp4DUmQa89t1U02I17cJfvJobYGJjzYGA1RYFqYVBs7AMPi2gSDmeRnws9O/w==]
