@@ -3,7 +3,12 @@ groups:
     gid: 2000
     description: roots, sudo everywhere
     members: [rhinosf1, macfan, reception, void, eth]
-    privileges: ['ALL = (ALL) NOPASSWD: ALL']             
+    privileges: ['ALL = (ALL) NOPASSWD: ALL']
+  botroots:
+    gid: 2001
+    description: root on bots1
+    members: []
+    privileges: ['ALL = (ALL) NOPASSWD: ALL']           
 
 users:
   macfan:
