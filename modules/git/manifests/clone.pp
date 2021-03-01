@@ -58,7 +58,7 @@ define git::clone(
     $group='root',
     $shared=false,
     $timeout='300',
-    $depth=1,
+    $depth=10,
     $bare=false,
     $recurse_submodules=false,
     $umask=undef,
