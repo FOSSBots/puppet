@@ -1,4 +1,3 @@
-cluster.read-only: true
 # MySQL
 mysql.user: 'phabricator'
 mysql.host: 'db1.mirahezebots.org'
@@ -14,7 +13,6 @@ auth.require-email-verification: true
 # Phabricator
 phabricator.show-prototypes: true
 phabricator.base-uri: "https://phab.mirahezebots.org/"
-phabricator.allowed-uris: ['https://phab.bots.miraheze.wiki']
 phabricator.timezone: 'UTC'
 security.alternate-file-domain: "https://phab-storage.mirahezebots.org/"
 security.require-https: true
