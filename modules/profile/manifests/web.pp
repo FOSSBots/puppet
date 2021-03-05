@@ -6,14 +6,14 @@ class profile::web(
 ){
  
     git::clone { 'MirahezeBots/bots-web':
-        ensure    => 'latest',
+        ensure    => absent,
         directory => '/var/www/',
         branch    => 'master',
         recurse_submodules => true,
     }
 
   file { 'post-web-hook':
-        ensure  => file,
+        ensure  => absent,
         path    => '/var/www/.git/hooks/post-merge',
         source  => 'puppet:///modules/profile/post-merge-web',
         mode    => '0755',
