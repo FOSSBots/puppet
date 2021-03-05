@@ -1,7 +1,7 @@
 cluster.read-only: true
 # MySQL
 mysql.user: 'phabricator'
-mysql.host: 'mysql-db1.mirahezebots.org'
+mysql.host: 'db1.mirahezebots.org'
 storage.mysql-engine.max-size: 0
 
 metamta.default-address: 'bots-noreply@miraheze.org'
