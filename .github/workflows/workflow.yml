@@ -20,6 +20,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y libgnutls28-dev
+          pip install -U sopel
           pip install -U -r modules/profile/files/devrequire.txt
       - name: Run tests
         run: |
