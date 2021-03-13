@@ -56,6 +56,14 @@ class profile::sopeldev(
         owner   => root,
         group   => root,
     }
+    file { 'post-dev-sopel-hook':
+        ensure  => file,
+        path    => '/srv/sopelbots/devcode/sopel/.git/hooks/post-merge',
+        source  => 'puppet:///modules/profile/post-merge-dev-sopel',
+        mode    => '0755',
+        owner   => root,
+        group   => root,
+    }
     file { 'dev-directory':
         ensure  => directory,
         path    => '/srv/sopelbots/devcode/',
@@ -97,6 +105,12 @@ class profile::sopeldev(
         ensure    => 'latest',
         directory => '/srv/sopelbots/devcode/sopel-joinall',
         branch    => 'dev',
+        recurse_submodules => true,
+    }
+    git::clone { 'MirahezeBots/sopel':
+        ensure    => 'latest',
+        directory => '/srv/sopelbots/devcode/sopel',
+        branch    => 'Testing',
         recurse_submodules => true,
     }
 }
