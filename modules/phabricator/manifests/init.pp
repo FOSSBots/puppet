@@ -43,6 +43,15 @@ class phabricator {
         group  => 'www-data',
     }
 
+    file {'phab-robots-custom':
+        ensure => file,
+        path   => '/var/phab/robots.txt',
+        source => 'puppet://modules/phabricator/phabrobot.txt',
+        mode   => '0755',
+        owner  => 'www-data',
+        group  => 'www-data',
+    }
+
     file { '/var/phab/repos':
         ensure => directory,
         mode   => '0755',
