@@ -1,5 +1,4 @@
 # MySQL
-cluster.read-only: true
 mysql.user: 'phabricator'
 mysql.host: 'db1.mirahezebots.org'
 storage.mysql-engine.max-size: 0
