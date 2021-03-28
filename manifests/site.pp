@@ -15,6 +15,7 @@ node '112.node1.net.fosshost.org' {
   include role::toolserver
   include ufw
   include phabricator
+  include roundcube
 }
 node '113.node1.net.fosshost.org' {
   include cron_puppet
