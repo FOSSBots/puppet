@@ -56,14 +56,6 @@ class profile::sopeldev(
         owner   => root,
         group   => root,
     }
-    file { 'post-dev-sopel-hook':
-        ensure  => file,
-        path    => '/srv/sopelbots/devcode/sopel/.git/hooks/post-merge',
-        source  => 'puppet:///modules/profile/post-merge-dev-sopel',
-        mode    => '0755',
-        owner   => root,
-        group   => root,
-    }
     file { 'dev-directory':
         ensure  => directory,
         path    => '/srv/sopelbots/devcode/',
@@ -107,10 +99,14 @@ class profile::sopeldev(
         branch    => 'dev',
         recurse_submodules => true,
     }
+    exec { 'rebuild sopel':
+        command     => 'cd /srv/sopelbots/devcode/sopel && sudo rm -rf /srv/sopelbots/devocde/sopel/dist/*.whl /srv/sopelbots/devocde/sopel/build/*.whl && sudo /srv/sopelbots/devvenv/bin/pyproject-build --wheel --outdir dist . && find dist -name "*.whl" | xargs sudo /srv/sopelbots/devvenv/bin/pip3.7 install --no-dependencies --force-reinstall',
+    }
     git::clone { 'MirahezeBots/sopel':
         ensure    => 'latest',
         directory => '/srv/sopelbots/devcode/sopel',
         branch    => 'Testing',
         recurse_submodules => true,
+        notify => Exec['rebuild sopel']
     }
 }
