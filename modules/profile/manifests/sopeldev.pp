@@ -1,5 +1,10 @@
 class profile::sopeldev(
 ){
+  exec { 'update dev':
+          command     => '/usr/bin/sudo /srv/sopelbots/devvenv/bin/pip3.7 install /srv/sopelbots/devrequire.txt',
+          cwd         => '/srv/sopelbots',
+          refreshonly => true,
+      }
   file { 'dev-require':
         ensure  => file,
         path    => '/srv/sopelbots/devrequire.txt',
@@ -7,6 +12,7 @@ class profile::sopeldev(
         mode    => '2755',
         owner   => root,
         group   => root,
+        notify  => Exec['update dev'],
     }
   file { 'post-dev-core-hook':
         ensure  => absent,
