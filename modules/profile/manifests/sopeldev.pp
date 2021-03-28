@@ -101,6 +101,7 @@ class profile::sopeldev(
     }
     exec { 'rebuild sopel':
         command     => 'cd /srv/sopelbots/devcode/sopel && sudo rm -rf /srv/sopelbots/devocde/sopel/dist/*.whl /srv/sopelbots/devocde/sopel/build/*.whl && sudo /srv/sopelbots/devvenv/bin/pyproject-build --wheel --outdir dist . && find dist -name "*.whl" | xargs sudo /srv/sopelbots/devvenv/bin/pip3.7 install --no-dependencies --force-reinstall',
+        refreshonly = true,
     }
     git::clone { 'MirahezeBots/sopel':
         ensure    => 'latest',
