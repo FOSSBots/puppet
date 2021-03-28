@@ -54,7 +54,7 @@ class profile::sopeldev(
       }
       exec { 'rebuild ${repo}':
           command     => '/usr/bin/sudo /usr/bin/rm -rf /srv/sopelbots/devcode/${repo}/dist/*.whl && /usr/bin/sudo /srv/sopelbots/devvenv/bin/pyproject-build --wheel --outdir /srv/sopelbots/devcode/${repo}/dist /srv/sopelbots/devcode/${repo} && /usr/bin/find dist -name "/srv/sopelbots/devcode/${repo}/dist/*.whl" | /usr/bin/xargs /usr/bin/sudo /srv/sopelbots/devvenv/bin/pip3.7 install --no-dependencies --force-reinstall',
-          cwd         => '/srv/sopelbots/devcode/jsonparser',
+          cwd         => '/srv/sopelbots/devcode/${repo}',
           refreshonly => true,
       }
     }
