@@ -9,52 +9,28 @@ class profile::sopeldev(
         group   => root,
     }
   file { 'post-dev-core-hook':
-        ensure  => file,
+        ensure  => absent,
         path    => '/srv/sopelbots/devcode/core/.git/hooks/post-merge',
-        source  => 'puppet:///modules/profile/post-merge-dev-core',
-        mode    => '0755',
-        owner   => root,
-        group   => root,
     }
     file { 'post-dev-adminlist-hook':
-        ensure  => file,
+        ensure  => absent,
         path    => '/srv/sopelbots/devcode/sopel-adminlist/.git/hooks/post-merge',
-        source  => 'puppet:///modules/profile/post-merge-dev-adminlist',
-        mode    => '0755',
-        owner   => root,
-        group   => root,
     }
     file { 'post-dev-channelmgnt-hook':
-        ensure  => file,
+        ensure  => absent,
         path    => '/srv/sopelbots/devcode/sopel-channelmgnt/.git/hooks/post-merge',
-        source  => 'puppet:///modules/profile/post-merge-dev-channelmgnt',
-        mode    => '0755',
-        owner   => root,
-        group   => root,
     }
     file { 'post-dev-jsonparser-hook':
-        ensure  => file,
+        ensure  => absent,
         path    => '/srv/sopelbots/devcode/jsonparser/.git/hooks/post-merge',
-        source  => 'puppet:///modules/profile/post-merge-dev-jsonparser',
-        mode    => '0755',
-        owner   => root,
-        group   => root,
     }
     file { 'post-dev-pingpong-hook':
-        ensure  => file,
+        ensure  => absent,
         path    => '/srv/sopelbots/devcode/sopel-pingpong/.git/hooks/post-merge',
-        source  => 'puppet:///modules/profile/post-merge-dev-pingpong',
-        mode    => '0755',
-        owner   => root,
-        group   => root,
     }
     file { 'post-dev-joinall-hook':
-        ensure  => file,
+        ensure  => absent,
         path    => '/srv/sopelbots/devcode/sopel-joinall/.git/hooks/post-merge',
-        source  => 'puppet:///modules/profile/post-merge-dev-joinall',
-        mode    => '0755',
-        owner   => root,
-        group   => root,
     }
     file { 'dev-directory':
         ensure  => directory,
@@ -67,40 +43,52 @@ class profile::sopeldev(
         ensure    => 'latest',
         directory => '/srv/sopelbots/devcode/core',
         branch    => 'dev',
-        recurse_submodules => true,
     }
     git::clone { 'MirahezeBots/sopel-adminlist':
         ensure    => 'latest',
         directory => '/srv/sopelbots/devcode/sopel-adminlist',
         branch    => 'dev',
-        recurse_submodules => true,
     }
     git::clone { 'MirahezeBots/sopel-channelmgnt':
         ensure    => 'latest',
         directory => '/srv/sopelbots/devcode/sopel-channelmgnt',
         branch    => 'dev',
-        recurse_submodules => true,
+    }
+    exec { 'rebuild jsonparser':
+        command     => '/usr/bin/sudo /usr/bin/rm -rf /srv/sopelbots/devcode/jsonparser/dist/*.whl && /usr/bin/sudo /srv/sopelbots/devvenv/bin/pyproject-build --wheel --outdir dist . && /usr/bin/find dist -name "/srv/sopelbots/devcode/jsonparser/dist/*.whl" | /usr/bin/xargs /usr/bin/sudo /srv/sopelbots/devvenv/bin/pip3.7 install --no-dependencies --force-reinstall',
+        cwd         => '/srv/sopelbots/devcode/jsonparser',
+        refreshonly => true,
     }
     git::clone { 'MirahezeBots/jsonparser':
         ensure    => 'latest',
         directory => '/srv/sopelbots/devcode/jsonparser',
         branch    => 'dev',
-        recurse_submodules => true,
+        notify => Exec['rebuild jsonparser'],
+    }
+    exec { 'rebuild pingpong':
+        command     => '/usr/bin/sudo /usr/bin/rm -rf /srv/sopelbots/devcode/sopel-pingpong/dist/*.whl && /usr/bin/sudo /srv/sopelbots/devvenv/bin/pyproject-build --wheel --outdir dist . && /usr/bin/find dist -name "/srv/sopelbots/devcode/sopel-pingpong/dist/*.whl" | /usr/bin/xargs /usr/bin/sudo /srv/sopelbots/devvenv/bin/pip3.7 install --no-dependencies --force-reinstall',
+        cwd         => '/srv/sopelbots/devcode/sopel-pingpong',
+        refreshonly => true,
     }
     git::clone { 'MirahezeBots/sopel-pingpong':
         ensure    => 'latest',
         directory => '/srv/sopelbots/devcode/sopel-pingpong',
         branch    => 'dev',
-        recurse_submodules => true,
+        notify => Exec['rebuild pingpong'],
+    }
+    exec { 'rebuild joinall':
+        command     => '/usr/bin/sudo /usr/bin/rm -rf /srv/sopelbots/devcode/sopel-joinall/dist/*.whl && /usr/bin/sudo /srv/sopelbots/devvenv/bin/pyproject-build --wheel --outdir dist . && /usr/bin/find dist -name "/srv/sopelbots/devcode/sopel-joinall/dist/*.whl" | /usr/bin/xargs /usr/bin/sudo /srv/sopelbots/devvenv/bin/pip3.7 install --no-dependencies --force-reinstall',
+        cwd         => '/srv/sopelbots/devcode/sopel-joinall',
+        refreshonly => true,
     }
     git::clone { 'MirahezeBots/sopel-joinall':
         ensure    => 'latest',
         directory => '/srv/sopelbots/devcode/sopel-joinall',
         branch    => 'dev',
-        recurse_submodules => true,
+        notify => Exec['rebuild joinall'],
     }
     exec { 'rebuild sopel':
-        command     => '/usr/bin/sudo /usr/bin/rm -rf /srv/sopelbots/devocde/sopel/dist/*.whl /srv/sopelbots/devocde/sopel/build/*.whl && /usr/bin/sudo /srv/sopelbots/devvenv/bin/pyproject-build --wheel --outdir dist . && find dist -name "*.whl" | /usr/bin/xargs /usr/bin/sudo /srv/sopelbots/devvenv/bin/pip3.7 install --no-dependencies --force-reinstall',
+        command     => '/usr/bin/sudo /usr/bin/rm -rf /srv/sopelbots/devcode/sopel/dist/*.whl && /usr/bin/sudo /srv/sopelbots/devvenv/bin/pyproject-build --wheel --outdir dist . && /usr/bin/find dist -name "/srv/sopelbots/devcode/sopel/dist/*.whl" | /usr/bin/xargs /usr/bin/sudo /srv/sopelbots/devvenv/bin/pip3.7 install --no-dependencies --force-reinstall',
         cwd         => '/srv/sopelbots/devcode/sopel',
         refreshonly => true,
     }
@@ -108,11 +96,6 @@ class profile::sopeldev(
         ensure    => 'latest',
         directory => '/srv/sopelbots/devcode/sopel',
         branch    => 'Testing',
-        recurse_submodules => true,
-        notify => Exec['rebuild sopel']
-    }
-    file { 'post-dev-sopel-hook':
-        ensure  => absent,
-        path    => '/srv/sopelbots/devcode/sopel/.git/hooks/post-merge',
+        notify => Exec['rebuild sopel'],
     }
 }
