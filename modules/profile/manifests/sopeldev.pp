@@ -52,15 +52,15 @@ class profile::sopeldev(
     }
     $repos = ['MirahezeBots', 'sopel-adminlist', 'sopel-channelmgnt', 'jsonparser', 'sopel-pingpong', 'sopel-joinall', 'sopel']
     $repos.each |$repo| {
-      git::clone { 'MirahezeBots/$repo':
+      git::clone { 'MirahezeBots/${repo}':
           ensure    => 'latest',
-          directory => '/srv/sopelbots/devcode/$repo',
+          directory => '/srv/sopelbots/devcode/${repo}',
           branch    => 'dev',
-          notify => Exec['rebuild $repo'],
+          notify => Exec['rebuild ${repo}'],
       }
       exec { 'rebuild ${repo}':
-          command     => '/usr/bin/sudo /usr/bin/rm -rf /srv/sopelbots/devcode/$repo/dist/*.whl && /usr/bin/sudo /srv/sopelbots/devvenv/bin/pyproject-build --wheel --outdir /srv/sopelbots/devcode/$repo/dist /srv/sopelbots/devcode/$repo && /usr/bin/find dist -name "/srv/sopelbots/devcode/$repo/dist/*.whl" | /usr/bin/xargs /usr/bin/sudo /srv/sopelbots/devvenv/bin/pip3.7 install --no-dependencies --force-reinstall',
-          cwd         => '/srv/sopelbots/devcode/$repo',
+          command     => '/usr/bin/sudo /usr/bin/rm -rf /srv/sopelbots/devcode/${repo}/dist/*.whl && /usr/bin/sudo /srv/sopelbots/devvenv/bin/pyproject-build --wheel --outdir /srv/sopelbots/devcode/${repo}/dist /srv/sopelbots/devcode/${repo} && /usr/bin/find dist -name "/srv/sopelbots/devcode/${repo}/dist/*.whl" | /usr/bin/xargs /usr/bin/sudo /srv/sopelbots/devvenv/bin/pip3.7 install --no-dependencies --force-reinstall',
+          cwd         => '/srv/sopelbots/devcode/${repo}',
           refreshonly => true,
       }
     }
