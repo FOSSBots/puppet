@@ -40,62 +40,22 @@ class profile::sopeldev(
         group   => root,
     }
     git::clone { 'MirahezeBots/MirahezeBots':
-        ensure    => 'latest',
+        ensure    => absent,
         directory => '/srv/sopelbots/devcode/core',
         branch    => 'dev',
     }
-    git::clone { 'MirahezeBots/sopel-adminlist':
-        ensure    => 'latest',
-        directory => '/srv/sopelbots/devcode/sopel-adminlist',
-        branch    => 'dev',
-    }
-    git::clone { 'MirahezeBots/sopel-channelmgnt':
-        ensure    => 'latest',
-        directory => '/srv/sopelbots/devcode/sopel-channelmgnt',
-        branch    => 'dev',
-    }
-    exec { 'rebuild jsonparser':
-        command     => '/usr/bin/sudo /usr/bin/rm -rf /srv/sopelbots/devcode/jsonparser/dist/*.whl && /usr/bin/sudo /srv/sopelbots/devvenv/bin/pyproject-build --wheel --outdir dist . && /usr/bin/find dist -name "/srv/sopelbots/devcode/jsonparser/dist/*.whl" | /usr/bin/xargs /usr/bin/sudo /srv/sopelbots/devvenv/bin/pip3.7 install --no-dependencies --force-reinstall',
-        cwd         => '/srv/sopelbots/devcode/jsonparser',
-        refreshonly => true,
-    }
-    git::clone { 'MirahezeBots/jsonparser':
-        ensure    => 'latest',
-        directory => '/srv/sopelbots/devcode/jsonparser',
-        branch    => 'dev',
-        notify => Exec['rebuild jsonparser'],
-    }
-    exec { 'rebuild pingpong':
-        command     => '/usr/bin/sudo /usr/bin/rm -rf /srv/sopelbots/devcode/sopel-pingpong/dist/*.whl && /usr/bin/sudo /srv/sopelbots/devvenv/bin/pyproject-build --wheel --outdir dist . && /usr/bin/find dist -name "/srv/sopelbots/devcode/sopel-pingpong/dist/*.whl" | /usr/bin/xargs /usr/bin/sudo /srv/sopelbots/devvenv/bin/pip3.7 install --no-dependencies --force-reinstall',
-        cwd         => '/srv/sopelbots/devcode/sopel-pingpong',
-        refreshonly => true,
-    }
-    git::clone { 'MirahezeBots/sopel-pingpong':
-        ensure    => 'latest',
-        directory => '/srv/sopelbots/devcode/sopel-pingpong',
-        branch    => 'dev',
-        notify => Exec['rebuild pingpong'],
-    }
-    exec { 'rebuild joinall':
-        command     => '/usr/bin/sudo /usr/bin/rm -rf /srv/sopelbots/devcode/sopel-joinall/dist/*.whl && /usr/bin/sudo /srv/sopelbots/devvenv/bin/pyproject-build --wheel --outdir dist . && /usr/bin/find dist -name "/srv/sopelbots/devcode/sopel-joinall/dist/*.whl" | /usr/bin/xargs /usr/bin/sudo /srv/sopelbots/devvenv/bin/pip3.7 install --no-dependencies --force-reinstall',
-        cwd         => '/srv/sopelbots/devcode/sopel-joinall',
-        refreshonly => true,
-    }
-    git::clone { 'MirahezeBots/sopel-joinall':
-        ensure    => 'latest',
-        directory => '/srv/sopelbots/devcode/sopel-joinall',
-        branch    => 'dev',
-        notify => Exec['rebuild joinall'],
-    }
-    exec { 'rebuild sopel':
-        command     => '/usr/bin/sudo /usr/bin/rm -rf /srv/sopelbots/devcode/sopel/dist/*.whl && /usr/bin/sudo /srv/sopelbots/devvenv/bin/pyproject-build --wheel --outdir dist . && /usr/bin/find dist -name "/srv/sopelbots/devcode/sopel/dist/*.whl" | /usr/bin/xargs /usr/bin/sudo /srv/sopelbots/devvenv/bin/pip3.7 install --no-dependencies --force-reinstall',
-        cwd         => '/srv/sopelbots/devcode/sopel',
-        refreshonly => true,
-    }
-    git::clone { 'MirahezeBots/sopel':
-        ensure    => 'latest',
-        directory => '/srv/sopelbots/devcode/sopel',
-        branch    => 'Testing',
-        notify => Exec['rebuild sopel'],
+    $repos = ['MirahezeBots', 'sopel-adminlist', 'sopel-channelmgnt', 'jsonparser', 'sopel-pingpong', 'sopel-joinall', 'sopel']
+    $repos.each |$repo| {
+      git::clone { 'MirahezeBots/${repo}':
+          ensure    => 'latest',
+          directory => '/srv/sopelbots/devcode/${repo}',
+          branch    => 'dev',
+          notify => Exec['rebuild ${repo}'],
+      }
+      exec { 'rebuild ${repo}':
+          command     => '/usr/bin/sudo /usr/bin/rm -rf /srv/sopelbots/devcode/${repo}/dist/*.whl && /usr/bin/sudo /srv/sopelbots/devvenv/bin/pyproject-build --wheel --outdir /srv/sopelbots/devcode/${repo}/dist /srv/sopelbots/devcode/${repo} && /usr/bin/find dist -name "/srv/sopelbots/devcode/${repo}/dist/*.whl" | /usr/bin/xargs /usr/bin/sudo /srv/sopelbots/devvenv/bin/pip3.7 install --no-dependencies --force-reinstall',
+          cwd         => '/srv/sopelbots/devcode/jsonparser',
+          refreshonly => true,
+      }
     }
 }
