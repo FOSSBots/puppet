@@ -1,4 +1,4 @@
-class roundcubemail{
+class roundcube{
     $db_user_password      = lookup('passwords::webmail::db'),
     $roundcubemail_des_key = lookup('passwords::webmail::des'),
 
