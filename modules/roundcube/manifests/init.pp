@@ -1,6 +1,6 @@
 class roundcube{
-    $db_user_password      = lookup('passwords::webmail::db'),
-    $roundcubemail_des_key = lookup('passwords::webmail::des'),
+    $db_user_password      = lookup('passwords::webmail::db')
+    $roundcubemail_des_key = lookup('passwords::webmail::des')
 
     git::clone { 'roundcubemail':
         directory          => '/var/webmail',
