@@ -14,41 +14,12 @@ class profile::sopeldev(
         group   => root,
         notify  => Exec['update dev'],
     }
-  file { 'post-dev-core-hook':
-        ensure  => absent,
-        path    => '/srv/sopelbots/devcode/core/.git/hooks/post-merge',
-    }
-    file { 'post-dev-adminlist-hook':
-        ensure  => absent,
-        path    => '/srv/sopelbots/devcode/sopel-adminlist/.git/hooks/post-merge',
-    }
-    file { 'post-dev-channelmgnt-hook':
-        ensure  => absent,
-        path    => '/srv/sopelbots/devcode/sopel-channelmgnt/.git/hooks/post-merge',
-    }
-    file { 'post-dev-jsonparser-hook':
-        ensure  => absent,
-        path    => '/srv/sopelbots/devcode/jsonparser/.git/hooks/post-merge',
-    }
-    file { 'post-dev-pingpong-hook':
-        ensure  => absent,
-        path    => '/srv/sopelbots/devcode/sopel-pingpong/.git/hooks/post-merge',
-    }
-    file { 'post-dev-joinall-hook':
-        ensure  => absent,
-        path    => '/srv/sopelbots/devcode/sopel-joinall/.git/hooks/post-merge',
-    }
     file { 'dev-directory':
         ensure  => directory,
         path    => '/srv/sopelbots/devcode/',
         mode    => '0755',
         owner   => root,
         group   => root,
-    }
-    git::clone { 'MirahezeBots/MirahezeBotsold':
-        ensure    => absent,
-        directory => '/srv/sopelbots/devcode/core',
-        branch    => 'dev',
     }
     $repos = ['MirahezeBots', 'sopel-adminlist', 'sopel-channelmgnt', 'jsonparser', 'sopel-pingpong', 'sopel-joinall', 'sopel']
     $repos.each |$repo| {
