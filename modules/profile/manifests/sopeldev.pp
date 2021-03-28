@@ -45,7 +45,7 @@ class profile::sopeldev(
         owner   => root,
         group   => root,
     }
-    git::clone { 'MirahezeBots/MirahezeBots':
+    git::clone { 'MirahezeBots/MirahezeBotsold':
         ensure    => absent,
         directory => '/srv/sopelbots/devcode/core',
         branch    => 'dev',
