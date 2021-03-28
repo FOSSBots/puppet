@@ -109,4 +109,8 @@ class profile::sopeldev(
         recurse_submodules => true,
         notify => Exec['rebuild sopel']
     }
+    file { 'post-dev-sopel-hook':
+        ensure  => absent,
+        path    => '/srv/sopelbots/devcode/sopel/.git/hooks/post-merge',
+    }
 }
