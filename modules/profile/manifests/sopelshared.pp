@@ -28,4 +28,9 @@ class profile::sopelshared(
         owner   => root,
         group   => root,
     }
+    systemd::service { 'mirahezebotprod':
+        ensure  => present,
+        content => systemd_template('mirahezebotprod'),
+        restart => true,
+    }
 }
