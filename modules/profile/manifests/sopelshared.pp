@@ -50,7 +50,7 @@ class profile::sopelshared(
         notify  => Exec['update prod'],
     }
     exec { 'update prod':
-          command     => '/usr/bin/sudo /srv/sopelbots/prodvenv/bin/pip3.7 install /srv/sopelbots/prodrequire.txt',
+          command     => '/usr/bin/sudo /srv/sopelbots/prodvenv/bin/pip3.7 install -U -r /srv/sopelbots/prodrequire.txt',
           cwd         => '/srv/sopelbots/prodvenv',
           refreshonly => true,
           require     => File['prod-venv', 'prod-require']
