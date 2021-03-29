@@ -1,9 +1,17 @@
 class profile::sopeldev(
 ){
+file { 'dev-venv':
+        ensure  => directory,
+        path    => '/srv/sopelbots/devvenv/',
+        mode    => '0755',
+        owner   => root,
+        group   => root,
+    }
   exec { 'update dev':
           command     => '/usr/bin/sudo /srv/sopelbots/devvenv/bin/pip3.7 install /srv/sopelbots/devrequire.txt',
-          cwd         => '/srv/sopelbots',
+          cwd         => '/srv/sopelbots/devvenv',
           refreshonly => true,
+          require     => File['dev-venv']
       }
   file { 'dev-require':
         ensure  => file,
