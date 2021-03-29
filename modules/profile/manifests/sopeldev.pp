@@ -7,13 +7,7 @@ file { 'dev-venv':
         owner   => root,
         group   => root,
     }
-  exec { 'update dev':
-          command     => '/usr/bin/sudo /srv/sopelbots/devvenv/bin/pip3.7 install /srv/sopelbots/devrequire.txt',
-          cwd         => '/srv/sopelbots/devvenv',
-          refreshonly => true,
-          require     => File['dev-venv']
-      }
-  file { 'dev-require':
+    file { 'dev-require':
         ensure  => file,
         path    => '/srv/sopelbots/devrequire.txt',
         source  => 'puppet:///modules/profile/devrequire.txt',
@@ -21,6 +15,12 @@ file { 'dev-venv':
         owner   => root,
         group   => root,
         notify  => Exec['update dev'],
+    }
+    exec { 'update dev':
+          command     => '/usr/bin/sudo /srv/sopelbots/devvenv/bin/pip3.7 install /srv/sopelbots/devrequire.txt',
+          cwd         => '/srv/sopelbots/devvenv',
+          refreshonly => true,
+          require     => File['dev-venv', 'dev-require']
     }
     file { 'dev-directory':
         ensure  => directory,
