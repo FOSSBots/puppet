@@ -17,7 +17,7 @@ file { 'dev-venv':
         notify  => Exec['update dev'],
     }
     exec { 'update dev':
-          command     => '/usr/bin/sudo /srv/sopelbots/devvenv/bin/pip3.7 install /srv/sopelbots/devrequire.txt',
+          command     => '/usr/bin/sudo /srv/sopelbots/devvenv/bin/pip3.7 install -U -r/srv/sopelbots/devrequire.txt',
           cwd         => '/srv/sopelbots/devvenv',
           refreshonly => true,
           require     => File['dev-venv', 'dev-require']
