@@ -35,4 +35,10 @@ class profile::sopeldev(
           refreshonly => true,
       }
     }
+    systemd::service { 'mirahezebottest':
+        ensure  => present,
+        content => systemd_template('mirahezebottest'),
+        restart => true,
+        require => Git::Clone['MirahhezeBots/sopel'],
+    }
 }
