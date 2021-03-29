@@ -33,4 +33,26 @@ class profile::sopelshared(
         content => systemd_template('mirahezebotprod'),
         restart => true,
     }
+    file { 'prod-venv':
+        ensure  => directory,
+        path    => '/srv/sopelbots/prodvenv/',
+        mode    => '0755',
+        owner   => root,
+        group   => root,
+    }
+    file { 'prod-require':
+        ensure  => file,
+        path    => '/srv/sopelbots/prodrequire.txt',
+        source  => 'puppet:///modules/profile/prodrequire.txt',
+        mode    => '2755',
+        owner   => root,
+        group   => root,
+        notify  => Exec['update dev'],
+    }
+    exec { 'update prod':
+          command     => '/usr/bin/sudo /srv/sopelbots/devvenv/bin/pip3.7 install /srv/sopelbots/prodrequire.txt',
+          cwd         => '/srv/sopelbots/devvenv',
+          refreshonly => true,
+          require     => File['dev-venv', 'dev-require']
+    }
 }
