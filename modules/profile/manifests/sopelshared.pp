@@ -47,12 +47,12 @@ class profile::sopelshared(
         mode    => '2755',
         owner   => root,
         group   => root,
-        notify  => Exec['update dev'],
+        notify  => Exec['update prod'],
     }
     exec { 'update prod':
-          command     => '/usr/bin/sudo /srv/sopelbots/devvenv/bin/pip3.7 install /srv/sopelbots/prodrequire.txt',
-          cwd         => '/srv/sopelbots/devvenv',
+          command     => '/usr/bin/sudo /srv/sopelbots/prodvenv/bin/pip3.7 install /srv/sopelbots/prodrequire.txt',
+          cwd         => '/srv/sopelbots/prodvenv',
           refreshonly => true,
-          require     => File['dev-venv', 'dev-require']
+          require     => File['prod-venv', 'prod-require']
     }
 }
