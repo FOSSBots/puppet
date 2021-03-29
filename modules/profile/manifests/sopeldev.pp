@@ -39,6 +39,6 @@ class profile::sopeldev(
         ensure  => present,
         content => systemd_template('mirahezebottest'),
         restart => true,
-        require => Git::Clone['MirahhezeBots/sopel'],
+        require => Git::Clone['MirahezeBots/sopel'],
     }
 }
