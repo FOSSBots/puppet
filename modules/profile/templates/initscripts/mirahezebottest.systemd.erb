@@ -6,7 +6,7 @@ DefaultInstance=sopel
 
 [Service]
 Type=simple
-User=www-data
+User=sopel
 PIDFile=/srv/sopelbots/test/pids/sopel-%i.pid
 ExecStart=/srv/sopelbots/devvenv/bin/sopel -c /srv/sopelbots/test/default.cfg
 Restart=on-failure
