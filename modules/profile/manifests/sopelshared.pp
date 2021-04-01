@@ -55,4 +55,9 @@ class profile::sopelshared(
           refreshonly => true,
           require     => File['prod-venv', 'prod-require']
     }
+    git::clone { "MirahezeBots/sopel-CVTFeed":
+          ensure    => 'latest',
+          directory => "/srv/sopelbots/cvtfeed",
+          branch    => 'dev',
+    }
 }
