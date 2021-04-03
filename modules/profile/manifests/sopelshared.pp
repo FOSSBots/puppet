@@ -59,6 +59,9 @@ class profile::sopelshared(
     git::clone { "MirahezeBots/sopel-CVTFeed":
           ensure    => 'latest',
           directory => "/srv/sopelbots/cvtfeed",
+          mode    => '770',
+          owner   => sopel,
+          group   => sopel,
           branch    => 'main',
     }
 }
