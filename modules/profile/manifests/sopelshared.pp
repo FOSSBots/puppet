@@ -8,25 +8,25 @@ class profile::sopelshared(
         ensure  => file,
         path    => '/srv/sopelbots/channelmgnt.json',
         source  => 'puppet:///modules/profile/channelmgnt.json',
-        mode    => '2755',
-        owner   => root,
-        group   => root,
+        mode    => '770',
+        owner   => sopel,
+        group   => sopel,
     }
     file { 'statusv2config':
         ensure  => file,
         path    => '/srv/sopelbots/status.json',
         source  => 'puppet:///modules/profile/status.json',
-        mode    => '2755',
-        owner   => root,
-        group   => root,
-    } 
+        mode    => '770',
+        owner   => sopel,
+        group   => sopel,
+    }
     file { 'phabconfig':
         ensure  => file,
         path    => '/srv/sopelbots/phab.json',
         source  => 'puppet:///modules/profile/phab.json',
-        mode    => '2755',
-        owner   => root,
-        group   => root,
+        mode    => '770',
+        owner   => sopel,
+        group   => sopel,
     }
     systemd::service { 'mirahezebotprod':
         ensure  => present,
@@ -36,23 +36,24 @@ class profile::sopelshared(
     file { 'prod-venv':
         ensure  => directory,
         path    => '/srv/sopelbots/prodvenv/',
-        mode    => '0755',
-        owner   => root,
-        group   => root,
+        mode    => '770',
+        owner   => sopel,
+        group   => sopel,
     }
     file { 'prod-require':
         ensure  => file,
         path    => '/srv/sopelbots/prodrequire.txt',
         source  => 'puppet:///modules/profile/prodrequire.txt',
-        mode    => '2755',
-        owner   => root,
-        group   => root,
+        mode    => '770',
+        owner   => sopel,
+        group   => sopel,
         notify  => Exec['update prod'],
     }
     exec { 'update prod':
-          command     => '/usr/bin/sudo /srv/sopelbots/prodvenv/bin/pip3.7 install -U -r /srv/sopelbots/prodrequire.txt',
+          command     => '/srv/sopelbots/prodvenv/bin/pip3.7 install -U -r /srv/sopelbots/prodrequire.txt',
           cwd         => '/srv/sopelbots/prodvenv',
           refreshonly => true,
+          user        => sopel,
           require     => File['prod-venv', 'prod-require']
     }
     git::clone { "MirahezeBots/sopel-CVTFeed":
