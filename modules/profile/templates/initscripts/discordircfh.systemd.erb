@@ -7,7 +7,7 @@ After=network-online.target
 [Service]
 Type=simple
 WorkingDirectory=/discord-irc
-User=www-data
+User=relays
 PIDFile=/discord-irc/%I.pid
 ExecStart=npm start -- --config /discord-irc/fhconfig.json
 Restart=on-failure
