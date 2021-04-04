@@ -19,11 +19,17 @@ class profile::discordirc{
         ensure  => present,
         content => template('profile/mhconfig.json'),
         notify  => Service['discordircmh'],
+        mode    => '770',
+        owner   => relays,
+        group   => relays,
     }
     
     file { '/discord-irc/fhconfig.json':
         ensure  => present,
         content => template('profile/fhconfig.json'),
         notify  => Service['discordircfh'],
+        mode    => '770',
+        owner   => relays,
+        group   => relays,
     }
 }
