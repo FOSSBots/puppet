@@ -1,4 +1,18 @@
 {
+   "default":{
+      "chanops":[
+         "MacFan4000",
+         "RhinosF1",
+         "Reception123",
+         "Voidwalker",
+         "dmehus",
+         "NDKilla",
+         "JohnLewis",
+         "Southparkfan",
+         "paladox"
+      ],
+      "log_channel":"#miraheze-bot-alerts"
+   },
    "#miraheze-cvt-private":{
       "inherits-from":[
          "#miraheze-cvt"
@@ -16,7 +30,6 @@
    "##RhinosF1":{
       "chanops":[
          "RhinosF1",
-         "Zppix",
          "Reception123",
          "LakesideMiners",
          "Vermont",
@@ -49,7 +62,6 @@
          "JohnLewis",
          "paladox",
          "RhinosF1",
-         "Universal_Omega",
          "dmehus"
       ]
    },
@@ -117,22 +129,24 @@
    "#miraheze-botlogs":{
       "chanops":[
          "MacFan4000",
-         "Zppix",
          "RhinosF1",
          "Reception123",
-         "Voidwalker"
+         "Voidwalker",
+         "dmehus",
+         "Sario528"
       ]
    },
    "#miraheze-bots":{
       "chanops":[
          "MacFan4000",
-         "Zppix",
          "RhinosF1",
          "Reception123",
          "Voidwalker",
          "SPF|Cloud",
          "PuppyKun",
-         "JohnLewis"
+         "JohnLewis",
+         "dmehus",
+         "Sario528"
       ]
    },
    "#miraheze-bot-alerts":{
@@ -171,8 +185,7 @@
       "chanops":[
          "dmehus",
          "MacFan4000",
-         "Reception123",
-         "Universal_Omega"
+         "Reception123"
       ]
    },
     "#miraheze-feed-test":{

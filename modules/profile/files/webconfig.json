@@ -25,7 +25,7 @@
    },
    "font-awesome-url":"Font-Awesome",
    "Font-awesome-path":"/var/flask/Font-Awesome",
-   "canonical-prefix":"https://bots.miraheze.wiki/",
+   "canonical-prefix":"https://mirahezebots.org/",
    "rendertemplates":{
       "navbar":"/var/flask/templates/navbar.html",
       "footer":"/var/flask/templates/footer.html",
