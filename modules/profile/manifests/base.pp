@@ -1,6 +1,6 @@
 class role::base {	
     include users
-    include cron_puppet
+    include puppet
     include motd
     include ufw
 }
