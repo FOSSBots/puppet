@@ -1,6 +1,6 @@
-# == Class staticweb
+# == Class web
 #
-# Installs the staticweb repo.
+# Installs the web repo.
 #
 class profile::web(
 ){
