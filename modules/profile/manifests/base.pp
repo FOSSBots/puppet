@@ -1,4 +1,4 @@
-class role::base {	
+class profile::base {	
     include users
     include puppet
     include motd
