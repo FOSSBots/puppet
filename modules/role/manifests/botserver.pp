@@ -3,4 +3,5 @@ class role::sopeltest {
     include ::profile::sopelshared
     include ::profile::base
     include ::profile::web
+    include ::profile::discordirc
 }
