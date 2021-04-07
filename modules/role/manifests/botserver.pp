@@ -1,6 +1,5 @@
 class role::botserver {	
-    include ::profile::sopeldev
-    include ::profile::sopelshared
+    include sopel
     include ::profile::base
     include ::profile::web
     include ::profile::discordirc
