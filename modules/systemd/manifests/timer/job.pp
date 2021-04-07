@@ -167,5 +167,4 @@ define systemd::timer::job(
         timer_intervals => $mangled_intervals,
         unit_name       => "${title}.service",
     }
-    }
 }
