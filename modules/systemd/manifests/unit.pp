@@ -39,7 +39,7 @@
 #
 define systemd::unit(
     String $content,
-    VMlib::Ensure $ensure=present,
+    Wmflib::Ensure $ensure=present,
     Boolean $restart=false,
     Boolean $override=false,
 ){
@@ -55,7 +55,7 @@ define systemd::unit(
         # Define the override dir if not defined.
         $override_dir = "${::systemd::override_dir}/${unit_name}.d"
         file { $override_dir:
-            ensure => ensure_directory($ensure),
+            ensure => stdlib::ensure($ensure, 'directory'),
             owner  => 'root',
             group  => 'root',
             mode   => '0555',

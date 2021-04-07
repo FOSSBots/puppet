@@ -29,13 +29,30 @@
 #   Filename of the logging file.
 #   Default: 'syslog.log'
 #
+# [*force_stop*]
+#   Force 'stop' rule in the syslog configuration to
+#   avoid sending the logs to syslog/daemon.log files.
+#   Default: false
+#
+# [*programname_comparison*]
+#   Operator to use when matching programname.
+#   Possible values: startswith, isequal
+#   Default: startswith
+#
 define systemd::syslog(
-    String $base_dir     = '/var/log',
-    String $owner        = $title,
-    String $group        = $title,
-    String $readable_by  = 'group',
-    String $log_filename = 'syslog.log'
+    Wmflib::Ensure                $ensure                 = 'present',
+    Stdlib::Unixpath              $base_dir               = '/var/log',
+    String[1]                     $owner                  = $title,
+    String[1]                     $group                  = $title,
+    Enum['user', 'group', 'all']  $readable_by            = 'group',
+    String[1]                     $log_filename           = 'syslog.log',
+    Boolean                       $force_stop             = false,
+    Enum['startswith', 'isequal'] $programname_comparison = 'startswith',
 ) {
+    if $::initsystem != 'systemd' {
+        fail('systemd::syslog is useful only with systemd')
+    }
+
     # File permissions
     $dirmode = '0755'
     $filemode = $readable_by ? {
@@ -49,15 +66,16 @@ define systemd::syslog(
 
     if ! defined(File[$local_logdir]) {
         file { $local_logdir:
-            ensure => directory,
+            ensure => stdlib::ensure($ensure, 'directory'),
             owner  => $owner,
             group  => $group,
             mode   => $dirmode,
+            force  => true,
         }
     }
 
     file { $local_syslogfile:
-        ensure  => present,
+        ensure  => $ensure,
         replace => false,
         content => '',
         owner   => $owner,
@@ -67,6 +85,7 @@ define systemd::syslog(
     }
 
     rsyslog::conf { $title:
+        ensure   => $ensure,
         content  => template('systemd/rsyslog.conf.erb'),
         priority => 20,
         require  => File[$local_logdir],
@@ -77,7 +96,7 @@ define systemd::syslog(
     }
 
     logrotate::conf { $title:
-        ensure  => present,
+        ensure  => $ensure,
         content => template('systemd/logrotate.erb'),
     }
 }
