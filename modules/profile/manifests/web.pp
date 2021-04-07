@@ -1,10 +1,10 @@
-# == Class staticweb
+# == Class web
 #
-# Installs the staticweb repo.
+# Installs the web repo.
 #
 class profile::web(
 ){
- 
+    include ::profile::autopip
     git::clone { 'MirahezeBots/bots-web':
         ensure    => 'latest',
         directory => '/var/www/',
