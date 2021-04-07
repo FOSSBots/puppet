@@ -22,14 +22,6 @@ class systemd {
         refreshonly => true,
     }
 
-    file { '/usr/local/lib/nagios/plugins/check_journal_pattern':
-        ensure => present,
-        source => 'puppet:///modules/systemd/check_journal_pattern',
-        mode   => '0555',
-        owner  => 'root',
-        group  => 'root',
-    }
-
     file { '/usr/local/bin/systemd-timer-mail-wrapper':
         ensure => file,
         mode   => '0555',
