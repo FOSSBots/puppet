@@ -1,8 +1,8 @@
-# == Class sopelshared
+# == Class sopelprod
 #
-# Installs the shared stuff between both sopel instances.
+# Installs the prod stuff for sopel.
 #
-class sopel(
+class sopel::prod(
 ){
   systemd::service { 'mirahezebotprod':
         ensure  => present,
