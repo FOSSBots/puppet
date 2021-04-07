@@ -1,18 +1,8 @@
 require 'spec_helper'
 
 describe 'PE Version specs' do
-  before :each do
-    # Explicitly load the pe_version.rb file which contains generated facts
-    # that cannot be automatically loaded.  Puppet 2.x implements
-    # Facter.collection.load while Facter 1.x markes Facter.collection.load as
-    # a private method.
-    if Facter.collection.respond_to? :load
-      Facter.collection.load(:pe_version)
-    else
-      Facter.collection.loader.load(:pe_version)
-    end
-  end
-
+  # we mock calls for the puppetversion fact, it is not normal to expect nil responses when mocking.
+  RSpec::Mocks.configuration.allow_message_expectations_on_nil = true
   context 'when puppetversion is nil' do
     before :each do
       allow(Facter.fact(:puppetversion)).to receive(:value).and_return(nil)
@@ -32,7 +22,8 @@ describe 'PE Version specs' do
       puppetversion = "2.7.19 (Puppet Enterprise #{version})"
       context "puppetversion => #{puppetversion}" do
         before :each do
-          allow(Facter.fact(:puppetversion)).to receive(:value).and_return(puppetversion)
+          allow(Facter).to receive(:value).with(anything).and_call_original
+          allow(Facter).to receive(:value).with('puppetversion').and_return(puppetversion)
         end
 
         (major, minor, patch) = version.split('.')
