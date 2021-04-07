@@ -1,4 +1,4 @@
-class profile::sopeldev(
+class sopel::dev(
 ){
 file { 'dev-venv':
         ensure  => directory,
