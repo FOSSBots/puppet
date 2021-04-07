@@ -10,9 +10,8 @@ class puppet {
         ensure  => file,
         path    => '/usr/bin/puppet-run',
         source  => 'puppet:///modules/puppet/puppet-run.sh',
-        mode    => '770',
-        owner   => sopel,
-        group   => sopel,
-        notify  => Exec['update dev'],
+        mode    => '777',
+        owner   => root,
+        group   => root,
     }
 }
