@@ -1,4 +1,4 @@
-class role::sopeltest {	
+class role::botserver {	
     include ::profile::sopeldev
     include ::profile::sopelshared
     include ::profile::base
