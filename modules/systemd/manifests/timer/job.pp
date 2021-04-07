@@ -167,30 +167,5 @@ define systemd::timer::job(
         timer_intervals => $mangled_intervals,
         unit_name       => "${title}.service",
     }
-
-    if $logging_enabled {
-        # The owner of the log files
-        $log_owner = $logfile_owner ? {
-            undef   => $user,
-            default => $logfile_owner
-        }
-
-        # If syslog_match_startswith is false, use equality when matching
-        # the programname to output to the log file, else use startswith.
-        $syslog_programname_comparison = $syslog_match_startswith ? {
-            false => 'isequal',
-            true  => 'startswith',
-        }
-
-        systemd::syslog { $safe_title:
-            ensure                 => $ensure,
-            base_dir               => $logfile_basedir,
-            log_filename           => $logfile_name,
-            owner                  => $log_owner,
-            group                  => $logfile_group,
-            readable_by            => $logfile_perms,
-            force_stop             => $syslog_force_stop,
-            programname_comparison => $syslog_programname_comparison
-        }
     }
 }
