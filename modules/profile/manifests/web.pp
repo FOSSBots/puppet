@@ -5,21 +5,6 @@
 class profile::web(
 ){
     include ::profile::autopip
-    git::clone { 'MirahezeBots/bots-web':
-        ensure    => absent,
-        directory => '/var/www/',
-        branch    => 'master',
-        recurse_submodules => true,
-    }
-
-  file { 'post-web-hook':
-        ensure  => absent,
-        path    => '/var/www/.git/hooks/post-merge',
-        source  => 'puppet:///modules/profile/post-merge-web',
-        mode    => '0755',
-        owner   => root,
-        group   => root,
-    }
  
     git::clone { 'MirahezeBots/mirahezebots.org':
         ensure    => 'latest',
