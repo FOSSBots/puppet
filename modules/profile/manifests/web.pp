@@ -4,7 +4,7 @@
 #
 class profile::web(
 ){
- 
+    include ::profile::autopip
     git::clone { 'MirahezeBots/bots-web':
         ensure    => 'latest',
         directory => '/var/www/',
