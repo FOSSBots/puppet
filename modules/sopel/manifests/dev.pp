@@ -1,4 +1,4 @@
-class profile::sopeldev(
+class sopel::dev(
 ){
 file { 'dev-venv':
         ensure  => directory,
@@ -10,7 +10,7 @@ file { 'dev-venv':
     file { 'dev-require':
         ensure  => file,
         path    => '/srv/sopelbots/devrequire.txt',
-        source  => 'puppet:///modules/profile/devrequire.txt',
+        source  => 'puppet:///modules/sopel/devrequire.txt',
         mode    => '770',
         owner   => sopel,
         group   => sopel,
