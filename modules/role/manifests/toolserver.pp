@@ -1,5 +1,4 @@
 class role::toolserver {
-    include base::service_unit
     include ::profile::phabdigest
     include ::profile::base
     include ::profile::web
