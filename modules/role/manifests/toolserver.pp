@@ -1,5 +1,4 @@
-class role::toolserver {
-    include base::service_unit
+class role::toolserver {	
     include ::profile::phabdigest
     include ::profile::base
     include ::profile::web
@@ -7,4 +6,5 @@ class role::toolserver {
     include roundcube
     include nrpe
     include monitoring
+    include base::service_unit
 }
