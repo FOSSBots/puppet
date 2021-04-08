@@ -9,13 +9,14 @@ class profile::phabdigest(
         shared    => true,
     }
     cron { 'phabdigest-bots-weekly':
-        ensure      => present,
-        command     => " cd /srv/phabdigest ; sudo python3 /srv/phabdigest/script.py weekly bots",
+        ensure      => absent,
         user        => root,
-        minute      => '0',
-        hour        => '15',
-        monthday    => '*',
-        month       => '*',
-        weekday     => '1',
+    }
+    systemd::timer::job { 'phabdigest-bots-weekly':
+        ensure      => present,
+        description => 'Weekly PhabDigest for botsphab',
+        command     => "/usr/bin/python3 /srv/phabdigest/script.py /srv/phabdigest/weekly.csv bots",
+        user        => root,
+        interval    => {'start' => 'OnCalendar', 'interval' => 'Mon *-*-* 15:00:00'},
     }
 }
