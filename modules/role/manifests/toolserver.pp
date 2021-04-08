@@ -6,5 +6,4 @@ class role::toolserver {
     include roundcube
     include nrpe
     include monitoring
-    include base::service_unit
 }
