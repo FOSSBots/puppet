@@ -8,10 +8,6 @@ class profile::phabdigest(
         branch    => 'master',
         shared    => true,
     }
-    cron { 'phabdigest-bots-weekly':
-        ensure      => absent,
-        user        => root,
-    }
     systemd::timer::job { 'phabdigest-bots-weekly':
         ensure      => present,
         description => 'Weekly PhabDigest for botsphab',
