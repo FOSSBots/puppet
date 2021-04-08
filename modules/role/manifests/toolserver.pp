@@ -4,6 +4,4 @@ class role::toolserver {
     include ::profile::web
     include phabricator
     include roundcube
-    include nrpe
-    include monitoring
 }
