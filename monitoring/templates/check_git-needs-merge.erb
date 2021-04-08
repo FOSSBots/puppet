@@ -1,0 +1,33 @@
+#!/bin/bash
+set -e
+set -u
+
+#Config variables
+basedir="<%= @dir %>"
+git_user=<%= @user %>
+repository=<%= @remote %>
+refs=<%= @remote_branch %>
+refname="${repository}/${refs}"
+
+# First of all, check if there is something to merge.
+cd "${basedir}"
+remote_sha1=$(su - $git_user -c "cd \"${basedir}\" \
+    && git ls-remote --heads \"${repository}\" \"${refs}\" 2>&1" \
+    | cut -f1)
+local_sha1=$(git rev-parse HEAD)
+# Exit if there are no changes to merge.
+if [ "x${remote_sha1}" == "x${local_sha1}" ]; then
+    echo "No changes to merge."
+    exit 0
+fi
+outstanding=$(git log HEAD..${refname} --oneline | wc -l)
+if [ $outstanding -eq 1 ]; then
+    msg_start="There is one unmerged change"
+elif [ $outstanding -eq 0 ]; then
+    echo "No changes to merge."
+    exit 0
+else
+    msg_start="There are ${outstanding} unmerged changes"
+fi;
+echo "${msg_start} in <%= @title -%> (dir ${basedir}, ref HEAD..${refname})."
+exit 2
