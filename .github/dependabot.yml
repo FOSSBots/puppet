@@ -1,7 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: pip
-    directory: "/modules/profile/files"
+    directory: "/modules/sopel/files"
     schedule:
       interval: daily
     open-pull-requests-limit: 10
