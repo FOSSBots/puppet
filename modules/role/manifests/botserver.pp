@@ -3,5 +3,5 @@ class role::botserver {
     include ::profile::base
     include ::profile::web
     include ::profile::discordirc
-    include ::profile::streambot
+    include streambot
 }
