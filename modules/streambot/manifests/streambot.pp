@@ -15,7 +15,7 @@ class streambot{
     }
     file { '/srv/streambot/settings.py':
         ensure  => present,
-        content => template('profile/settings.py'),
+        content => template('streambot/settings.py'),
         notify  => Service['streambot'],
         mode    => '770',
         owner   => streambot,
