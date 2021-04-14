@@ -4,8 +4,8 @@ class profile::streambot{
         ensure    => 'latest',
         directory => '/srv/streambot',
         branch    => 'master',
-        owner     => www-data,
-        group     => www-data,
+        owner     => streambot,
+        group     => streambot,
         recurse_submodules => true,
     }
     systemd::service { 'streambot':
