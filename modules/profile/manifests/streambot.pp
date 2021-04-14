@@ -13,12 +13,12 @@ class profile::streambot{
         content => systemd_template('streambot'),
         restart => true,
     }
-    file { '/discord-irc/mhconfig.json':
+    file { '/srv/streambot/settings.py':
         ensure  => present,
         content => template('profile/settings.py'),
-        notify  => Service['discordircmh'],
+        notify  => Service['streambot'],
         mode    => '770',
-        owner   => relays,
-        group   => relays,
+        owner   => streambot,
+        group   => streambot,
     }
 }
