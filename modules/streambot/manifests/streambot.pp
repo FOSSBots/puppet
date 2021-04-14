@@ -1,4 +1,4 @@
-class profile::streambot{
+class streambot{
     $streambot_pass = lookup('passwords::streambot::irc')
     git::clone { 'MirahezeBots/snitchbot':
         ensure    => 'latest',
