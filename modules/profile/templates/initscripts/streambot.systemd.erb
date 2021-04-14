@@ -1,0 +1,13 @@
+# managed by puppet
+[Unit]
+Description=MirahezeBots StreamBot
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /srv/streambot/snitchbot.py
+User=root
+StartLimitBurst=0
+Restart=on-failure
+RestartSec=15
+[Install]
+WantedBy=multi-user.target
