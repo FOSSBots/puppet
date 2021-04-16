@@ -1,7 +1,7 @@
 MirahezeBot-Plugins==9.1.2
 sopel==7.0.7
 sopel-plugins.adminlist==1.0.5
-sopel-plugins.channelmgnt==2.0.1
+sopel-plugins.channelmgnt==2.0.2
 sopel-plugins.joinall==1.0.2
 sopel-plugins.pingpong==1.0.4
 pipdeptree==2.0.0
