@@ -9,3 +9,5 @@ ufw::allow:
   'mariadb/tools1':
     port: '3306'
     from: '82.145.63.172' 
+users::groups:
+  - dbadmins
