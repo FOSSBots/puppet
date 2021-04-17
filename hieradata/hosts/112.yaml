@@ -15,3 +15,5 @@ ufw::allow:
     port: '80/tcp'
   'http/https/tcp':
     port: '80,443/tcp'
+users::groups:
+  - toolsadmins
