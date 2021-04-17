@@ -17,6 +17,7 @@ class streambot{
         ensure  => present,
         content => template('streambot/settings.py'),
         notify  => Service['streambot'],
+        require => Git::Clone['MirahezeBots/snitchbot'],
         mode    => '770',
         owner   => streambot,
         group   => streambot,
