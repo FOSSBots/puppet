@@ -24,13 +24,19 @@ groups:
     description: Access to do basic stuff on tools1
     members: [sario]
     privileges: ['ALL = (ALL) NOPASSWD: /usr/sbin/service *',
-                 'ALL = (ALL) NOPASSWD: /var/phabricator/bin/*']
+                 'ALL = (ALL) NOPASSWD: /var/phabricator/bin/*',
+                 'ALL = (ALL) NOPASSWD: /usr/bin/puppet *',
+                 'ALL = (ALL) NOPASSWD: /usr/bin/git *',
+                 'ALL = (ALL) NOPASSWD: /usr/bin/puppet-run *']
   dbadmins:
     gid: 2004
     description: Access to do basic stuff on db1
     members: [sario]
     privileges: ['ALL = (ALL) NOPASSWD: /usr/bin/mysql *',
-                'ALL = (ALL) NOPASSWD: /usr/sbin/service *']
+                 'ALL = (ALL) NOPASSWD: /usr/sbin/service *',
+                 'ALL = (ALL) NOPASSWD: /usr/bin/puppet *',
+                 'ALL = (ALL) NOPASSWD: /usr/bin/git *',
+                 'ALL = (ALL) NOPASSWD: /usr/bin/puppet-run *']
 
 users:
   macfan:
