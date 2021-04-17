@@ -8,7 +8,12 @@ groups:
     gid: 2001
     description: root on bots1
     members: [sario]
-    privileges: ['ALL = (ALL) NOPASSWD: ALL']           
+    privileges: ['ALL = (ALL) NOPASSWD: ALL']
+  botadmins:
+    gid: 2002
+    description: simple shell on bots1, rights will expand soon.
+    members: []
+    privileges: [] 
 
 users:
   macfan:
