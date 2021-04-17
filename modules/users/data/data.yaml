@@ -13,7 +13,12 @@ groups:
     gid: 2002
     description: simple shell on bots1, rights will expand soon.
     members: []
-    privileges: [] 
+    privileges: ['ALL = (sopel) NOPASSWD: /usr/bin/ls *',
+                 'ALL = (sopel) NOPASSWD: /usr/bin/cat *',
+                 'ALL = (relays) NOPASSWD: /usr/bin/ls *',
+                 'ALL = (relays) NOPASSWD: /usr/bin/cat *',
+                 'ALL = (streambot) NOPASSWD: /usr/bin/ls *',
+                 'ALL = (streambot) NOPASSWD: /usr/bin/cat *']
 
 users:
   macfan:
