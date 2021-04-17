@@ -17,3 +17,4 @@ ufw::allow:
     port: '80,443/tcp'
 users::groups:
   - botroots
+  - botadmins
