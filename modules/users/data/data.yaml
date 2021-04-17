@@ -82,4 +82,4 @@ users:
     uid: 1008
     name: Dmehus
     realname: Doug
-    ssh_keys: []
+    ssh_keys: [ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINOayqeyKODOW9BbcPJAsmVZpZx5elWXrM5he04LRFXj wylie@Wylie-HP]
