@@ -19,16 +19,16 @@ groups:
                  'ALL = (relays) NOPASSWD: /usr/bin/cat *',
                  'ALL = (streambot) NOPASSWD: /usr/bin/ls *',
                  'ALL = (streambot) NOPASSWD: /usr/bin/cat *']
-   toolsadmins:
-     gid: 2003
-     description: Access to do basic stuff on tools1
-     members: []
-     privileges: []
-   dbadmins:
-     gid: 2004
-     description: Access to do basic stuff on db1
-     members: []
-     privileges: []
+  toolsadmins:
+    gid: 2003
+    description: Access to do basic stuff on tools1
+    members: []
+    privileges: []
+  dbadmins:
+    gid: 2004
+    description: Access to do basic stuff on db1
+    members: []
+    privileges: []
 
 users:
   macfan:
