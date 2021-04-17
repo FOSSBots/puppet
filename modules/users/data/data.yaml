@@ -26,7 +26,6 @@ groups:
     privileges: ['ALL = (ALL) NOPASSWD: /usr/sbin/service *',
                  'ALL = (ALL) NOPASSWD: /var/phabricator/bin/*',
                  'ALL = (ALL) NOPASSWD: /usr/bin/puppet *',
-                 'ALL = (ALL) NOPASSWD: /usr/bin/git *',
                  'ALL = (ALL) NOPASSWD: /usr/bin/puppet-run *']
   dbadmins:
     gid: 2004
