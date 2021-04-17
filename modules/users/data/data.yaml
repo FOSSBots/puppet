@@ -23,12 +23,14 @@ groups:
     gid: 2003
     description: Access to do basic stuff on tools1
     members: []
-    privileges: []
+    privileges: ['ALL = (ALL) NOPASSWD: /usr/sbin/service *',
+                 'ALL = (ALL) NOPASSWD: /var/phabricator/bin *']
   dbadmins:
     gid: 2004
     description: Access to do basic stuff on db1
     members: []
-    privileges: []
+    privileges: ['ALL = (ALL) NOPASSWD: /usr/bin/mysql *',
+                'ALL = (ALL) NOPASSWD: /usr/sbin/service *']
 
 users:
   macfan:
