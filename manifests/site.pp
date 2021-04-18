@@ -1,9 +1,9 @@
-node '100.node4.net.fosshost.org' {
+node 'bots1.mirahezebots.org' {
   include role::botserver
 }
-node '112.node1.net.fosshost.org' {
+node 'tools1.mirahezebots.org' {
   include role::toolserver
 }
-node '113.node1.net.fosshost.org' {
+node 'db1.mirahezebots.org' {
   include profile::base
 }
