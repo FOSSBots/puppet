@@ -10,7 +10,7 @@ class sopel(
         ensure  => file,
         path    => '/srv/sopelbots/channelmgnt.json',
         source  => 'puppet:///modules/sopel/channelmgnt.json',
-        mode    => '770',
+        mode    => '774',
         owner   => sopel,
         group   => sopel,
     }
@@ -18,7 +18,7 @@ class sopel(
         ensure  => file,
         path    => '/srv/sopelbots/status.json',
         source  => 'puppet:///modules/sopel/status.json',
-        mode    => '770',
+        mode    => '774',
         owner   => sopel,
         group   => sopel,
     }
@@ -26,14 +26,14 @@ class sopel(
         ensure  => file,
         path    => '/srv/sopelbots/phab.json',
         source  => 'puppet:///modules/sopel/phab.json',
-        mode    => '770',
+        mode    => '774',
         owner   => sopel,
         group   => sopel,
     }
     git::clone { "MirahezeBots/sopel-CVTFeed":
           ensure    => 'latest',
           directory => "/srv/sopelbots/cvtfeed",
-          mode    => '770',
+          mode    => '774',
           owner   => sopel,
           group   => sopel,
           branch    => 'main',
