@@ -1,6 +1,4 @@
-# A class to handle GENERIC server mail internally. This will NOT work outside
-# a Miraheze Mail Server.
-class base::mail {
+class mailrelay {
     package { 'postfix':
         ensure => present,
     }
