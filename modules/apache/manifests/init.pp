@@ -135,3 +135,4 @@ class apache {
         group   => root,
         require => Class['role::toolserver'],
     }
+}
