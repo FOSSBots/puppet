@@ -5,6 +5,7 @@
 class profile::web(
 ){
     include ::profile::autopip
+    include apache
  
     git::clone { 'MirahezeBots/mirahezebots.org':
         ensure    => 'latest',
