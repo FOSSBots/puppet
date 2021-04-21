@@ -4,5 +4,4 @@ class role::botserver {
     include ::profile::web
     include ::profile::discordirc
     include streambot
-    include apache
 }

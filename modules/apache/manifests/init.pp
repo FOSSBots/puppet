@@ -8,28 +8,10 @@ class apache {
         require => Package['apache2'],
     }
 
-    file { '/etc/apache2/sites-available/mirahezebots.org.conf':
-        ensure  => file,
-        path    => '/etc/apache2/sites-available/mirahezebots.org.conf',
-        source  => 'puppet:///modules/apache/mirahezebots.org.conf',
-        mode    => '774',
-        owner   => root,
-        group   => root,
-    }
-
     file { '/etc/apache2/sites-available/mirahezebots.org-le-ssl.conf':
         ensure  => file,
         path    => '/etc/apache2/sites-available/mirahezebots.org-le-ssl.conf',
         source  => 'puppet:///modules/apache/mirahezebots.org-le-ssl.conf',
-        mode    => '774',
-        owner   => root,
-        group   => root,
-    }
-
-    file { '/etc/apache2/sites-available/www.mirahezebots.org.conf':
-        ensure  => file,
-        path    => '/etc/apache2/sites-available/www.mirahezebots.org.conf',
-        source  => 'puppet:///modules/apache/www.mirahezebots.org.conf',
         mode    => '774',
         owner   => root,
         group   => root,
@@ -44,30 +26,10 @@ class apache {
         group   => root,
     }
 
-    file { '/etc/apache2/sites-available/bots1.mirahezebots.org.conf':
-        ensure  => file,
-        path    => '/etc/apache2/sites-available/bots1.mirahezebots.org.conf',
-        source  => 'puppet:///modules/apache/bots1.mirahezebots.org.conf',
-        mode    => '774',
-        owner   => root,
-        group   => root,
-        require => Class['role::botserver'],
-    }
-
     file { '/etc/apache2/sites-available/bots1.mirahezebots.org-le-ssl.conf':
         ensure  => file,
         path    => '/etc/apache2/sites-available/bots1.mirahezebots.org-le-ssl.conf',
         source  => 'puppet:///modules/apache/bots1.mirahezebots.org-le-ssl.conf',
-        mode    => '774',
-        owner   => root,
-        group   => root,
-        require => Class['role::botserver'],
-    }
-
-    file { '/etc/apache2/sites-available/sopel.mirahezebots.org.conf':
-        ensure  => file,
-        path    => '/etc/apache2/sites-available/sopel.mirahezebots.org.conf',
-        source  => 'puppet:///modules/apache/sopel.mirahezebots.org.conf',
         mode    => '774',
         owner   => root,
         group   => root,
@@ -84,16 +46,6 @@ class apache {
         require => Class['role::botserver'],
     }
 
-    file { '/etc/apache2/sites-available/100.node4.net.fosshost.org.conf':
-        ensure  => file,
-        path    => '/etc/apache2/sites-available/100.node4.net.fosshost.org.conf',
-        source  => 'puppet:///modules/apache/100.node4.net.fosshost.org.conf',
-        mode    => '774',
-        owner   => root,
-        group   => root,
-        require => Class['role::botserver'],
-    }
-
     file { '/etc/apache2/sites-available/100.node4.net.fosshost.org-le-ssl.conf':
         ensure  => file,
         path    => '/etc/apache2/sites-available/100.node4.net.fosshost.org-le-ssl.conf',
@@ -104,30 +56,10 @@ class apache {
         require => Class['role::botserver'],
     }
 
-    file { '/etc/apache2/sites-available/icinga.mirahezebots.org.conf':
-        ensure  => file,
-        path    => '/etc/apache2/sites-available/icinga.mirahezebots.org.conf',
-        source  => 'puppet:///modules/apache/icinga.mirahezebots.org.conf',
-        mode    => '774',
-        owner   => root,
-        group   => root,
-        require => Class['role::toolserver'],
-    }
-
     file { '/etc/apache2/sites-available/icinga.mirahezebots.org-le-ssl.conf':
         ensure  => file,
         path    => '/etc/apache2/sites-available/icinga.mirahezebots.org-le-ssl.conf',
         source  => 'puppet:///modules/apache/icinga.mirahezebots.org-le-ssl.conf',
-        mode    => '774',
-        owner   => root,
-        group   => root,
-        require => Class['role::toolserver'],
-    }
-
-    file { '/etc/apache2/sites-available/phabdigests.mirahezebots.org.conf':
-        ensure  => file,
-        path    => '/etc/apache2/sites-available/phabdigests.mirahezebots.org.conf',
-        source  => 'puppet:///modules/apache/phabdigests.mirahezebots.org.conf',
         mode    => '774',
         owner   => root,
         group   => root,
@@ -144,30 +76,10 @@ class apache {
         require => Class['role::toolserver'],
     }
 
-    file { '/etc/apache2/sites-available/phab.mirahezebots.org.conf':
-        ensure  => file,
-        path    => '/etc/apache2/sites-available/phab.mirahezebots.org.conf',
-        source  => 'puppet:///modules/apache/phab.mirahezebots.org.conf',
-        mode    => '774',
-        owner   => root,
-        group   => root,
-        require => Class['role::toolserver'],
-    }
-
     file { '/etc/apache2/sites-available/phab.mirahezebots.org-le-ssl.conf':
         ensure  => file,
         path    => '/etc/apache2/sites-available/phab.mirahezebots.org-le-ssl.conf',
         source  => 'puppet:///modules/apache/phab.mirahezebots.org-le-ssl.conf',
-        mode    => '774',
-        owner   => root,
-        group   => root,
-        require => Class['role::toolserver'],
-    }
-
-    file { '/etc/apache2/sites-available/phab-storage.mirahezebots.org.conf':
-        ensure  => file,
-        path    => '/etc/apache2/sites-available/phab-storage.mirahezebots.org.conf',
-        source  => 'puppet:///modules/apache/phab-storage.mirahezebots.org.conf',
         mode    => '774',
         owner   => root,
         group   => root,
@@ -184,16 +96,6 @@ class apache {
         require => Class['role::toolserver'],
     }
 
-    file { '/etc/apache2/sites-available/tools1.mirahezebots.org.conf':
-        ensure  => file,
-        path    => '/etc/apache2/sites-available/tools1.mirahezebots.org.conf',
-        source  => 'puppet:///modules/apache/tools1.mirahezebots.org.conf',
-        mode    => '774',
-        owner   => root,
-        group   => root,
-        require => Class['role::toolserver'],
-    }
-
     file { '/etc/apache2/sites-available/tools1.mirahezebots.org-le-ssl.conf':
         ensure  => file,
         path    => '/etc/apache2/sites-available/tools1.mirahezebots.org-le-ssl.conf',
@@ -204,30 +106,10 @@ class apache {
         require => Class['role::toolserver'],
     }
 
-    file { '/etc/apache2/sites-available/webmail.mirahezebots.org.conf':
-        ensure  => file,
-        path    => '/etc/apache2/sites-available/webmail.mirahezebots.org.conf',
-        source  => 'puppet:///modules/apache/webmail.mirahezebots.org.conf',
-        mode    => '774',
-        owner   => root,
-        group   => root,
-        require => Class['role::toolserver'],
-    }
-
     file { '/etc/apache2/sites-available/webmail.mirahezebots.org-le-ssl.conf':
         ensure  => file,
         path    => '/etc/apache2/sites-available/webmail.mirahezebots.org-le-ssl.conf',
         source  => 'puppet:///modules/apache/webmail.mirahezebots.org-le-ssl.conf',
-        mode    => '774',
-        owner   => root,
-        group   => root,
-        require => Class['role::toolserver'],
-    }
-
-    file { '/etc/apache2/sites-available/112.node1.net.fosshost.org.conf':
-        ensure  => file,
-        path    => '/etc/apache2/sites-available/112.node1.net.fosshost.org.conf',
-        source  => 'puppet:///modules/apache/112.node1.net.fosshost.org.conf',
         mode    => '774',
         owner   => root,
         group   => root,

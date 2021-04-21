@@ -5,5 +5,4 @@ class role::toolserver {
     include phabricator
     include roundcube
     include mailrelay
-    include apache
 }
