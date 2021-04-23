@@ -5,14 +5,11 @@
       "discordToken":"<%= @discordfh_token %>",
       "ircNickColor":false,
       "channelMapping":{
-         ;; public
          "#fosshost":"#fosshost",
          "#fosshost-incident":"#fosshost-incident",
          "#fosshost-social":"#fosshost-social",
-         ;; private
          "#fosshost-volunteers":"#fosshost-volunteers",
          "#fosshost-exec":"#fosshost-exec",
-         ;; bots only ;)
          "#webhook":"#fosshost-engine"
       },
       "commandCharacters":[
