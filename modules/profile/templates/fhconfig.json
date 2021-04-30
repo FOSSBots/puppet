@@ -10,6 +10,7 @@
          "#fosshost-social":"#fosshost-social",
          "#fosshost-volunteers":"#fosshost-volunteers",
          "#fosshost-exec":"#fosshost-exec",
+         "#fosshost-techops":"#fosshost-techops",
          "#webhook":"#fosshost-engine"
       },
       "commandCharacters":[
@@ -25,7 +26,8 @@
             "#fosshost-social",
             "#fosshost-volunteers",
             "#fosshost-exec",
-            "#fosshost-engine"
+            "#fosshost-engine",
+            "#fosshost-techops"
          ],
          "debug":false,
          "port":"7070",
