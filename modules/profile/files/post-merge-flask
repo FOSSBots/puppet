@@ -1,2 +1,2 @@
 #!/bin/bash -e
-cd /var/flask && sudo pip3 install -r requirements.txt && sudo npm install && sudo npm ci
+cd /var/flask && sudo pip3 install -r requirements.txt
