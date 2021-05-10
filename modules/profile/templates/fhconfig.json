@@ -5,12 +5,12 @@
       "discordToken":"<%= @discordfh_token %>",
       "ircNickColor":false,
       "channelMapping":{
-         "#fosshost":"#fosshost",
-         "#fosshost-incident":"#fosshost-incident",
-         "#fosshost-social":"#fosshost-social",
-         "#fosshost-volunteers":"#fosshost-volunteers",
+         "742089740643205174":"#fosshost",
+         "834803116293619803":"#fosshost-incident",
+         "834802993232478248":"#fosshost-social",
+         "788819267511910440":"#fosshost-volunteers",
          "#fosshost-exec":"#fosshost-exec",
-         "#webhook":"#fosshost-engine"
+         "790588749586104340":"#fosshost-engine"
       },
       "commandCharacters":[
          ".",
