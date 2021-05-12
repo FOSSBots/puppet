@@ -6,6 +6,12 @@ class profile::web(
 ){
     include ::profile::autopip
     include apache
+    
+    package { 'Flask':
+        ensure => present,
+        name => Flask,
+        provider => pip3,
+    }
  
     git::clone { 'MirahezeBots/mirahezebots.org':
         ensure    => 'latest',
