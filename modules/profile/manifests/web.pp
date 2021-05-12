@@ -8,7 +8,6 @@ class profile::web(
     
     package { 'Flask':
         ensure => present,
-        name => Flask,
         provider => pip3,
     }
  
