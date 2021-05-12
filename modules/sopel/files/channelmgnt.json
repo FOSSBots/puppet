@@ -9,7 +9,8 @@
          "NDKilla",
          "JohnLewis",
          "Southparkfan",
-         "paladox"
+         "paladox",
+         "Crepusculum"
       ],
       "log_channel":"#miraheze-bot-alerts"
    },
@@ -62,6 +63,7 @@
          "JohnLewis",
          "paladox",
          "RhinosF1",
+         "Crepusculum",
          "dmehus"
       ]
    },
@@ -185,7 +187,8 @@
       "chanops":[
          "dmehus",
          "MacFan4000",
-         "Reception123"
+         "Reception123",
+         "Crepusculum"
       ]
    },
     "#miraheze-feed-test":{
