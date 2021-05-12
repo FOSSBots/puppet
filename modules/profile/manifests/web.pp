@@ -4,7 +4,6 @@
 #
 class profile::web(
 ){
-    include ::profile::autopip
     include apache
     
     package { 'Flask':
