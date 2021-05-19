@@ -1,0 +1,19 @@
+# This file is managed by puppet
+[Unit]
+Description=Sopel IRC bot (prod instance (libera))
+Documentation=https://sopel.chat/
+After=network-online.target
+DefaultInstance=sopel
+
+[Service]
+Type=simple
+User=sopel
+PIDFile=/srv/sopelbots/prod2/pids/sopel-%i.pid
+ExecStart=/srv/sopelbots/prodvenv/bin/sopel -c /srv/sopelbots/prod2/default.cfg
+Restart=on-failure
+RestartPreventExitStatus=2
+RestartSec=30
+Environment=LC_ALL=en_US.UTF-8
+
+[Install]
+WantedBy=multi-user.target
