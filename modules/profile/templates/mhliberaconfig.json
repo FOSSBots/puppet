@@ -1,7 +1,7 @@
 [
    {
       "nickname":"MH-Discord",
-      "server":"chat.freenode.net",
+      "server":"irc.libera.chat",
       "discordToken":"<%= @discordmh_token %>",
       "ircNickColor":false,
       "channelMapping":{
