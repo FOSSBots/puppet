@@ -9,6 +9,11 @@ class sopel::prod(
         content => systemd_template('mirahezebotprod'),
         restart => true,
     }
+  systemd::service { 'mirahezebotprodlibera':
+        ensure  => present,
+        content => systemd_template('mirahezebotprodlibera'),
+        restart => true,
+    }
   file { 'prod-venv':
         ensure  => directory,
         path    => '/srv/sopelbots/prodvenv/',
