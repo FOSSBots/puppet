@@ -20,7 +20,7 @@ class profile::discordirc{
         ensure  => present,
         content => systemd_template('mhdiscordlibera'),
         restart => true,
-        require => File['/discord-irc/mhconfiglibera.json'],
+        require => File['/discord-irc/mhliberaconfig.json'],
     }
     file { '/discord-irc/mhconfig.json':
         ensure  => present,
@@ -31,9 +31,9 @@ class profile::discordirc{
         group   => relays,
     }
     
-    file { '/discord-irc/mhconfiglibera.json':
+    file { '/discord-irc/mhliberaconfig.json':
         ensure  => present,
-        content => template('profile/mhconfiglibera.json'),
+        content => template('profile/mhliberaconfig.json'),
         notify  => Service['mhdiscordlibera'],
         mode    => '770',
         owner   => relays,
