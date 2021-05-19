@@ -54,4 +54,10 @@ file { 'dev-venv':
         restart => true,
         require => Git::Clone['MirahezeBots/sopel'],
     }
+    systemd::service { 'mirahezebottestlibera':
+        ensure  => present,
+        content => systemd_template('mirahezebottestlibera'),
+        restart => true,
+        require => Git::Clone['MirahezeBots/sopel'],
+    }
 }
