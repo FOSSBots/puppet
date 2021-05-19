@@ -8,8 +8,8 @@ DefaultInstance=sopel
 [Service]
 Type=simple
 User=sopel
-PIDFile=/srv/sopelbots/prod2/pids/sopel-%i.pid
-ExecStart=/srv/sopelbots/prodvenv/bin/sopel -c /srv/sopelbots/prod2/default.cfg
+PIDFile=/srv/sopelbots/prod/pids/sopellibera-%i.pid
+ExecStart=/srv/sopelbots/prodvenv/bin/sopel -c /srv/sopelbots/prod/libera.cfg
 Restart=on-failure
 RestartPreventExitStatus=2
 RestartSec=30
