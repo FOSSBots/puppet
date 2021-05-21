@@ -50,6 +50,7 @@ file { 'dev-venv':
     }
     systemd::service { 'mirahezebottest':
         ensure  => absent,
+        content => '',
     }
     systemd::service { 'mirahezebottestlibera':
         ensure  => present,

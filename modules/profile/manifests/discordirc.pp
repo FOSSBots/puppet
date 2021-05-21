@@ -6,6 +6,7 @@ class profile::discordirc{
     $discordfhlibera_password = lookup('passwords::irc::fhlibera')
     systemd::service { 'discordircmh':
         ensure  => absent,
+        content => '',
     }
     systemd::service { 'discordircfh':
         ensure  => present,
