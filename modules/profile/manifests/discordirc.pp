@@ -6,7 +6,7 @@ class profile::discordirc{
     $discordfh_password = lookup('passwords::irc::fh')
     $discordfhlibera_password = lookup('passwords::irc::fhlibera')
     systemd::service { 'discordircmh':
-        ensure  => present,
+        ensure  => absent,
         content => systemd_template('discordircmh'),
         restart => true,
         require => File['/discord-irc/mhconfig.json'],
