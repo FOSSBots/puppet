@@ -50,9 +50,6 @@ file { 'dev-venv':
     }
     systemd::service { 'mirahezebottest':
         ensure  => absent,
-        content => systemd_template('mirahezebottest'),
-        restart => true,
-        require => Git::Clone['MirahezeBots/sopel'],
     }
     systemd::service { 'mirahezebottestlibera':
         ensure  => present,
