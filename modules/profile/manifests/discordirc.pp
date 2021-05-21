@@ -1,4 +1,5 @@
 class profile::discordirc{
+    $discordmh_token = lookup('passwords::discord::mh')
     $discordmh_password = lookup('passwords::irc::mh')
     $discordmhlibera_password = lookup('passwords::irc::mhlibera')
     $discordfh_token = lookup('passwords::discord::fh')
@@ -6,6 +7,9 @@ class profile::discordirc{
     $discordfhlibera_password = lookup('passwords::irc::fhlibera')
     systemd::service { 'discordircmh':
         ensure  => absent,
+        content => systemd_template('discordircmh'),
+        restart => true,
+        require => File['/discord-irc/mhconfig.json'],
     }
     systemd::service { 'discordircfh':
         ensure  => present,
@@ -27,6 +31,11 @@ class profile::discordirc{
     }
     file { '/discord-irc/mhconfig.json':
         ensure  => absent,
+        content => template('profile/mhconfig.json'),
+        notify  => Service['discordircmh'],
+        mode    => '770',
+        owner   => relays,
+        group   => relays,
     }
     
     file { '/discord-irc/mhliberaconfig.json':
