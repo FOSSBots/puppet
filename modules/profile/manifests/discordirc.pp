@@ -9,6 +9,7 @@ class profile::discordirc{
         ensure  => absent,
         content => systemd_template('discordircmh'),
         restart => true,
+        require => File['/discord-irc/mhconfig.json'],
     }
     systemd::service { 'discordircfh':
         ensure  => present,
@@ -29,8 +30,9 @@ class profile::discordirc{
         require => File['/discord-irc/fhliberaconfig.json'],
     }
     file { '/discord-irc/mhconfig.json':
-        ensure  => absent,
+        ensure  => present,
         content => template('profile/mhconfig.json'),
+        notify  => Service['discordircmh'],
         mode    => '770',
         owner   => relays,
         group   => relays,
