@@ -48,10 +48,6 @@ file { 'dev-venv':
           refreshonly => true,
       }
     }
-    systemd::service { 'mirahezebottest':
-        ensure  => absent,
-        content => '',
-    }
     systemd::service { 'mirahezebottestlibera':
         ensure  => present,
         content => systemd_template('mirahezebottestlibera'),
