@@ -7,8 +7,7 @@ class profile::discordirc{
     $discordfhlibera_password = lookup('passwords::irc::fhlibera')
     systemd::service { 'discordircmh':
         ensure  => absent,
-        content => systemd_template('discordircmh'),
-        restart => true,
+        content => '',
     }
     systemd::service { 'discordircfh':
         ensure  => present,
@@ -30,10 +29,6 @@ class profile::discordirc{
     }
     file { '/discord-irc/mhconfig.json':
         ensure  => absent,
-        content => template('profile/mhconfig.json'),
-        mode    => '770',
-        owner   => relays,
-        group   => relays,
     }
     
     file { '/discord-irc/mhliberaconfig.json':
