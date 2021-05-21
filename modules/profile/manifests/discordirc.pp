@@ -30,7 +30,7 @@ class profile::discordirc{
         require => File['/discord-irc/fhliberaconfig.json'],
     }
     file { '/discord-irc/mhconfig.json':
-        ensure  => absent,
+        ensure  => present,
         content => template('profile/mhconfig.json'),
         notify  => Service['discordircmh'],
         mode    => '770',
