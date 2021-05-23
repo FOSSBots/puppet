@@ -5,7 +5,7 @@
 class sopel::prod(
 ){
   systemd::service { 'mirahezebotprod':
-        ensure  => present,
+        ensure  => absent,
         content => systemd_template('mirahezebotprod'),
         restart => true,
     }
