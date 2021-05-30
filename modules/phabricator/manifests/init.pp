@@ -3,6 +3,14 @@ class phabricator {
 
     require_package(['python-pygments', 'python3-pygments', 'subversion'])
 
+    git::clone{ 'phab-fork':
+        ensure    => present,
+        directory => '/var/phab-deploy',
+        origin    => 'https://github.com/MirahezeBots/phabricator-deployment.git',
+        branch    => 'wmf/stable',
+        recursive => true,
+    }
+    
     git::clone { 'arcanist':
         ensure    => present,
         directory => '/var/arcanist',
@@ -88,5 +96,10 @@ class phabricator {
         ensure  => present,
         content => template('phabricator/local.json.erb'),
         require => Git::Clone['phabricator'],
+    }
+    file { '/var/phab-deploy/phabricator/conf/local/local.json':
+        ensure  => present,
+        content => template('phabricator/local.json.erb'),
+        require => Git::Clone['phab-fork'],
     }
 }
