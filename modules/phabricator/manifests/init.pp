@@ -23,16 +23,6 @@ class phabricator {
         origin    => 'https://github.com/phacility/phabricator.git',
     }
 
-
-    file {'remove_phab_ext_dir_if_no_git':
-        ensure  => absent,
-        path    => '/var/phabricator/src/extensions',
-        recurse => true,
-        purge   => true,
-        force   => true,
-        require => Exec['chk_phab_ext_git_exist'],
-    }
-
     git::clone { 'phabricator-extensions':
         ensure    => absent,
         directory => '/var/phabricator/src/extensions',
