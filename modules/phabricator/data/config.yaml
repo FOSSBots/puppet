@@ -10,6 +10,11 @@ auth.lock-config: true
 auth.require-approval: false
 auth.require-email-verification: true
 
+# extensions
+load-libraries: [
+    'libext/misc'
+  ]
+
 # Phabricator
 phabricator.show-prototypes: true
 phabricator.base-uri: "https://phab.mirahezebots.org/"
