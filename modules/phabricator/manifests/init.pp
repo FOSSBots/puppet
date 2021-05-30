@@ -12,22 +12,17 @@ class phabricator {
     }
     
     git::clone { 'arcanist':
-        ensure    => present,
+        ensure    => absent,
         directory => '/var/arcanist',
         origin    => 'https://github.com/phacility/arcanist.git',
     }
 
     git::clone { 'phabricator':
-        ensure    => present,
+        ensure    => absent,
         directory => '/var/phabricator',
         origin    => 'https://github.com/phacility/phabricator.git',
     }
 
-    exec { "chk_phab_ext_git_exist":
-        command => 'true',
-        path    =>  ['/usr/bin', '/usr/sbin', '/bin'],
-        onlyif  => 'test ! -d /var/phabricator/src/extensions/.git'
-    }
 
     file {'remove_phab_ext_dir_if_no_git':
         ensure  => absent,
@@ -39,7 +34,7 @@ class phabricator {
     }
 
     git::clone { 'phabricator-extensions':
-        ensure    => latest,
+        ensure    => absent,
         directory => '/var/phabricator/src/extensions',
         origin    => 'https://github.com/miraheze/phabricator-extensions.git',
     }
