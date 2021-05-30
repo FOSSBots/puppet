@@ -101,7 +101,7 @@ class phabricator {
         ensure  => present,
         content => template('phabricator/local.json.erb'),
         require => Git::Clone['phab-fork'],
-        mode    => '660',
+        mode    => '444',
         owner   => www-data,
         group   => www-data,
         
