@@ -8,7 +8,7 @@ class phabricator {
         directory => '/var/phab-deploy',
         origin    => 'https://github.com/MirahezeBots/phabricator-deployment.git',
         branch    => 'wmf/stable',
-        recursive => true,
+        recurse_submodules => true,
     }
     
     git::clone { 'arcanist':
