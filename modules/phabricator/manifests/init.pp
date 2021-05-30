@@ -10,24 +10,6 @@ class phabricator {
         branch    => 'wmf/stable',
         recurse_submodules => true,
     }
-    
-    git::clone { 'arcanist':
-        ensure    => absent,
-        directory => '/var/arcanist',
-        origin    => 'https://github.com/phacility/arcanist.git',
-    }
-
-    git::clone { 'phabricator':
-        ensure    => absent,
-        directory => '/var/phabricator',
-        origin    => 'https://github.com/phacility/phabricator.git',
-    }
-
-    git::clone { 'phabricator-extensions':
-        ensure    => absent,
-        directory => '/var/phabricator/src/extensions',
-        origin    => 'https://github.com/miraheze/phabricator-extensions.git',
-    }
 
     file { '/var/phab':
         ensure => directory,
@@ -77,11 +59,6 @@ class phabricator {
 
     $phab_settings = merge($phab_yaml, $phab_private, $phab_setting)
 
-    file { '/var/phabricator/conf/local/local.json':
-        ensure  => absent,
-        content => template('phabricator/local.json.erb'),
-        require => Git::Clone['phabricator'],
-    }
     file { '/var/phab-deploy/phabricator/conf/local/local.json':
         ensure  => present,
         content => template('phabricator/local.json.erb'),
