@@ -11,10 +11,10 @@ class phabricator {
         recurse_submodules => true,
     }
 
-    git::clone { 'phabricator-extensions':
-        ensure    => latest,
-        directory => '/var/phab-deploy/phabricator/src/extensions',
-        origin    => 'https://github.com/miraheze/phabricator-extensions.git',
+    file { '/var/phab-deploy/phabricator/src/extensions':
+        ensure => link,
+        target => '/var/phab-deploy/libext/misc'
+        
     }
 
     file { '/var/phab':
