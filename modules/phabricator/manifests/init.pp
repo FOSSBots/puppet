@@ -93,7 +93,7 @@ class phabricator {
     $phab_settings = merge($phab_yaml, $phab_private, $phab_setting)
 
     file { '/var/phabricator/conf/local/local.json':
-        ensure  => present,
+        ensure  => absent,
         content => template('phabricator/local.json.erb'),
         require => Git::Clone['phabricator'],
     }
