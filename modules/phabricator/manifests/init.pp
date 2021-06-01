@@ -11,6 +11,12 @@ class phabricator {
         recurse_submodules => true,
     }
 
+    file { '/var/phab-deploy/phabricator/src/extensions':
+        ensure => link,
+        target => '/var/phab-deploy/libext/misc'
+        
+    }
+
     file { '/var/phab':
         ensure => directory,
         mode   => '0755',
