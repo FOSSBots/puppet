@@ -1,4 +1,4 @@
-class profile::discordirc(){
+class profile::discordirc{
     $discordmh_token = lookup('passwords::discord::mh')
     $discordmhlibera_password = lookup('passwords::irc::mhlibera')
     $discordfh_token = lookup('passwords::discord::fh')
