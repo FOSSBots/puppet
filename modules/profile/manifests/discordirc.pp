@@ -41,7 +41,7 @@ class profile::discordirc{
     file { '/discord-irc/buffconfig.json':
         ensure  => present,
         content => template('profile/buffconfig.json'),
-        notify  => Service['discordbuff'],
+        notify  => Service['discordircbuff'],
         mode    => '770',
         owner   => relays,
         group   => relays,
