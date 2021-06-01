@@ -2,7 +2,7 @@
    {
       "nickname":"FosshostRelay",
       "server":"chat.freenode.net",
-      "discordToken":"<%= @discordfh_token %>",
+      "discordToken":"<%= @discordfhfn_token %>",
       "ircNickColor":false,
       "channelMapping":{
          "742089740643205174":"#fosshost",
