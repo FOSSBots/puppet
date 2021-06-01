@@ -22,7 +22,7 @@
          "userName":"BuffalonasRelay",
          "password":"",
          "secure":true,
-         "sasl":true,
+         "sasl":false,
          "millisecondsOfSilenceBeforePingSent":"3600000"
       }
    }
