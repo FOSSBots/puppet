@@ -1,0 +1,29 @@
+[
+   {
+      "nickname":"BuffalonasRelay",
+      "server":"irc.libera.chat",
+      "discordToken":"<%= @discordbuff_token %>",
+      "ircNickColor":false,
+      "channelMapping":{
+         "844193280974389270":"#miraheze-buffalonas"
+      },
+      "commandCharacters":[
+         ".",
+         ",",
+         "$",
+         "!"
+      ],
+      "ircOptions":{
+         "channels":[
+            "#miraheze-buffalonas"
+         ],
+         "debug":false,
+         "port":"7070",
+         "userName":"BuffalonasRelay",
+         "password":"",
+         "secure":true,
+         "sasl":true,
+         "millisecondsOfSilenceBeforePingSent":"3600000"
+      }
+   }
+]
