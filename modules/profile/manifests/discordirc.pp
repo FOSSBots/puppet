@@ -6,62 +6,24 @@ class profile::discordirc{
     $discordfh_password = lookup('passwords::irc::fh')
     $discordfhlibera_password = lookup('passwords::irc::fhlibera')
     $discordbuff_token = lookup('passwords::discord::buff')
-    systemd::service { 'discordircfh':
+
+    $relays = ['fhfreenode', 'fhlibera', 'mhlibera', 'buff']
+    $relays.each |$relay| {
+
+    systemd::service { "discordirc${relay}":
         ensure  => present,
-        content => systemd_template('discordircfh'),
+        content => systemd_template("discordirc${relay}"),
         restart => true,
-        require => File['/discord-irc/fhconfig.json'],
-    }
-    systemd::service { 'discordircbuff':
-        ensure  => present,
-        content => systemd_template('discordircbuff'),
-        restart => true,
-        require => File['/discord-irc/buffconfig.json'],
-    }
-    systemd::service { 'mhdiscordlibera':
-        ensure  => present,
-        content => systemd_template('mhdiscordlibera'),
-        restart => true,
-        require => File['/discord-irc/mhliberaconfig.json'],
-    }
-    systemd::service { 'fhdiscordlibera':
-        ensure  => present,
-        content => systemd_template('fhdiscordlibera'),
-        restart => true,
-        require => File['/discord-irc/fhliberaconfig.json'],
+        require => File["/discord-irc/${relay}config.json"],
     }
     
-    file { '/discord-irc/mhliberaconfig.json':
+    file { "/discord-irc/${relay}config.json":
         ensure  => present,
-        content => template('profile/mhliberaconfig.json'),
-        notify  => Service['mhdiscordlibera'],
+        content => template("profile/${relay}config.json"),
+        notify  => Service["discordirc${relay}"],
         mode    => '770',
         owner   => relays,
         group   => relays,
     }
-    file { '/discord-irc/buffconfig.json':
-        ensure  => present,
-        content => template('profile/buffconfig.json'),
-        notify  => Service['discordircbuff'],
-        mode    => '770',
-        owner   => relays,
-        group   => relays,
-    }
-    
-    file { '/discord-irc/fhconfig.json':
-        ensure  => present,
-        content => template('profile/fhconfig.json'),
-        notify  => Service['discordircfh'],
-        mode    => '770',
-        owner   => relays,
-        group   => relays,
-    }
-    file { '/discord-irc/fhliberaconfig.json':
-        ensure  => present,
-        content => template('profile/fhliberaconfig.json'),
-        notify  => Service['fhdiscordlibera'],
-        mode    => '770',
-        owner   => relays,
-        group   => relays,
-    }
+}
 }
