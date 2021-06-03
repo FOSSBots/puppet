@@ -9,11 +9,9 @@ define users::user(
     Optional[Array[String]] $privileges = undef,
     Array[String]           $ssh_keys   = [],
     Boolean                 $system     = false,
-    String                  $homedir    = '',
+    String                  $homedir    = "/home/${homedir}",
 ) {
-    if $homedir == '' {
-        $homedir = "/home/${name}"
-    }
+
     user { $name:
         ensure     => $ensure,
         name       => $name,
