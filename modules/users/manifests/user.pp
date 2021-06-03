@@ -9,7 +9,7 @@ define users::user(
     Optional[Array[String]] $privileges = undef,
     Array[String]           $ssh_keys   = [],
     Boolean                 $system     = false,
-    String                  $homedir    = "/home/${homedir}",
+    String                  $homedir    = "/home/${name}",
 ) {
 
     user { $name:
