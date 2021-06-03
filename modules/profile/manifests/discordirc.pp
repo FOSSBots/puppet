@@ -13,7 +13,8 @@ class profile::discordirc(){
         gid        => 996,
         comment    => 'Discord<->IRC Relay System Account',
         system     => true,
-        homedir    => '/discord-irc'
+        homedir    => '/discord-irc',
+        shell      => '/bin/sh',
     }
 
     $relays = ['fhfreenode', 'fhlibera', 'mhlibera', 'buff']
