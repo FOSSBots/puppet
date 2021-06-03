@@ -9,10 +9,12 @@ class profile::discordirc(){
 
     $relays = ['fhfreenode', 'fhlibera', 'mhlibera', 'buff']
     $relays.each |$relay| {
+    $description = "Discord-IRC (${relay})"
+    $exec = "npm start -- --config /discord-irc/${relay}config.json"
 
     systemd::service { "discordirc${relay}":
         ensure  => present,
-        content => systemd_template("discordirc${relay}"),
+        content => systemd_template("discordirc"),
         restart => true,
         require => File["/discord-irc/${relay}config.json"],
     }
