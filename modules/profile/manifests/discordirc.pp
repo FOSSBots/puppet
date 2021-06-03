@@ -7,6 +7,15 @@ class profile::discordirc(){
     $discordfhlibera_password = lookup('passwords::irc::fhlibera')
     $discordbuff_token = lookup('passwords::discord::buff')
 
+    users::user { 'relays':
+        ensure     => present,
+        uid        => 996,
+        gid        => 996,
+        comment    => 'Discord<->IRC Relay System Account',
+        system     => true,
+        homedir    => '/discord-irc'
+    }
+
     $relays = ['fhfreenode', 'fhlibera', 'mhlibera', 'buff']
     $relays.each |$relay| {
     $description = "Discord-IRC (${relay})"
@@ -16,7 +25,7 @@ class profile::discordirc(){
         ensure  => present,
         content => systemd_template("discordirc"),
         restart => true,
-        require => File["/discord-irc/${relay}config.json"],
+        require => [File["/discord-irc/${relay}config.json"], User['relays']],
     }
     
     file { "/discord-irc/${relay}config.json":
@@ -26,6 +35,7 @@ class profile::discordirc(){
         mode    => '770',
         owner   => relays,
         group   => relays,
+        require => User['relays']
     }
 }
 }
