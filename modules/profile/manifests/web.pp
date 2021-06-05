@@ -26,7 +26,7 @@ class profile::web(
         mode    => '0755',
         owner   => www-data,
         group   => www-data,
-        Git::Clone['MirahezeBots/mirahezebots.org'],
+        require => Git::Clone['MirahezeBots/mirahezebots.org'],
     }
     file { 'flask-config':
         ensure  => file,
@@ -35,7 +35,7 @@ class profile::web(
         mode    => '0755',
         owner   => www-data,
         group   => www-data,
-        Git::Clone['MirahezeBots/mirahezebots.org'],
+        require => Git::Clone['MirahezeBots/mirahezebots.org'],
     }
     file { 'flask-wsgi':
         ensure  => file,
@@ -44,6 +44,6 @@ class profile::web(
         mode    => '0755',
         owner   => www-data,
         group   => www-data,
-        Git::Clone['MirahezeBots/mirahezebots.org'],
+        require => Git::Clone['MirahezeBots/mirahezebots.org'],
     }
 }
