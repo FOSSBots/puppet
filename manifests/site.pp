@@ -10,3 +10,6 @@ node 'db1.mirahezebots.org' {
 node 'test2001.mirahezebots.org' {
   include role::testnet
  }
+ node 'mirahezebots-fhc-test2001' {
+  include role::testnet
+ }
