@@ -11,7 +11,7 @@ class icinga2::node(){
 
     file { '/etc/icinga2/zones.conf':
         ensure  => present,
-        content => template('icinga/node-zones.conf'),
+        content => template('icinga2/node-zones.conf'),
         mode    => '775',
         owner   => root,
         group   => root,
