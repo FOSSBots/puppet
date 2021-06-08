@@ -16,4 +16,10 @@ class icinga2::node(){
         owner   => root,
         group   => root,
     }
+    
+    file { '/usr/lib/nagios/plugins/check_puppet_run':
+	    ensure  => present,
+	    content => template('icinga2/check_puppet_run'),
+        mode    => '0555',
+	}
 }
