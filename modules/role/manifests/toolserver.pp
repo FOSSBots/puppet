@@ -6,5 +6,5 @@ class role::toolserver {
     include roundcube
     include mailrelay
     include apache
-    include ::icinga::master
+    include ::icinga2::master
 }
