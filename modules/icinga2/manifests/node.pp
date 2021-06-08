@@ -22,4 +22,11 @@ class icinga2::node(){
 	    content => template('icinga2/check_puppet_run'),
         mode    => '0555',
 	}
+    file { '/usr/lib/nagios/plugins/check_systemd_state':
+    	ensure => present,
+	source => 'puppet:///modules/systemd/check_systemd_unit_status',
+	mode    => '775',
+	owner   => root,
+	group   => root,
+	}
 }
