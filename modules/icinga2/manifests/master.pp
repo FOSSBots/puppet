@@ -3,7 +3,7 @@ class icinga2::master{
         ensure => present,
     }
 
-    service { 'icinga':
+    service { 'icinga2':
         ensure  => running,
         require => Package['icinga2'],
     }
