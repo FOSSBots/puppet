@@ -1,2 +1,3 @@
 users::groups:
   - grouponeshell
+icinga::nodename: '100.node4.net.fosshost.org'
