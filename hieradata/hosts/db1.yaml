@@ -11,5 +11,5 @@ ufw::allow:
     from: '82.145.63.172' 
 users::groups:
   - dbadmins
-icinga::nodename: '100.node4.net.fosshost.org'
+icinga::nodename: '113.node1.net.fosshost.org'
 
