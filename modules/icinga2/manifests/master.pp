@@ -87,7 +87,7 @@ class icinga2::master{
     }
     file { '/usr/lib/nagios/plugins/check_systemd_state':
     	ensure => present,
-	content => 'puppet:///modules/systemd/check_systemd_unit_status',
+	source => 'puppet:///modules/systemd/check_systemd_unit_status',
 	mode    => '775',
 	owner   => root,
 	group   => root,
