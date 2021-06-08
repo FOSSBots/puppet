@@ -18,4 +18,3 @@ ufw::allow:
 users::groups:
   - grouponeshell
 icinga::nodename: 'test2001.mirahezebots.org'
-
