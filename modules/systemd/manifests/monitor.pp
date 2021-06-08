@@ -20,13 +20,13 @@ define systemd::monitor (
         group  => 'root',
     })
 
-    nrpe::monitor_service { "check_${title}_status":
-        ensure         => $ensure,
-        description    => "Check unit status of ${title}",
-        nrpe_command   => "/usr/local/lib/nagios/plugins/check_systemd_unit_status ${title}",
-        check_interval => $check_interval,
-        retries        => $retries,
-        contact_group  => $contact_group,
-        notes_url      => $notes_url,
-    }
+    # nrpe::monitor_service { "check_${title}_status":
+        # ensure         => $ensure,
+       # description    => "Check unit status of ${title}",
+       # nrpe_command   => "/usr/local/lib/nagios/plugins/check_systemd_unit_status ${title}",
+       # check_interval => $check_interval,
+       # retries        => $retries,
+       # contact_group  => $contact_group,
+       #  notes_url      => $notes_url,
+    # }
 }
