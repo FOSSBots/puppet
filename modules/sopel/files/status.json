@@ -2,27 +2,27 @@
    "wikis":{
       "mhmeta":{
          "sulgroup":"miraheze",
-         "url":"/dev/null"
+         "url":"meta.miraheze.org"
       },
       "mhtest":{
          "sulgroup":"miraheze",
-         "url":"/dev/null"
+         "url":"publictestwiki.com"
       },
       "quirc":{
          "sulgroup":"miraheze",
-         "url":"/dev/null"
+         "url":"quirc.miraheze.org"
       },
       "rf1bot":{
          "sulgroup":"miraheze",
-         "url":"/dev/null"
+         "url":"rf1bot.miraheze.org"
       },
       "login":{
          "sulgroup":"miraheze",
-         "url":"/dev/null"
+         "url":"login.miraheze.org"
       },
       "sariowiki":{
          "sulgroup":"sario",
-         "url":"/dev/null"
+         "url":"sariowiki.miraheze.org"
       }
    },
    "users":{
