@@ -17,7 +17,7 @@ class profile::discordirc(){
         shell      => '/bin/sh',
     }
 
-    $relays = ['fhfreenode', 'fhlibera', 'mhlibera', 'buff']
+    $relays = ['fhlibera', 'mhlibera', 'buff']
     $relays.each |$relay| {
     $description = "Discord-IRC (${relay})"
     $exec = "npm start -- --config /discord-irc/${relay}config.json"
