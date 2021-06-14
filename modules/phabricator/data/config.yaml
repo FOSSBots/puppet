@@ -103,7 +103,6 @@ phabricator.uninstalled-applications:
   PhabricatorFactApplication: true # we don't have fact sources to graph
   PhabricatorFundApplication: true # we don't need to fund single projects
   PhabricatorHarbormasterApplication: true # we don't need local CI / we don't have resources
-  PhabricatorLegalpadApplication: true # we are not a law firm
   PhabricatorMacroApplication: true # we don't need a macro databases
   PhabricatorMultimeterApplication: true # performance sampling we don't have
   PhabricatorNuanceApplication: true # we're not a call center
