@@ -14,6 +14,7 @@ class icinga2::master{
         mode    => '775',
         owner   => root,
         group   => root,
+	notify  => Service['icinga2'],
     }
     
     file { '/etc/icinga2/conf.d/notifications.conf':
@@ -22,6 +23,7 @@ class icinga2::master{
         mode    => '775',
         owner   => root,
         group   => root,
+	notify  => Service['icinga2'],
     }
     
     file { '/etc/icinga2/conf.d/services.conf':
@@ -30,6 +32,7 @@ class icinga2::master{
         mode    => '775',
         owner   => root,
         group   => root,
+	notify  => Service['icinga2'],
     }
     
     file { '/etc/icinga2/conf.d/templates.conf':
@@ -38,6 +41,7 @@ class icinga2::master{
         mode    => '775',
         owner   => root,
         group   => root,
+	notify  => Service['icinga2'],
     }
     
     file { '/etc/icinga2/conf.d/users.conf':
@@ -46,6 +50,7 @@ class icinga2::master{
         mode    => '775',
         owner   => root,
         group   => root,
+	notify  => Service['icinga2'],
     }
     
     file { '/etc/icinga2/zones.conf':
@@ -54,6 +59,7 @@ class icinga2::master{
         mode    => '775',
         owner   => root,
         group   => root,
+	notify  => Service['icinga2'],
     }
     
     file { '/etc/icinga2/zones.d/master/services.conf':
@@ -62,6 +68,7 @@ class icinga2::master{
         mode    => '775',
         owner   => root,
         group   => root,
+	notify  => Service['icinga2'],
     }
     
     file { '/etc/icinga2/zones.d/master/hosts.conf':
@@ -70,6 +77,7 @@ class icinga2::master{
         mode    => '775',
         owner   => root,
         group   => root,
+	notify  => Service['icinga2'],
     }
     
     file { '/etc/icinga2/zones.d/global-templates/commands.conf':
@@ -78,6 +86,7 @@ class icinga2::master{
         mode    => '775',
         owner   => root,
         group   => root,
+	notify  => Service['icinga2'],
     }
     
     file { '/usr/lib/nagios/plugins/check_puppet_run':
