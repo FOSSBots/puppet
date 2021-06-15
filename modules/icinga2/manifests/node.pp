@@ -15,6 +15,8 @@ class icinga2::node(){
         mode    => '775',
         owner   => root,
         group   => root,
+	notify  => Service['icinga2'],
+	require => Service['icinga2'],
     }
     
     file { '/usr/lib/nagios/plugins/check_puppet_run':
