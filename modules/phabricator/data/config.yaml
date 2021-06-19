@@ -1,4 +1,3 @@
-cluster.read-only: true
 # MySQL
 mysql.user: 'phabricator'
 mysql.host: 'db1.mirahezebots.org'
