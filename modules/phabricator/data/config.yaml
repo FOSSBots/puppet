@@ -1,6 +1,5 @@
 # MySQL
 mysql.user: 'phabricator'
-mysql.host: 'db1.mirahezebots.org'
 storage.mysql-engine.max-size: 0
 
 metamta.default-address: 'noreply@mirahezebots.org'
