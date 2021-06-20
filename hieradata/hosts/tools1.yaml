@@ -17,3 +17,4 @@ ufw::allow:
     port: '80,443/tcp'
 users::groups:
   - toolsadmins
+db::main::ip: '82.145.63.173'
