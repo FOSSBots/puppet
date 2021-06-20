@@ -44,6 +44,7 @@ class phabricator {
     $phab_yaml = loadyaml("${module_path}/data/config.yaml")
     $phab_private = {
         'mysql.pass' => lookup('passwords::db::phabricator'),
+        'mysql.host' => lookup('db::main::ip'),
     }
 
     $phab_setting = {
