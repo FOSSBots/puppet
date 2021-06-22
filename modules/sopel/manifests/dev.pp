@@ -30,7 +30,7 @@ file { 'dev-venv':
         owner   => sopel,
         group   => sopel,
     }
-    $repos = ['MirahezeBots', 'sopel-adminlist', 'sopel-channelmgnt', 'jsonparser', 'sopel-pingpong', 'sopel-joinall', 'sopel']
+    $repos = ['MirahezeBots', 'sopel-adminlist', 'sopel-channelmgnt', 'jsonparser', 'sopel-joinall', 'sopel']
     $repos.each |$repo| {
       git::clone { "MirahezeBots/${repo}":
           ensure    => 'latest',
