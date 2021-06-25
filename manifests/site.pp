@@ -10,7 +10,4 @@ node 'db1.mirahezebots.org' {
 }
 node 'test2001.mirahezebots.org' {
   include role::testnet
- }
-node 'mw2001.mirahezebots.org' {
-  include profile::base
 }
