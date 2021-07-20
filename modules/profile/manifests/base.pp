@@ -16,7 +16,7 @@ class profile::base {
         provider => pip3,
     }
     systemd::service { 'ssh':
-        ensure  => present,
+        ensure  => running,
         require => File['/etc/ssh/sshd_config'],
     }
     file { "/etc/ssh/sshd_config":
