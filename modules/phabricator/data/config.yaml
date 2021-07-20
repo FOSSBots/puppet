@@ -1,3 +1,4 @@
+cluster.read-only: true
 # MySQL
 mysql.user: 'phabricator'
 storage.mysql-engine.max-size: 0
