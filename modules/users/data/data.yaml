@@ -2,12 +2,12 @@ groups:
   ops:
     gid: 2000
     description: roots, sudo everywhere
-    members: [rhinosf1, macfan, reception, void]
+    members: [rhinosf1, macfan, reception, void, sario]
     privileges: ['ALL = (ALL) NOPASSWD: ALL']
   botroots:
     gid: 2001
     description: root on bots1
-    members: [sario]
+    members: []
     privileges: ['ALL = (ALL) NOPASSWD: ALL']
   botadmins:
     gid: 2002
@@ -22,7 +22,7 @@ groups:
   toolsadmins:
     gid: 2003
     description: Access to do basic stuff on tools1
-    members: [sario]
+    members: []
     privileges: ['ALL = (ALL) NOPASSWD: /usr/sbin/service *',
                  'ALL = (ALL) NOPASSWD: /var/phabricator/bin/*',
                  'ALL = (ALL) NOPASSWD: /usr/bin/puppet *',
@@ -30,7 +30,7 @@ groups:
   dbadmins:
     gid: 2004
     description: Access to do basic stuff on db1
-    members: [sario]
+    members: []
     privileges: ['ALL = (ALL) NOPASSWD: /usr/bin/mysql *',
                  'ALL = (ALL) NOPASSWD: /usr/sbin/service *',
                  'ALL = (ALL) NOPASSWD: /usr/bin/puppet *',
