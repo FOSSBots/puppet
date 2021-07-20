@@ -21,7 +21,7 @@ class profile::base {
     }
     file { "/etc/ssh/sshd_config":
         ensure  => present,
-        content => 'puppet:///modules/profile/sshd_config',
+        source => 'puppet:///modules/profile/sshd_config',
         notify  => Service['ssh'],
         mode    => '444',
         owner   => root,
