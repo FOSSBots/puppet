@@ -5,7 +5,7 @@ class profile::phabdigest(
     git::clone { 'MirahezeBots/phabdigests':
         ensure    => 'latest',
         directory => $install_dir,
-        branch    => 'master',
+        branch    => 'main',
         shared    => true,
     }
     systemd::timer::job { 'phabdigest-bots-weekly':
