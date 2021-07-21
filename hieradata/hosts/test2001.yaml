@@ -19,3 +19,4 @@ users::groups:
   - grouponeshell
 icinga::nodename: 'test2001.mirahezebots.org'
 passwords::db::phabricator: 'dummy'
+db::main::ip: '127.0.0.1'
