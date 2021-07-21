@@ -18,3 +18,4 @@ ufw::allow:
 users::groups:
   - grouponeshell
 icinga::nodename: 'test2001.mirahezebots.org'
+passwords::db::phabricator: 'dummy'
