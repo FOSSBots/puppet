@@ -62,6 +62,14 @@ class icinga2::master{
 	notify  => Service['icinga2'],
     }
     
+    file { '/etc/icinga2/zones.d':
+    	ensure => directory,
+	mode    => '775',
+	owner   => root,
+	group   => root,
+    }
+	
+    
     file { '/etc/icinga2/zones.d/master/services.conf':
         ensure  => present,
         content => template('icinga2/zones.d/master/services.conf'),
