@@ -196,5 +196,8 @@
          "RhinosF1",
          "MacFan4000"
       ]
-   }
+   },
+   "##Sario":{
+      "inherits-from":[
+         "#miraheze-botlogs"
 }
