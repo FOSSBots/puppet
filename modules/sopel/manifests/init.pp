@@ -6,6 +6,14 @@ class sopel(
 ){
     include sopel::dev
     include sopel::prod
+    
+    file { '/srv/sopelbots':
+        ensure  => directory,
+        mode    => '774',
+        owner   => sopel,
+        group   => sopel,
+    }
+    
     file { 'channelmgnt':
         ensure  => file,
         path    => '/srv/sopelbots/channelmgnt.json',
