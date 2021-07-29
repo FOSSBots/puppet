@@ -10,7 +10,6 @@ class profile::discordirc(){
     users::user { 'relays':
         ensure     => present,
         uid        => 996,
-        gid        => 996,
         comment    => 'Discord<->IRC Relay System Account',
         system     => true,
         homedir    => '/discord-irc',
