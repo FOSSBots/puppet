@@ -12,7 +12,7 @@ six==1.16.0
 praw==5.4.0
 prawcore==0.14.0
 sopel-dns==0.3.1
-pipdeptree==2.0.0
+pipdeptree==2.1.0
 requests-cache==0.7.2
 wheel==0.36.2
 xmltodict==0.12
