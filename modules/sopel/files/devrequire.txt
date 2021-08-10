@@ -14,7 +14,7 @@ prawcore==0.14.0
 sopel-dns==0.3.1
 pipdeptree==2.1.0
 requests-cache==0.7.2
-wheel==0.36.2
+wheel==0.37.0
 xmltodict==0.12
 rsa==4.7.2
 pytz==2021.1
