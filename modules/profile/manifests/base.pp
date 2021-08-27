@@ -32,9 +32,4 @@ class profile::base {
         age     => '1w',
         recurse => true,
     }
-    
-    tidy { '/var/log':
-        age     => '4w',
-        recurse => true,
-    }
 }
