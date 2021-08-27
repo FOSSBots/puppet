@@ -27,4 +27,9 @@ class profile::base {
         owner   => root,
         group   => root,
     }
+    
+    tidy { '/var/lib/puppet/reports':
+        age     => '1w',
+        recurse => true,
+    }
 }
