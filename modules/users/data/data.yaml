@@ -36,11 +36,6 @@ groups:
                  'ALL = (ALL) NOPASSWD: /usr/bin/puppet *',
                  'ALL = (ALL) NOPASSWD: /usr/bin/git *',
                  'ALL = (ALL) NOPASSWD: /usr/bin/puppet-run *']
-  grouponeshell:
-    gid: 2005
-    description: Shell on Group 1 Servers
-    members: [rhinosf1, macfan, reception, void, sario, dmehus]
-    privileges: []
 
 users:
   macfan:
