@@ -11,7 +11,7 @@
          "834803279073509413": "#fosshost-techops",
          "788819267511910440":"#fosshost-volunteers",
          "820914556418916382":"#fosshost-exec",
-         "790588749586104340":"#fosshost-engine"
+         "885275432625262642":"#fosshost-feedback"
       },
       "commandCharacters":[
          ".",
@@ -27,7 +27,7 @@
             "#fosshost-techops",
             "#fosshost-volunteers",
             "#fosshost-exec",
-            "#fosshost-engine"
+            "#fosshost-feedback"
          ],
          "debug":false,
          "port":"7070",
