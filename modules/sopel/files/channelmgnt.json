@@ -20,8 +20,8 @@
    
    },
    "#memipedia-offtopic":{
-     "chanops":[
-        "Bongo-Cat"
+      "inherits-from":[
+         "#memipedia"
      ]
    },
    "#miraheze-cvt-private":{
