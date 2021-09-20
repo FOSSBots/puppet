@@ -17,6 +17,13 @@
         "Bongo-Cat"
      ]
    },
+   
+   },
+   "#memipedia-offtopic":{
+      "inherits-from":[
+         "#memipedia"
+     ]
+   },
    "#miraheze-cvt-private":{
       "inherits-from":[
          "#miraheze-cvt"
