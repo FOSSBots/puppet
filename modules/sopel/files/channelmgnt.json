@@ -17,6 +17,13 @@
         "Bongo-Cat"
      ]
    },
+   
+   },
+   "#memipedia-offtopic":{
+     "chanops":[
+        "Bongo-Cat"
+     ]
+   },
    "#miraheze-cvt-private":{
       "inherits-from":[
          "#miraheze-cvt"
