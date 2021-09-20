@@ -12,6 +12,11 @@
       ],
       "log_channel":"#miraheze-bot-alerts"
    },
+   "#memipedia":{
+     "chanops":[
+        "Bongo-Cat",
+     ]
+   },
    "#miraheze-cvt-private":{
       "inherits-from":[
          "#miraheze-cvt"
