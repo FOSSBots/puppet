@@ -5,7 +5,6 @@
          "RhinosF1",
          "Reception123",
          "Voidwalker",
-         "dmehus",
          "NDKilla",
          "Southparkfan",
          "Universal_Omega"
@@ -33,8 +32,7 @@
       "chanops":[
          "NDKilla",
          "Voidwalker",
-         "Reception123",
-         "dmehus"
+         "Reception123"
       ]
    },
    "##RhinosF1":{
@@ -70,8 +68,7 @@
          "Voidwalker",
          "Void|bot",
          "RhinosF1",
-         "Universal_Omega",
-         "dmehus"
+         "Universal_Omega"
       ]
    },
    "#miraheze-offtopic":{
@@ -90,8 +87,7 @@
          "NDKilla",
          "Voidwalker",
          "Zppix",
-         "RhinosF1",
-         "dmehus"
+         "RhinosF1"
       ]
    },
    "#testadminwiki":{
@@ -154,7 +150,6 @@
          "SPF|Cloud",
          "PuppyKun",
          "JohnLewis",
-         "dmehus",
          "Sario"
       ]
    },
@@ -170,7 +165,6 @@
    },
     "#miraheze-feed-commons":{
       "chanops":[
-         "dmehus",
          "hispano76",
          "MacFan4000",
          "Reception123"
@@ -178,7 +172,6 @@
    },
     "#miraheze-dev":{
       "chanops":[
-         "dmehus",
          "MacFan4000",
          "Naleksuh",
          "Reception123",
@@ -200,7 +193,6 @@
    },
     "#miraheze-feed-test":{
       "chanops":[
-         "dmehus",
          "Reception123",
          "NDKilla",
          "Voidwalker",
