@@ -6,9 +6,9 @@ groups:
     privileges: ['ALL = (ALL) NOPASSWD: ALL']
   botroots:
     gid: 2001
-    description: root on bots1
+    description: Not in use
     members: []
-    privileges: ['ALL = (ALL) NOPASSWD: ALL']
+    privileges: []
   botadmins:
     gid: 2002
     description: Shell on bots1, rights will expand soon.
