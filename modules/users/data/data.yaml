@@ -12,7 +12,7 @@ groups:
   botadmins:
     gid: 2002
     description: Shell on bots1, rights will expand soon.
-    members: []
+    members: [dmehus]
     privileges: ['ALL = (sopel) NOPASSWD: ALL',
                  'ALL = (relays) NOPASSWD: ALL',
                  'ALL = (streambot) NOPASSWD: ALL',
