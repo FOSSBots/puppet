@@ -6,14 +6,17 @@ groups:
     privileges: ['ALL = (ALL) NOPASSWD: ALL']
   botroots:
     gid: 2001
-    description: Not in use
+    description: root on bots1
     members: []
-    privileges: []
+    privileges: ['ALL = (ALL) NOPASSWD: ALL']
   botadmins:
     gid: 2002
-    description: Not in use
+    description: Shell on bots1, rights will expand soon.
     members: []
-    privileges: []
+    privileges: ['ALL = (sopel) NOPASSWD: ALL',
+                 'ALL = (relays) NOPASSWD: ALL',
+                 'ALL = (streambot) NOPASSWD: ALL',
+                 'ALL = (ALL) NOPASSWD: /usr/sbin/service *']
   toolsadmins:
     gid: 2003
     description: Access to do basic stuff on tools1
