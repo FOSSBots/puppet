@@ -8,7 +8,9 @@
          "dmehus",
          "NDKilla",
          "Southparkfan",
-         "Universal_Omega"
+         "Universal_Omega",
+         "JohnLewis",
+         "paladox"
       ],
       "log_channel":"#miraheze-bot-alerts"
    },
@@ -69,7 +71,10 @@
          "Void|bot",
          "RhinosF1",
          "Universal_Omega",
-         "dmehus"
+         "dmehus",
+         "JohnLewis",
+         "paladox",
+         "Agent"
       ]
    },
    "#miraheze-offtopic":{
@@ -78,8 +83,15 @@
       ]
    },
    "#miraheze-sre":{
-      "inherits-from":[
-         "#miraheze"
+      "chanops":[
+         "Southparkfan",
+         "Reception123",
+         "Voidwalker",
+         "RhinosF1",
+         "Universal_Omega",
+         "JohnLewis",
+         "paladox",
+         "Agent"
       ]
    },
    "#miraheze-testwiki":{
