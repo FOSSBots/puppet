@@ -83,8 +83,15 @@
       ]
    },
    "#miraheze-sre":{
-      "inherits-from":[
-         "#miraheze"
+      "chanops":[
+         "Southparkfan",
+         "Reception123",
+         "Voidwalker",
+         "RhinosF1",
+         "Universal_Omega",
+         "JohnLewis",
+         "paladox",
+         "Agent"
       ]
    },
    "#miraheze-testwiki":{
