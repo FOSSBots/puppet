@@ -37,7 +37,7 @@
             "#miraheze-cvt-feed",
             "#miraheze-offtopic",
             "#miraheze-sre",
-            "#miraheze-meetings",
+            "#miraheze-meetings"
          ],
          "debug":false,
          "parallelPingFix":true,
