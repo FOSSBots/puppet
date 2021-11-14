@@ -41,6 +41,9 @@
             "#miraheze-offtopic",
             "#miraheze-sre",
             "#miraheze-meetings"
+            "#miraheze-ballmedia-feed"
+            "#miraheze-ballmedia-polandball-feed"
+            "#miraheze-ballmedia-polcompball-feed"
          ],
          "debug":false,
          "parallelPingFix":true,
