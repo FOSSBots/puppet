@@ -23,8 +23,8 @@
          ],
          "debug":false,
          "port":"7070",
-         "userName":"BallmediaRelay",
-         "password":"",
+         "userName":"mh-discord",
+         "password":"<%= @discordmhlibera_password %>",
          "secure":true,
          "sasl":false,
          "millisecondsOfSilenceBeforePingSent":"3600000"
