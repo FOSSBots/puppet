@@ -1,0 +1,33 @@
+[
+   {
+      "nickname":"BallmediaRelay",
+      "server":"irc.libera.chat",
+      "discordToken":"<%= @discordballmedia_token %>",
+      "ircNickColor":false,
+      "channelMapping":{
+         "898084590508445696":"#miraheze-ballmedia-feed"
+         "900548603989336064":"#miraheze-ballmedia-polandball-feed"
+         "894597880306884679":"#miraheze-ballmedia-polcompball-feed"
+      },
+      "commandCharacters":[
+         ".",
+         ",",
+         "$",
+         "!"
+      ],
+      "ircOptions":{
+         "channels":[
+            "#miraheze-ballmedia-feed"
+            "#miraheze-ballmedia-polandball-feed"
+            "#miraheze-ballmedia-polcompball-feed"
+         ],
+         "debug":false,
+         "port":"7070",
+         "userName":"BallmediaRelay",
+         "password":"",
+         "secure":true,
+         "sasl":false,
+         "millisecondsOfSilenceBeforePingSent":"3600000"
+      }
+   }
+]

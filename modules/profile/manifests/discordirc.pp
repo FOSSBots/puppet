@@ -6,6 +6,7 @@ class profile::discordirc(){
     $discordfh_password = lookup('passwords::irc::fh')
     $discordfhlibera_password = lookup('passwords::irc::fhlibera')
     $discordbuff_token = lookup('passwords::discord::buff')
+    $discordballmedia_token = lookup('passwords::discord::ballmedia')
 
     users::user { 'relays':
         ensure     => present,
@@ -16,7 +17,7 @@ class profile::discordirc(){
         shell      => '/bin/sh',
     }
 
-    $relays = ['fhlibera', 'mhlibera', 'buff']
+    $relays = ['fhlibera', 'mhlibera', 'buff', 'ballmedia']
     $relays.each |$relay| {
     $description = "Discord-IRC (${relay})"
     $exec = "npm start -- --config /discord-irc/${relay}config.json"
