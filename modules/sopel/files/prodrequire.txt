@@ -1,5 +1,5 @@
 MirahezeBot-Plugins==9.1.5
-sopel==7.1.6
+sopel==7.1.7
 sopel-plugins.adminlist==1.0.7
 sopel-plugins.channelmgnt==2.1.1
 sopel-plugins.joinall==1.0.4
