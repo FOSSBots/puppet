@@ -1,0 +1,20 @@
+[
+   {
+      "nickname":"MHLtdRelay",
+      "server":"irc.libera.chat",
+      "discordToken":"<%= @discordirc_token %>",
+      "ircNickColor":false,
+      "channelMapping":{},
+      "commandCharacters":[],
+      "ircOptions":{
+         "channels":[],
+         "debug":false,
+         "port":"7070",
+         "userName":"MHLtdRelay",
+         "password":"<%= @discordltd_password %>",
+         "secure":true,
+         "sasl":true,
+         "millisecondsOfSilenceBeforePingSent":"3600000"
+      }
+   }
+]
