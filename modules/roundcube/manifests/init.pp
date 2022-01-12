@@ -5,7 +5,7 @@ class roundcube{
     git::clone { 'roundcubemail':
         directory          => '/var/webmail',
         origin             => 'https://github.com/roundcube/roundcubemail',
-        branch             => '1.4.11', # we are using the beta for the new skin
+        branch             => '1.5.2', # we are using the beta for the new skin
         recurse_submodules => true,
         owner              => 'www-data',
         group              => 'www-data',
