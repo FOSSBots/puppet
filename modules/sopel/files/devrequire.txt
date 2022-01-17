@@ -13,7 +13,7 @@ praw==5.4.0
 prawcore==0.14.0
 sopel-dns==0.3.1
 pipdeptree==2.2.1
-requests-cache==0.9.0
+requests-cache==0.9.1
 wheel==0.37.0
 xmltodict==0.12
 rsa==4.8
