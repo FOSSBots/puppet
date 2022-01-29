@@ -1,3 +1,4 @@
 users::groups:
   - toolsadmins
 db::main::ip: '2a09:11c0:336:fff1::2'
+icinga::nodename: 'tools2002.mirahezebots.org'
