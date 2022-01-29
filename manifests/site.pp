@@ -8,3 +8,13 @@ node 'db1.mirahezebots.org' {
   include profile::base
   include ::icinga2::node
 }
+node 'bots2002.mirahezebots.org' {
+  include role::botserver
+}
+node 'tools2002.mirahezebots.org' {
+  include role::toolserver
+}
+node 'db2002.mirahezebots.org' {
+  include profile::base
+  include ::icinga2::node
+}

@@ -1,0 +1,3 @@
+users::groups:
+  - dbadmins
+icinga::nodename: 'db2002.mirahezebots.org'
