@@ -1,0 +1,3 @@
+users::groups:
+  - botadmins
+icinga::nodename: 'bots2002.mirahezebots.org'
