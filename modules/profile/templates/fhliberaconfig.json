@@ -12,6 +12,7 @@
          "788819267511910440":"#fosshost-volunteers",
          "842594441302900746":"#fosshost-exec",
          "885275432625262642":"#fosshost-feedback",
+         "853024700989177926":"#fosshost-meet",
          "881857494241136680":"#fosshost-applications-private"
       },
       "commandCharacters":[
@@ -29,6 +30,7 @@
             "#fosshost-volunteers",
             "#fosshost-exec",
             "#fosshost-feedback",
+            "#fosshost-meet",
             "#fosshost-applications-private"
          ],
          "debug":false,
