@@ -1,7 +1,7 @@
 database = '/srv/streambot/snitch.db'
 
-snatch_network = 'irc.libera.chat'
-snitch_network = 'irc.libera.chat'
+snatch_network = '2001:6b0:e:2a18::120'
+snitch_network = '2001:6b0:e:2a18::120'
 
 nickserv_password = '<%= @streambot_pass %>'
 
