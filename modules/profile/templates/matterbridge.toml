@@ -1,6 +1,6 @@
 [irc]
     [irc.libera]
-    Server="irc.libera.chat:6667"
+    Server="irc.libera.chat:6697"
     Nick="mhbridgebot"
     NickServNick="mh-discord"
     NickServPassword="<%= @discordmhlibera_password %>"
