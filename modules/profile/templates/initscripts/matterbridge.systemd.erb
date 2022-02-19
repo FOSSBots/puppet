@@ -6,9 +6,9 @@ After=network-online.target
 
 [Service]
 Type=simple
-WorkingDirectory=/discord-irc
+WorkingDirectory=/srv/matterbridge
 User=relays
-PIDFile=/discord-irc/%I.pid
+PIDFile=/srv/matterbridge/%I.pid
 ExecStart=./matterbridge
 Restart=on-failure
 RestartPreventExitStatus=2
