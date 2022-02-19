@@ -1,6 +1,6 @@
 [
    {
-      "nickname":"MH-Discord",
+      "nickname":"MH-Discord"
       "server":"irc.libera.chat",
       "discordToken":"<%= @discordmh_token %>",
       "ircNickColor":false,
