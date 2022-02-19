@@ -2,7 +2,7 @@
    {
       "nickname":"BuffalonasRelay",
       "server":"irc.libera.chat",
-      "discordToken":"<%= @discordbuff_token %>",
+      "discordToken":"<%= @discordbuff_token %>"
       "ircNickColor":false,
       "channelMapping":{
          "844193280974389270":"#miraheze-buffalonas"
