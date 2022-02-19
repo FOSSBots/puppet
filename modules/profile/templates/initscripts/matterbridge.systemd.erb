@@ -1,0 +1,19 @@
+# Managed By Puppet
+[Unit]
+Description=Chat relay bot
+Documentation=https://github.com/42wim/matterbridge
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/discord-irc
+User=relays
+PIDFile=/discord-irc/%I.pid
+ExecStart=./matterbridge
+Restart=on-failure
+RestartPreventExitStatus=2
+RestartSec=30
+Environment=LC_ALL=en_US.UTF-8
+
+[Install]
+WantedBy=multi-user.target
