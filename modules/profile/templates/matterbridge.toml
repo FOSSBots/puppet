@@ -24,7 +24,7 @@
     
     [discord.buffalonas]
     Token="<%= @discordbuff_token %>"
-    Server="Buffalonas"
+    Server="BuffaloNAS"
     RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
     UseUserName=true
     
