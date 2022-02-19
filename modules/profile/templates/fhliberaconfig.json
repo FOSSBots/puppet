@@ -2,7 +2,7 @@
    {
       "nickname":"FosshostRelay",
       "server":"irc.libera.chat",
-      "discordToken":"<%= @discordfh_token %>",
+      "discordToken":"<%= @discordfh_token %>"
       "ircNickColor":false,
       "channelMapping":{
          "742089740643205174":"#fosshost",
