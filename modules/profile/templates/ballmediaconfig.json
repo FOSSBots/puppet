@@ -5,7 +5,7 @@
       "discordToken":"<%= @discordballmedia_token %>",
       "ircNickColor":false,
       "channelMapping":{
-         "898084590508445696":"#miraheze-ballmedia-feed",
+         "898084590508445696":"#miraheze-ballmedia-feed"
          "900548603989336064":"#miraheze-ballmedia-polandball-feed",
          "894597880306884679":"#miraheze-ballmedia-polcompball-feed"
       },
