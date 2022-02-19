@@ -8,7 +8,7 @@
     UseSASL=true
     SkipTLSVerify=false
     RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
-    IgnoreNicks="iinga-miraheze"
+    IgnoreNicks="icinga-miraheze"
 
 [discord]
     [discord.miraheze]
