@@ -26,14 +26,14 @@ class profile::discordirc(){
         restart => true,
         require => [File["/discord-irc/${relay}config.json"], User['relays']],
     }
-    
+
     systemd::service { "matterbridge":
         ensure  => present,
         content => systemd_template("matterbridge"),
         restart => true,
         require => [File["/srv/matterbridge/matterbridge.toml"], User['relays']],
     }
-    
+
     file { "/discord-irc/${relay}config.json":
         ensure  => present,
         content => template("profile/${relay}config.json"),
@@ -43,6 +43,7 @@ class profile::discordirc(){
         group   => relays,
         require => User['relays']
     }
+
     file { "/srv/matterbridge/matterbridge.toml":
         ensure  => present,
         content => template("profile/matterbridge.toml"),
