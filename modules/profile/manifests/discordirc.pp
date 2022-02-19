@@ -27,7 +27,7 @@ class profile::discordirc(){
         require => [File["/discord-irc/${relay}config.json"], User['relays']],
     }
 
-    systemd::service { "matterbridge":
+    systemd::service { 'matterbridge':
         ensure  => present,
         content => systemd_template("matterbridge"),
         restart => true,
