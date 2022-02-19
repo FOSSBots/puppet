@@ -47,7 +47,7 @@ class profile::discordirc(){
     file { "/srv/matterbridge/matterbridge.toml":
         ensure  => present,
         content => template("profile/matterbridge.toml"),
-        notify  => Service["matterbridge`"],
+        notify  => Service["matterbridge"],
         mode    => '770',
         owner   => relays,
         group   => relays,
