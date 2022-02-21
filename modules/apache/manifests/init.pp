@@ -26,7 +26,7 @@ class apache {
         group   => root,
     }
 
-    if $trusted['hostname'] == 'bots1.miraheaebots.org' {
+    if $trusted['hostname'] == 'bots2002.miraheaebots.org' {
 
         file { '/etc/apache2/sites-available/bots1.mirahezebots.org-le-ssl.conf':
             ensure  => present,
@@ -56,7 +56,7 @@ class apache {
         }
     }
 
-    if $trusted['hostname'] == 'tools1.miraheaebots.org' {
+    if $trusted['hostname'] == 'tools2002.miraheaebots.org' {
 
         file { '/etc/apache2/sites-available/icinga.mirahezebots.org-le-ssl.conf':
             ensure  => present,
