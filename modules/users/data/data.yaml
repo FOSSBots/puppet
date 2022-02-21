@@ -11,7 +11,7 @@ groups:
     privileges: []
   botadmins:
     gid: 2002
-    description: Shell on bots1, rights will expand soon.
+    description: Shell on bots2002, rights will expand soon.
     members: [dmehus]
     privileges: ['ALL = (sopel) NOPASSWD: ALL',
                  'ALL = (relays) NOPASSWD: ALL',
@@ -19,7 +19,7 @@ groups:
                  'ALL = (ALL) NOPASSWD: /usr/sbin/service *']
   toolsadmins:
     gid: 2003
-    description: Access to do basic stuff on tools1
+    description: Access to do basic stuff on tools2002
     members: []
     privileges: ['ALL = (ALL) NOPASSWD: /usr/sbin/service *',
                  'ALL = (ALL) NOPASSWD: /var/phabricator/bin/*',
@@ -27,7 +27,7 @@ groups:
                  'ALL = (ALL) NOPASSWD: /usr/bin/puppet-run *']
   dbadmins:
     gid: 2004
-    description: Access to do basic stuff on db1
+    description: Access to do basic stuff on db2002
     members: []
     privileges: ['ALL = (ALL) NOPASSWD: /usr/bin/mysql *',
                  'ALL = (ALL) NOPASSWD: /usr/sbin/service *',
