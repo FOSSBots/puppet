@@ -34,6 +34,12 @@
     Server="Ballmedia"
     RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
     UseUserName=true
+    
+[telegram]
+    [telegram.fosshost]
+    Token="<%= @telegramfh_token %>"
+    RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
+    MessageFormat="HTMLNick"
 
 [[gateway]]
     name = "mh.main"
@@ -130,6 +136,10 @@
     [[gateway.inout]]
     account ="irc.libera"
     channel = "#fosshost"
+    
+    [[gateway.inout]]
+    account ="telegram.fosshost"
+    channel =
 
 [[gateway]]
     name = "fh.incident"
