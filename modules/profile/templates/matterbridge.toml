@@ -39,7 +39,7 @@
     [zulip.phorge]
     Token="<%= @zulipphorge_token %>"
     Login="phorgebridge-bot@temp-community-phab.zulipchat.com"
-    Server="temp-community-phab.zulipchat.com"
+    Server="https://temp-community-phab.zulipchat.com"
     RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
 
 [[gateway]]
