@@ -281,3 +281,15 @@
     [[gateway.inout]]
     account ="irc.libera"
     channel = "#miraheze-ballmedia-polcompball-feed"
+
+[[gateway]]
+    name = "phorge.main"
+    enable=true
+
+    [[gateway.inout]]
+    account = "zulip.phorge"
+    channel="general"
+
+    [[gateway.inout]]
+    account ="irc.libera"
+    channel = "#phorge"
