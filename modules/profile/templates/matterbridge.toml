@@ -9,6 +9,7 @@
     SkipTLSVerify=false
     RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
     IgnoreNicks="icinga-miraheze"
+    JoinDelay=2
 
 [discord]
     [discord.miraheze]
