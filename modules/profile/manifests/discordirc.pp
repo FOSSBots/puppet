@@ -5,6 +5,7 @@ class profile::discordirc(){
     $discordfhlibera_password = lookup('passwords::irc::fhlibera')
     $discordbuff_token = lookup('passwords::discord::buff')
     $discordballmedia_token = lookup('passwords::discord::ballmedia')
+    $zulipphorge_token = lookup('passwords::zulip::phorge')
 
     users::user { 'relays':
         ensure     => present,
