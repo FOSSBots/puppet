@@ -288,7 +288,7 @@
 
     [[gateway.inout]]
     account = "zulip.phorge"
-    channel="general/bridge:mytopic"
+    channel="general/topic:bridge"
 
     [[gateway.inout]]
     account ="irc.libera"
