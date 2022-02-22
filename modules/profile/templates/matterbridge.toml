@@ -35,6 +35,13 @@
     RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
     UseUserName=true
 
+[zulip]
+    [zulip.phorge]
+    Token="<%= @zulipphorge_token %>"
+    Login="phorgebridge-bot@temp-community-phab.zulipchat.com"
+    Server="temp-community-phab.zulipchat.com"
+    RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
+
 [[gateway]]
     name = "mh.main"
     enable=true
