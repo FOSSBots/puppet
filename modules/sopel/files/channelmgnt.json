@@ -69,7 +69,8 @@
          "dmehus",
          "JohnLewis",
          "paladox",
-         "Agent"
+         "Agent",
+         "MacFan4000"
       ]
    },
    "#miraheze-offtopic":{
@@ -85,7 +86,8 @@
          "Voidwalker",
          "JohnLewis",
          "paladox",
-         "Agent"
+         "Agent",
+         "MacFan4000"
       ]
    },
    "#miraheze-testwiki":{
@@ -101,7 +103,7 @@
    "#testadminwiki":{
       "chanops":[
          "MacFan4000",
-         "Voidwalker"
+         "dmehus"
       ]
    },
    "##CyberBogan":{
@@ -197,7 +199,9 @@
          "dmehus",
          "MacFan4000",
          "Reception123",
-         "CosmicAlpha"
+         "CosmicAlpha",
+         "Voidwalker",
+         "Agent"
       ]
    },
     "#miraheze-feed-test":{
