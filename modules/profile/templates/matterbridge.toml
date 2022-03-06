@@ -234,6 +234,18 @@
     [[gateway.inout]]
     account ="irc.libera"
     channel = "#fosshost-applications-private"
+    
+[[gateway]]
+    name = "fh.acb"
+    enable=true
+    
+    [[gateway.inout]]
+    account = "discord.fosshost"
+    channel="ID:847535136357875732"
+    
+    [[gateway.inout]]
+    account ="irc.libera"
+    channel = "fosshost=acb"
 
 [[gateway]]
     name = "buffalonas.main"
