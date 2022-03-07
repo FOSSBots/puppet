@@ -245,7 +245,7 @@
     
     [[gateway.inout]]
     account ="irc.libera"
-    channel = "fosshost=acb"
+    channel = "#fosshost-acb"
 
 [[gateway]]
     name = "buffalonas.main"
