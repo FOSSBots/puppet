@@ -17,6 +17,7 @@
     Server="Miraheze"
     RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
     UseUserName=true
+    EditSuffix=" (edited)"
     
     [discord.fosshost]
     Token="<%= @discordfh_token %>"
