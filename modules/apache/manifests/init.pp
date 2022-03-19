@@ -16,6 +16,15 @@ class apache {
         owner   => root,
         group   => root,
     }
+    
+    file { '/etc/apache2/sites-available/fossbots.org-le-ssl.conf':
+        ensure  => present,
+        path    => '/etc/apache2/sites-available/fossbots.org-le-ssl.conf',
+        source  => 'puppet:///modules/apache/fossbots.org-le-ssl.conf',
+        mode    => '774',
+        owner   => root,
+        group   => root,
+    }
 
     file { '/etc/apache2/sites-available/www.mirahezebots.org-le-ssl.conf':
         ensure  => present,
