@@ -16,16 +16,16 @@
       "fosshost.png":"/var/flask/assets/fosshost.png"
    },
    "title":{
-       "index":"Home - MirahezeBot",
-       "about":"About - MirahezeBot",
-       "documentation":"Documentation - MirahezeBot",
-       "contribs":"Contributions - MirahezeBot",
-       "privacy":"Privacy - MirahezeBot",
-       "terms":"Terms - MirahezeBot"
+       "index":"Home - FOSSBots",
+       "about":"About - FOSSBots",
+       "documentation":"Documentation - FOSSBots",
+       "contribs":"Contributions - FOSSBots",
+       "privacy":"Privacy - FOSSBots",
+       "terms":"Terms - FOSSBots"
    },
    "font-awesome-url":"Font-Awesome",
    "Font-awesome-path":"/var/flask/Font-Awesome",
-   "canonical-prefix":"https://mirahezebots.org/",
+   "canonical-prefix":"https://fossbots.org/",
    "rendertemplates":{
       "navbar":"/var/flask/templates/navbar.html",
       "footer":"/var/flask/templates/footer.html",
