@@ -165,42 +165,6 @@
     channel = "#fosshost-social"
 
 [[gateway]]
-    name = "fh.techops"
-    enable=true
-
-    [[gateway.inout]]
-    account = "discord.fosshost"
-    channel="ID:834803279073509413"
-
-    [[gateway.inout]]
-    account ="irc.libera"
-    channel = "#fosshost-techops"
-
-[[gateway]]
-    name = "fh.volunteers"
-    enable=true
-
-    [[gateway.inout]]
-    account = "discord.fosshost"
-    channel="ID:788819267511910440"
-
-    [[gateway.inout]]
-    account ="irc.libera"
-    channel = "#fosshost-volunteers"
-
-[[gateway]]
-    name = "fh.exec"
-    enable=true
-
-    [[gateway.inout]]
-    account = "discord.fosshost"
-    channel="ID:842594441302900746"
-
-    [[gateway.inout]]
-    account ="irc.libera"
-    channel = "#fosshost-exec"
-
-[[gateway]]
     name = "fh.feedback"
     enable=true
 
@@ -211,30 +175,6 @@
     [[gateway.inout]]
     account ="irc.libera"
     channel = "#fosshost-feedback"
-
-[[gateway]]
-    name = "fh.meet"
-    enable=true
-
-    [[gateway.inout]]
-    account = "discord.fosshost"
-    channel="ID:853024700989177926"
-
-    [[gateway.inout]]
-    account ="irc.libera"
-    channel = "#fosshost-meet"
-
-[[gateway]]
-    name = "fh.privateapps"
-    enable=true
-
-    [[gateway.inout]]
-    account = "discord.fosshost"
-    channel="ID:881857494241136680"
-
-    [[gateway.inout]]
-    account ="irc.libera"
-    channel = "#fosshost-applications-private"
     
 [[gateway]]
     name = "fh.acb"
