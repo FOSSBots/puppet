@@ -35,7 +35,7 @@ class apache {
         group   => root,
     }
 
-    if $trusted['hostname'] == 'bots2002.miraheaebots.org' {
+    if $trusted['hostname'] == 'bots2002.mirahezebots.org' {
 
         file { '/etc/apache2/sites-available/bots1.mirahezebots.org-le-ssl.conf':
             ensure  => present,
@@ -63,9 +63,18 @@ class apache {
             owner   => root,
             group   => root,
         }
+        
+        file { '/etc/apache2/sites-available/sopel.fossbots.org-le-ssl.conf':
+            ensure  => present,
+            path    => '/etc/apache2/sites-available/sopel.fossbots.org-le-ssl.conf',
+            source  => 'puppet:///modules/apache/sopel.fossbots.org-le-ssl.conf',
+            mode    => '774',
+            owner   => root,
+            group   => root,
+        }
     }
 
-    if $trusted['hostname'] == 'tools2002.miraheaebots.org' {
+    if $trusted['hostname'] == 'tools2002.mirahezebots.org' {
 
         file { '/etc/apache2/sites-available/icinga.mirahezebots.org-le-ssl.conf':
             ensure  => present,
@@ -107,6 +116,42 @@ class apache {
             ensure  => present,
             path    => '/etc/apache2/sites-available/tools1.mirahezebots.org-le-ssl.conf',
             source  => 'puppet:///modules/apache/tools1.mirahezebots.org-le-ssl.conf',
+            mode    => '774',
+            owner   => root,
+            group   => root,
+        }
+        
+        file { '/etc/apache2/sites-available/icinga.fossbots.org-le-ssl.conf':
+            ensure  => present,
+            path    => '/etc/apache2/sites-available/icinga.fossbots.org-le-ssl.conf',
+            source  => 'puppet:///modules/apache/icinga.fossbots.org-le-ssl.conf',
+            mode    => '774',
+            owner   => root,
+            group   => root,
+        }
+
+        file { '/etc/apache2/sites-available/phabdigests.fossbots.org-le-ssl.conf':
+            ensure  => present,
+            path    => '/etc/apache2/sites-available/phabdigests.fossbots.org-le-ssl.conf',
+            source  => 'puppet:///modules/apache/phabdigests.fossbots.org-le-ssl.conf',
+            mode    => '774',
+            owner   => root,
+            group   => root,
+        }
+
+        file { '/etc/apache2/sites-available/phab.fossbots.org-le-ssl.conf':
+            ensure  => present,
+            path    => '/etc/apache2/sites-available/phab.fossbots.org-le-ssl.conf',
+            source  => 'puppet:///modules/apache/phab.fossbots.org-le-ssl.conf',
+            mode    => '774',
+            owner   => root,
+            group   => root,
+        }
+
+        file { '/etc/apache2/sites-available/phab-storage.fossbots.org-le-ssl.conf':
+            ensure  => present,
+            path    => '/etc/apache2/sites-available/phab-storage.fossbots.org-le-ssl.conf',
+            source  => 'puppet:///modules/apache/phab-storage.fossbots.org-le-ssl.conf',
             mode    => '774',
             owner   => root,
             group   => root,
