@@ -153,18 +153,6 @@
     channel = "#fosshost-incident"
 
 [[gateway]]
-    name = "fh.social"
-    enable=true
-
-    [[gateway.inout]]
-    account = "discord.fosshost"
-    channel="ID:834802993232478248"
-
-    [[gateway.inout]]
-    account ="irc.libera"
-    channel = "#fosshost-social"
-
-[[gateway]]
     name = "fh.feedback"
     enable=true
 
