@@ -1,6 +1,6 @@
 class streambot{
     $streambot_pass = lookup('passwords::streambot::irc')
-    git::clone { 'MirahezeBots/snitchbot':
+    git::clone { 'FOSSBots/snitchbot':
         ensure    => 'latest',
         directory => '/srv/streambot',
         branch    => 'master',
@@ -17,7 +17,7 @@ class streambot{
         ensure  => present,
         content => template('streambot/settings.py'),
         notify  => Service['streambot'],
-        require => Git::Clone['MirahezeBots/snitchbot'],
+        require => Git::Clone['FOSSBots/snitchbot'],
         mode    => '770',
         owner   => streambot,
         group   => streambot,
