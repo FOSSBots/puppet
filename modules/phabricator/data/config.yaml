@@ -11,9 +11,9 @@ auth.require-email-verification: true
 
 # Phabricator
 phabricator.show-prototypes: true
-phabricator.base-uri: "https://phab.mirahezebots.org/"
+phabricator.base-uri: "https://phab.fossbots.org/"
 phabricator.timezone: 'UTC'
-security.alternate-file-domain: "https://phab-storage.mirahezebots.org/"
+security.alternate-file-domain: "https://phab-storage.fossbots.org/"
 security.require-https: true
 security.strict-transport-security: true
 repository.default-local-path: "/var/phab/repos/"
