@@ -9,7 +9,7 @@ sopel-modules.chanlogs==0.2.2
 sopel-modules.github==0.4.5
 emoji==1.7.0
 six==1.16.0
-praw==5.4.0
+praw==7.5.0
 prawcore==0.14.0
 sopel-dns==0.3.1
 pipdeptree==2.2.1
