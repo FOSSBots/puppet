@@ -11,7 +11,7 @@
       "robots.txt":"/var/flask/templates/robots.txt",
       "sitemap.xml":"/var/flask/templates/sitemap.xml",
       "css/common.css":"/var/flask/assets/common.css",
-      "logo.png":"/var/flask/assets/logo.png",
+      "logo-new.png":"/var/flask/assets/logo.png",
       "favicon.png":"/var/flask/assets/favicon.png",
       "fosshost.png":"/var/flask/assets/fosshost.png"
    },
