@@ -1,11 +1,11 @@
-node 'bots2002.mirahezebots.org' {
+node 'bots2002.fossbots.org' {
   include role::botserver
 }
-node 'tools2002.mirahezebots.org' {
+node 'tools2002.fossbots.org' {
   include role::toolserver
   include ::icinga2::master
 }
-node 'db2002.mirahezebots.org' {
+node 'db2002.fossbots.org' {
   include profile::base
   include ::icinga2::node
 }
