@@ -4,7 +4,7 @@ class profile::dbbackups {
         description => 'Backup Database',
         command     => "/usr/bin/backup-db",
         user        => root,
-        interval    => {'start' => 'OnCalendar', 'interval' => '*/7 *-*-* *:*:*'},
+        interval    => {'start' => 'OnCalendar', 'interval' => 'Tue *-*-* 09:00:00'},
     }
     file { 'db-backup-script':
         ensure  => file,
