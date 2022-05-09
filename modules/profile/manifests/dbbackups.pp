@@ -1,4 +1,4 @@
-class dbbackups {
+class profile::dbbackups {
     systemd::timer::job { 'backup-db':
         ensure      => present,
         description => 'Backup Database',
