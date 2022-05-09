@@ -8,4 +8,5 @@ node 'tools2002.fossbots.org' {
 node 'db2002.fossbots.org' {
   include profile::base
   include ::icinga2::node
+  include profile::dbbackups
 }
