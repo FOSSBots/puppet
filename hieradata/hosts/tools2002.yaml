@@ -1,4 +1,4 @@
 users::groups:
   - toolsadmins
-db::main::ip: 'db2002.mirahezebots.org'
-icinga::nodename: 'tools2002.mirahezebots.org'
+db::main::ip: 'db2002.fossbots.org'
+icinga::nodename: 'tools2002.fossbots.org'
