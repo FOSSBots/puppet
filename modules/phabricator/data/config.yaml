@@ -2,7 +2,7 @@
 mysql.user: 'phabricator'
 storage.mysql-engine.max-size: 0
 
-metamta.default-address: 'noreply@mirahezebots.org'
+metamta.default-address: 'noreply@fossbots.org'
 
 # Auth
 auth.lock-config: true
