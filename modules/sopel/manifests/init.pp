@@ -38,7 +38,7 @@ class sopel(
         owner   => sopel,
         group   => sopel,
     }
-    git::clone { "MirahezeBots/sopel-CVTFeed":
+    git::clone { "FOSSBots/sopel-CVTFeed":
           ensure    => 'latest',
           directory => "/srv/sopelbots/cvtfeed",
           mode    => '774',
