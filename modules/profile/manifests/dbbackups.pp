@@ -2,7 +2,7 @@ class dbbackups {
     systemd::timer::job { 'backup-db':
         ensure      => present,
         description => 'Backup Database',
-        command     => "/usr/bin/backup-db,
+        command     => "/usr/bin/backup-db",
         user        => root,
         interval    => {'start' => 'OnCalendar', 'interval' => '*/7 *-*-* *:*:*'},
     }
