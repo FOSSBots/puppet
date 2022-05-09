@@ -54,9 +54,9 @@ class phabricator {
                 'key'          => 'mirahezebots-smtp',
                 'type'         => 'smtp',
                 'options'      => {
-                    'host'     => 'mail.mirahezebots.org',
+                    'host'     => 'smtppro.zoho.eu',
                     'port'     => 587,
-                    'user'     => 'noreply@mirahezebots.org',
+                    'user'     => 'noreply@fossbots.org',
                     'password' => lookup('passwords::mail::phab'),
                     'protocol' => 'tls',
                 },
