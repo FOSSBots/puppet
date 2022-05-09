@@ -34,12 +34,12 @@ smtp_tls_session_cache_database = btree:${data_directory}/smtp_scache
 # information on enabling SSL in the smtp client.
 
 smtpd_relay_restrictions = permit_mynetworks permit_sasl_authenticated defer_unauth_destination
-myhostname = tools2002.mirahezebots.org
+myhostname = tools2002.fossbots.org
 alias_maps = hash:/etc/aliases
 alias_database = hash:/etc/aliases
 myorigin = /etc/mailname
-mydestination = $myhostname, mirahezebots.org, tools2002.mirahezebots.org, localhost.mirahezebots.org, localhost
-relayhost = [mail.mirahezebots.org]:587
+mydestination = $myhostname, fossbots.org, tools2002.fossbots.org, localhost.fossbots.org, localhost
+relayhost = [smtppro.zoho.eu]:587
 mynetworks = [::ffff:127.0.0.0]/104 [::1]/128
 mailbox_command = procmail -a "$EXTENSION"
 mailbox_size_limit = 0
