@@ -1,3 +1,3 @@
 <%= $facts[operatingsystem] %> <%= $facts[operatingsystemrelease] %> <%= $facts[architecture] %>
 
-Welcome to the MirahezeBots server! By using this server you agree to the MirahezeBots Terms of Use (https://mirahezebots.org/terms)
+Welcome to the FOSSBots server! By using this server you agree to the FOSSBots Terms of Use (https://fossbots.org/terms)
