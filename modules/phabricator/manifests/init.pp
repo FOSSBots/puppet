@@ -6,7 +6,7 @@ class phabricator {
     git::clone{ 'phab-fork':
         ensure    => present,
         directory => '/var/phab-deploy',
-        origin    => 'https://github.com/MirahezeBots/phabricator-deployment.git',
+        origin    => 'https://github.com/FOSSBots/phabricator-deployment.git',
         branch    => 'wmf/stable',
         recurse_submodules => true,
     }
