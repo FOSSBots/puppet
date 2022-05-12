@@ -10,7 +10,7 @@
          "JohnLewis",
          "paladox"
       ],
-      "log_channel":"#miraheze-bot-alerts"
+      "log_channel":"#fossbots-alerts"
    },
    "#memipedia":{
      "chanops":[
