@@ -32,7 +32,7 @@ file { 'dev-venv':
     }
     $repos = ['MirahezeBots', 'sopel-adminlist', 'sopel-channelmgnt', 'jsonparser', 'sopel-joinall', 'sopel']
     $repos.each |$repo| {
-      git::clone { "MirahezeBots/${repo}":
+      git::clone { "FOSSBots/${repo}":
           ensure    => 'latest',
           directory => "/srv/sopelbots/devcode/${repo}",
           branch    => 'dev',
@@ -52,6 +52,6 @@ file { 'dev-venv':
         ensure  => present,
         content => systemd_template('mirahezebottestlibera'),
         restart => true,
-        require => Git::Clone['MirahezeBots/sopel'],
+        require => Git::Clone['FOSSBots/sopel'],
     }
 }
