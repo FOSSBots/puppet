@@ -2,7 +2,7 @@ class profile::phabdigest(
     $install_dir = '/srv/phabdigest',
 ){
  
-    git::clone { 'MirahezeBots/phabdigests':
+    git::clone { 'FOSSBots/phabdigests':
         ensure    => 'latest',
         directory => $install_dir,
         branch    => 'main',
