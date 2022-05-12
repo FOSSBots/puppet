@@ -23,6 +23,6 @@ class mailrelay {
 
     file { '/etc/mailname':
         ensure  => present,
-        content => 'mirahezebots.org',
+        content => 'fossbots.org',
     }
 }
