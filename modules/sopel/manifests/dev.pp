@@ -17,7 +17,7 @@ file { 'dev-venv':
         notify  => Exec['update dev'],
     }
     exec { 'update dev':
-          command     => '/srv/sopelbots/devvenv/bin/pip3.7 install -U -r /srv/sopelbots/devrequire.txt',
+          command     => '/srv/sopelbots/devvenv/bin/pip3.9 install -U -r /srv/sopelbots/devrequire.txt',
           cwd         => '/srv/sopelbots/devvenv',
           refreshonly => true,
           user        => sopel,
@@ -42,7 +42,7 @@ file { 'dev-venv':
           notify => Exec["rebuild ${repo}"],
       }
       exec { "rebuild ${repo}":
-          command     => "/usr/bin/rm -rf /srv/sopelbots/devcode/${repo}/dist/*.whl && /srv/sopelbots/devvenv/bin/pyproject-build --wheel --outdir /srv/sopelbots/devcode/${repo}/dist /srv/sopelbots/devcode/${repo} && /usr/bin/find / -wholename \"/srv/sopelbots/devcode/${repo}/dist/*.whl\" | /usr/bin/xargs /srv/sopelbots/devvenv/bin/pip3.7 install --no-dependencies --force-reinstall",
+          command     => "/usr/bin/rm -rf /srv/sopelbots/devcode/${repo}/dist/*.whl && /srv/sopelbots/devvenv/bin/pyproject-build --wheel --outdir /srv/sopelbots/devcode/${repo}/dist /srv/sopelbots/devcode/${repo} && /usr/bin/find / -wholename \"/srv/sopelbots/devcode/${repo}/dist/*.whl\" | /usr/bin/xargs /srv/sopelbots/devvenv/bin/pip3.9 install --no-dependencies --force-reinstall",
           cwd         => "/srv/sopelbots/devcode/${repo}",
           user        => sopel,
           refreshonly => true,
