@@ -26,7 +26,7 @@ class sopel::prod(
         notify  => Exec['update prod'],
     }
     exec { 'update prod':
-          command     => '/srv/sopelbots/prodvenv/bin/pip3.7 install -U -r /srv/sopelbots/prodrequire.txt',
+          command     => '/srv/sopelbots/prodvenv/bin/pip3.9 install -U -r /srv/sopelbots/prodrequire.txt',
           cwd         => '/srv/sopelbots/prodvenv',
           refreshonly => true,
           user        => sopel,
