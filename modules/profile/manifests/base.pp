@@ -37,4 +37,20 @@ class profile::base {
         age     => '4w',
         recurse => true,
     }
+    
+    systemd::timer::job { 'backup-puppet':
+        ensure      => present,
+        description => 'Backup Puppet',
+        command     => "/usr/bin/backup-puppet",
+        user        => root,
+        interval    => {'start' => 'OnCalendar', 'interval' => 'Tue *-*-* 07:00:00'},
+    }
+    file { 'puppet-backup-script':
+        ensure  => file,
+        path    => '/usr/bin/backup-puppet',
+        source  => 'puppet:///modules/profile/backup-puppet.sh',
+        mode    => '777',
+        owner   => root,
+        group   => root,
+    }
 }
