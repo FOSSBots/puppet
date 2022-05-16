@@ -1,7 +1,7 @@
 class role::toolserver {	
     include ::profile::phabdigest
     include ::profile::base
-    include ::profile::phabbackups
+    include ::profile::toolsbackups
     include ::profile::web
     include phabricator
     include roundcube
