@@ -3,7 +3,7 @@ class profile::base {
     include puppet
     include motd
     include ufw
-    $hostname = $icinga::nodename
+    $hostname = lookup('icinga::nodename')
 
     package { 'wheel':
         ensure => present,
