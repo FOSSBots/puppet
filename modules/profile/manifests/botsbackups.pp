@@ -1,7 +1,7 @@
 class profile::botsbackups {
     systemd::timer::job { 'backup-bots':
         ensure      => present,
-        description => 'Backup Database',
+        description => 'Backup Bots',
         command     => "/usr/bin/backup-bots",
         user        => root,
         interval    => {'start' => 'OnCalendar', 'interval' => 'Tue *-*-* 08:00:00'},
