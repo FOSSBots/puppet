@@ -48,7 +48,7 @@ class profile::base {
     file { 'puppet-backup-script':
         ensure  => file,
         path    => '/usr/bin/backup-puppet',
-        source  => 'puppet:///modules/profile/backup-puppet.sh',
+        content => template("profile/backup-puppet.sh"),
         mode    => '777',
         owner   => root,
         group   => root,
