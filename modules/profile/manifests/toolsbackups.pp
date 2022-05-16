@@ -1,7 +1,7 @@
 class profile::toolsbackups {
     systemd::timer::job { 'backup-phab':
         ensure      => present,
-        description => 'Backup Phabricator',
+        description => 'Backup ToolServer',
         command     => "/usr/bin/backup-phab",
         user        => root,
         interval    => {'start' => 'OnCalendar', 'interval' => 'Tue *-*-* 10:00:00'},
