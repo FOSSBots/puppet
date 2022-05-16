@@ -3,7 +3,7 @@ class profile::base {
     include puppet
     include motd
     include ufw
-    $hostname = $facts['hostname']
+    $hostname = $facts['networking']['hostname']
 
     package { 'wheel':
         ensure => present,
