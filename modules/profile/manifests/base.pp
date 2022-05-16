@@ -3,6 +3,7 @@ class profile::base {
     include puppet
     include motd
     include ufw
+    $hostname = lookup('icinga::nodename')
 
     package { 'wheel':
         ensure => present,
@@ -36,5 +37,21 @@ class profile::base {
     tidy { '/var/log':
         age     => '4w',
         recurse => true,
+    }
+    
+    systemd::timer::job { 'backup-puppet':
+        ensure      => present,
+        description => 'Backup Puppet',
+        command     => "/usr/bin/backup-puppet",
+        user        => root,
+        interval    => {'start' => 'OnCalendar', 'interval' => 'Tue *-*-* 07:00:00'},
+    }
+    file { 'puppet-backup-script':
+        ensure  => file,
+        path    => '/usr/bin/backup-puppet',
+        content => template("profile/backup-puppet.sh"),
+        mode    => '777',
+        owner   => root,
+        group   => root,
     }
 }
