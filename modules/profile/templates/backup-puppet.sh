@@ -1,3 +1,3 @@
 #!/bin/bash
-cp /etc/puppet/private/hieradata/common.yaml /backups/<%= $hostname %>.yaml
-s3cmd -c /backups/.s3cfg /backups/<%=  $hostname %>.yaml s3://backup-fossbots
+cp /etc/puppet/private/hieradata/common.yaml /backups/<%= lookup('icinga::nodename') %>.yaml
+s3cmd -c /backups/.s3cfg /backups/<%=  lookup('icinga::nodename') %>.yaml s3://backup-fossbots
