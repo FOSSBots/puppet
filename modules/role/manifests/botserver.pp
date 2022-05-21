@@ -5,4 +5,5 @@ class role::botserver {
     include ::profile::discordirc
     include streambot
     include ::icinga2::node
+    include ::profile::botsbackups
 }
