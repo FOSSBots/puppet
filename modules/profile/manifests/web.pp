@@ -11,7 +11,7 @@ class profile::web(
         provider => pip3,
     }
  
-    git::clone { 'FOSSBots/mirahezebots.org':
+    git::clone { 'FOSSBots/fossbots.org':
         ensure    => 'latest',
         directory => '/var/flask',
         branch    => 'dev',
