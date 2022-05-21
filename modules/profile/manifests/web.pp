@@ -11,7 +11,7 @@ class profile::web(
         provider => pip3,
     }
  
-    git::clone { 'FOSSBots/mirahezebots.org':
+    git::clone { 'FOSSBots/fossbots.org':
         ensure    => 'latest',
         directory => '/var/flask',
         branch    => 'dev',
@@ -26,7 +26,7 @@ class profile::web(
         mode    => '0755',
         owner   => www-data,
         group   => www-data,
-        require => Git::Clone['FOSSBots/mirahezebots.org'],
+        require => Git::Clone['FOSSBots/fossbots.org'],
     }
     file { 'flask-config':
         ensure  => file,
@@ -35,7 +35,7 @@ class profile::web(
         mode    => '0755',
         owner   => www-data,
         group   => www-data,
-        require => Git::Clone['FOSSBots/mirahezebots.org'],
+        require => Git::Clone['FOSSBots/fossbots.org'],
     }
     file { 'flask-wsgi':
         ensure  => file,
@@ -44,6 +44,6 @@ class profile::web(
         mode    => '0755',
         owner   => www-data,
         group   => www-data,
-        require => Git::Clone['FOSSBots/mirahezebots.org'],
+        require => Git::Clone['FOSSBots/fossbots.org'],
     }
 }
