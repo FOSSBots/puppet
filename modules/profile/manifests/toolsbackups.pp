@@ -4,7 +4,7 @@ class profile::toolsbackups {
         description => 'Backup Phabricator',
         command     => "/usr/bin/backup-phab",
         user        => root,
-        interval    => {'start' => 'OnCalendar', 'interval' => 'Tue *-*-* 10:00:00'},
+        interval    => {'start' => 'OnCalendar', 'interval' => '* *-*-* 10:00:00'},
     }
     file { 'phab-backup-script':
         ensure  => file,
