@@ -4,7 +4,7 @@ class profile::botsbackups {
         description => 'Backup Bots',
         command     => "/usr/bin/backup-bots",
         user        => root,
-        interval    => {'start' => 'OnCalendar', 'interval' => '*-*-*-* 08:00:00'},
+        interval    => {'start' => 'OnCalendar', 'interval' => '*-*-* 08:00:00'},
     }
     file { 'bots-backup-script':
         ensure  => file,
