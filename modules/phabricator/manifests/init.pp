@@ -64,7 +64,7 @@ class phabricator {
         # database
         'cluster.databases'    => [
             {
-                 'host'  => lookup('db::main::ip'),
+                 'host'  => 'db2002.fossbots.org',
                  'role' => 'master',
                  'disabled' => false,
             },
