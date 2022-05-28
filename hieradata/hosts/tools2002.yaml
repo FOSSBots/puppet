@@ -1,4 +1,3 @@
 users::groups:
   - toolsadmins
-db::main::ip: 'db2002.fossbots.org'
 icinga::nodename: 'tools2002.fossbots.org'
