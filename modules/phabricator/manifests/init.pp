@@ -44,7 +44,6 @@ class phabricator {
     $phab_yaml = loadyaml("${module_path}/data/config.yaml")
     $phab_private = {
         'mysql.pass' => lookup('passwords::db::phabricator'),
-        'mysql.host' => lookup('db::main::ip'),
     }
 
     $phab_setting = {
@@ -60,6 +59,19 @@ class phabricator {
                     'password' => lookup('passwords::mail::phab'),
                     'protocol' => 'tls',
                 },
+            },
+        ],
+        # database
+        'cluster.databases'    => [
+            {
+                 'host'  => lookup('db::main::ip'),
+                 'role' => 'master',
+                 'disabled' => false,
+            },
+            {
+                 'host'  => 'db2003.fossbots.org',
+                 'role' => 'replica',
+                 'disabled' => false,
             },
         ],
     }
