@@ -10,3 +10,8 @@ node 'db2002.fossbots.org' {
   include ::icinga2::node
   include profile::dbbackups
 }
+
+node 'dr3001.fossbots.org' {
+  include profile::discordirc
+  include profile::base
+}
