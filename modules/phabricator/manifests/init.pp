@@ -70,7 +70,7 @@ class phabricator {
             },
             {
                  'host'  => 'db3001.fossbots.org',
-                 'role' => 'master',
+                 'role' => 'replica',
                  'disabled' => false,
             },
         ],
