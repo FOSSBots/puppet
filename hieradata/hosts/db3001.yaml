@@ -1,0 +1,3 @@
+users::groups:
+  - dbadmins
+icinga::nodename: 'db3001.fossbots.org'
