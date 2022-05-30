@@ -1,0 +1,3 @@
+users::groups:
+  - toolsadmins
+icinga::nodename: 'tools3001.fossbots.org'
