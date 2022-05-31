@@ -1,7 +1,7 @@
 class profile::phabdigest(
     $install_dir = '/srv/phabdigest',
 ){
- 
+    $ensure = lookup('digests::timer')
     git::clone { 'FOSSBots/phabdigests':
         ensure    => 'latest',
         directory => $install_dir,
@@ -9,7 +9,7 @@ class profile::phabdigest(
         shared    => true,
     }
     systemd::timer::job { 'phabdigest-bots-weekly':
-        ensure      => present,
+        ensure      => $ensure,
         description => 'Weekly PhabDigest for botsphab',
         command     => "/usr/bin/python3 /srv/phabdigest/script.py /srv/phabdigest/weekly.csv bots",
         user        => root,
