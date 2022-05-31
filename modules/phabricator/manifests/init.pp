@@ -66,12 +66,12 @@ class phabricator {
             {
                  'host'  => 'db2002.fossbots.org',
                  'role' => 'master',
-                 'disabled' => true,
+                 'disabled' => false,
             },
             {
                  'host'  => 'db3001.fossbots.org',
                  'role' => 'replica',
-                 'disabled' => false,
+                 'disabled' => true,
             },
         ],
     }
