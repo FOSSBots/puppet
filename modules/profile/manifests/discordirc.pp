@@ -5,6 +5,7 @@ class profile::discordirc(){
     $discordbuff_token = lookup('passwords::discord::buff')
     $discordballmedia_token = lookup('passwords::discord::ballmedia')
     $zulipphorge_token = lookup('passwords::zulip::phorge')
+    $ensure = lookup('bridgebot::timer')
 
     users::user { 'relays':
         ensure     => present,
@@ -26,7 +27,7 @@ class profile::discordirc(){
     }
     
     systemd::service { 'matterbridge':
-        ensure  => present,
+        ensure  => $ensure,
         content => systemd_template('matterbridge'),
         restart => true,
         require => [File['/srv/matterbridge/matterbridge.toml'], User['relays']],

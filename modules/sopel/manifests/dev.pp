@@ -1,5 +1,6 @@
 class sopel::dev(
 ){
+$ensure = lookup('sopel::dev::timer')
 file { 'dev-venv':
         ensure  => directory,
         path    => '/srv/sopelbots/devvenv/',
@@ -49,7 +50,7 @@ file { 'dev-venv':
       }
     }
     systemd::service { 'mirahezebottestlibera':
-        ensure  => present,
+        ensure  => $ensure,
         content => systemd_template('mirahezebottestlibera'),
         restart => true,
         require => Git::Clone['FOSSBots/sopel'],

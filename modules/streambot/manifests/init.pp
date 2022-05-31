@@ -1,5 +1,6 @@
 class streambot{
     $streambot_pass = lookup('passwords::streambot::irc')
+    $ensure = lookup('streambot::timer')
     git::clone { 'FOSSBots/snitchbot':
         ensure    => 'latest',
         directory => '/srv/streambot',
@@ -9,7 +10,7 @@ class streambot{
         recurse_submodules => true,
     }
     systemd::service { 'streambot':
-        ensure  => present,
+        ensure  => $ensure,
         content => systemd_template('streambot'),
         restart => true,
     }
