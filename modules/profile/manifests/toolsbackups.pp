@@ -1,6 +1,7 @@
 class profile::toolsbackups {
+    $backups_run = lookup(backups::run)
     systemd::timer::job { 'backup-phab':
-        ensure      => present,
+        ensure      => $backups_run,
         description => 'Backup Phabricator',
         command     => "/usr/bin/backup-phab",
         user        => root,
@@ -15,7 +16,7 @@ class profile::toolsbackups {
         group   => root,
     }
     systemd::timer::job { 'backup-phab-digest':
-        ensure      => present,
+        ensure      => $backups_run,
         description => 'Backup Phabricator',
         command     => "/usr/bin/backup-phab-digest",
         user        => root,

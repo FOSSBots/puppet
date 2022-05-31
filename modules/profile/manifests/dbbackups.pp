@@ -1,6 +1,7 @@
 class profile::dbbackups {
+    $backups_run = lookup(backups::run)
     systemd::timer::job { 'backup-db':
-        ensure      => present,
+        ensure      => $backups_run,
         description => 'Backup Database',
         command     => "/usr/bin/backup-db",
         user        => root,
