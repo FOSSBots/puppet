@@ -1,3 +1,4 @@
 users::groups:
   - toolsadmins
 icinga::nodename: 'tools2002.fossbots.org'
+backups::run: present
