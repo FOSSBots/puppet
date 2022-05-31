@@ -1,6 +1,7 @@
 class profile::botsbackups {
+    $backups_run = lookup(backups::run)
     systemd::timer::job { 'backup-bots':
-        ensure      => present,
+        ensure      => $backups_run,
         description => 'Backup Bots',
         command     => "/usr/bin/backup-bots",
         user        => root,
