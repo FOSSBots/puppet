@@ -4,8 +4,9 @@
 #
 class sopel::prod(
 ){
+  $ensure = lookup('sopel::prod::timer')
   systemd::service { 'mirahezebotprodlibera':
-        ensure  => present,
+        ensure  => $ensure,
         content => systemd_template('mirahezebotprodlibera'),
         restart => true,
     }
