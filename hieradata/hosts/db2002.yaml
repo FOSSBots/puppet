@@ -2,3 +2,4 @@ users::groups:
   - dbadmins
 icinga::nodename: 'db2002.fossbots.org'
 backups::run: present
+mariadb::id: 1
