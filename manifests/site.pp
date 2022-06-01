@@ -9,6 +9,7 @@ node 'db2002.fossbots.org' {
   include profile::base
   include ::icinga2::node
   include profile::dbbackups
+  include mariadb
 }
 node 'bots3001.fossbots.org' {
   include role::botserver
@@ -21,4 +22,5 @@ node 'db3001.fossbots.org' {
   include profile::base
   include ::icinga2::node
   include profile::dbbackups
+  include mariadb
 }
