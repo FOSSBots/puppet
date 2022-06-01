@@ -1,4 +1,5 @@
 class apache {
+    $mariadb_id = lookup('mariadb::id')
     package { 'mariadb-server':
         ensure => present,
     }
