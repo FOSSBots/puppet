@@ -5,6 +5,7 @@
 # this is read by the standalone daemon and embedded servers
 [server]
 read-only = 1
+gtid_strict_mode = 1
 
 # this is only for the mysqld standalone daemon
 [mysqld]
