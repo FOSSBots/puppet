@@ -26,3 +26,4 @@ maxminddb==2.2.0
 urllib3==1.26.9
 dnspython==2.2.1
 build==0.8.0
+mysqlclient==2.1.0
