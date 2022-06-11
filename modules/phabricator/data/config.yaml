@@ -93,7 +93,7 @@ maniphest.statuses:
 
 # Disable some Phabricator applications
 phabricator.uninstalled-applications:
-  PhabricatorAlmanacApplication: true # we don't have resources to manage
+  PhabricatorAlmanacApplication: false # we have resources to manage
   PhabricatorChatLogApplication: true # deprecated
   PhabricatorCountdownApplication: true # niche calendar thing, not useful
   PhabricatorDivinerApplication: true # we don't need Phab docs locally
