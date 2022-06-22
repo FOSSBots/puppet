@@ -21,7 +21,7 @@ pytz==2022.1
 pyparsing==3.0.9
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-geoip2==4.5.0
+geoip2==4.6.0
 maxminddb==2.2.0
 urllib3==1.26.9
 dnspython==2.2.1
