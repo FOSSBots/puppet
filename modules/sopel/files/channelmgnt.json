@@ -219,5 +219,10 @@
       "inherits-from":[
          "#miraheze-botlogs"
        ]
+   },
+   "#brandon-wm":{
+      "chanops":[
+         "BrandonWM"
+      ]
    }
 }
