@@ -5,10 +5,10 @@
          "RhinosF1",
          "Reception123",
          "Voidwalker",
-         "dmehus",
          "CosmicAlpha",
          "JohnLewis",
-         "paladox"
+         "paladox",
+         "raidarr"
       ],
       "log_channel":"#fossbots-alerts"
    },
@@ -31,7 +31,6 @@
       "chanops":[
          "Voidwalker",
          "Reception123",
-         "dmehus",
          "raidarr"
       ]
    },
@@ -67,7 +66,6 @@
          "Void|bot",
          "RhinosF1",
          "CosmicAlpha",
-         "dmehus",
          "JohnLewis",
          "paladox",
          "Agent",
@@ -148,7 +146,6 @@
          "MacFan4000",
          "RhinosF1",
          "Voidwalker",
-         "dmehus",
          "Sario"
       ]
    },
@@ -158,7 +155,6 @@
          "RhinosF1",
          "Voidwalker",
          "JohnLewis",
-         "dmehus",
          "Sario"
       ]
    },
@@ -196,7 +192,6 @@
    },
     "#miraheze-feed-login":{
       "chanops":[
-         "dmehus",
          "MacFan4000",
          "Reception123",
          "CosmicAlpha",
