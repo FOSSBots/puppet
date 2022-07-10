@@ -25,15 +25,6 @@ class profile::discordirc(){
         group   => relays,
         require => User['relays']
     }
-    file { "/srv/matterbridge/matterbridge":
-        ensure  => present,
-        source => 'https://github.com/42wim/matterbridge/releases/download/v1.25.2/matterbridge-1.25.2-linux-arm64',
-        notify  => Service["matterbridge"],
-        mode    => '770',
-        owner   => relays,
-        group   => relays,
-        require => User['relays']
-    }
     
     systemd::service { 'matterbridge':
         ensure  => $ensure,
