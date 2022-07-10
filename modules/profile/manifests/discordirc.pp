@@ -27,7 +27,7 @@ class profile::discordirc(){
     }
     file { "/srv/matterbridge/matterbridge":
         ensure  => present,
-        source => 'https://github.com/42wim/matterbridge/releases/download/v1.25.2/matterbridge-1.25.2-linux-arm64'
+        source => 'https://github.com/42wim/matterbridge/releases/download/v1.25.2/matterbridge-1.25.2-linux-arm64',
         notify  => Service["matterbridge"],
         mode    => '770',
         owner   => relays,
