@@ -16,7 +16,7 @@ pipdeptree==2.2.1
 requests-cache==0.9.5
 wheel==0.37.0
 xmltodict==0.12
-rsa==4.8
+rsa==4.9
 pytz==2022.1
 pyparsing==3.0.9
 pyasn1==0.4.8
