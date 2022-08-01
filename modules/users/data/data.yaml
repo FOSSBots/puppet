@@ -2,7 +2,7 @@ groups:
   ops:
     gid: 2000
     description: roots, sudo everywhere
-    members: [rhinosf1, macfan, void, sario]
+    members: [rhinosf1, macfan, void, sario, peer]
     privileges: ['ALL = (ALL) NOPASSWD: ALL']
   botroots:
     gid: 2001
@@ -97,3 +97,10 @@ users:
     name: Dmehus
     realname: Doug
     ssh_keys: []
+
+  peer:
+    ensure: present
+    uid: 1009
+    name: Peer
+    realname: Peer
+    ssh_keys: [ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKoaoGwuX2cx0FYeOybU5Q/VcHoOouRq0lbXDdNzqiOw peer@globaL-CURVE-2020]
