@@ -112,4 +112,4 @@ users:
     uid: 1010
     name: Chrs
     realname: Chrs
-    ssh_keys: []
+    ssh_keys: [ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMYj9RifGtR0ucKRZP4T29WI/QXhNEiwJZ2tXK79a3a+]
