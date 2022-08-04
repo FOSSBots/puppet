@@ -12,19 +12,21 @@ groups:
   botadmins:
     gid: 2002
     description: Shell on bots2002, rights will expand soon.
-    members: []
+    members: [chrs]
     privileges: ['ALL = (sopel) NOPASSWD: ALL',
                  'ALL = (relays) NOPASSWD: ALL',
                  'ALL = (streambot) NOPASSWD: ALL',
+                 'ALL = (www-data) NOPASSWD: ALL',
                  'ALL = (ALL) NOPASSWD: /usr/sbin/service *']
   toolsadmins:
     gid: 2003
     description: Access to do basic stuff on tools2002
-    members: []
+    members: [chrs]
     privileges: ['ALL = (ALL) NOPASSWD: /usr/sbin/service *',
                  'ALL = (ALL) NOPASSWD: /var/phabricator/bin/*',
                  'ALL = (ALL) NOPASSWD: /usr/bin/puppet *',
-                 'ALL = (ALL) NOPASSWD: /usr/bin/puppet-run *']
+                 'ALL = (www-data) NOPASSWD: ALL',
+                 'ALL = (ALL) NOPASSWD: /usr/bin/puppet-run']
   dbadmins:
     gid: 2004
     description: Access to do basic stuff on db2002
@@ -104,3 +106,10 @@ users:
     name: Peer
     realname: Peer
     ssh_keys: [ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKoaoGwuX2cx0FYeOybU5Q/VcHoOouRq0lbXDdNzqiOw peer@globaL-CURVE-2020]
+
+  chrs:
+    ensure: present
+    uid: 1010
+    name: Chrs
+    realname: Chrs
+    ssh_keys: [ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMYj9RifGtR0ucKRZP4T29WI/QXhNEiwJZ2tXK79a3a+]
