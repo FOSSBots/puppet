@@ -21,7 +21,7 @@ export EDITOR=`which vim`
 
 # Aliases
 alias ccze="ccze -mansi" # -m ansi disables ncurses - a much easier experience
-alias si="sudo -i -E EDITOR"
+alias si="sudo -i"
 
 # Aliases (as functions)
 ctailf () {
