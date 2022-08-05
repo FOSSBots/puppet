@@ -8,6 +8,26 @@ class apache {
         require => Package['apache2'],
     }
 
+    exec { 'mod_remoteip':
+        creates => '/etc/apache2/mods-enabled/remoteip.load',
+        require => Package['apache2'],
+        command => '/usr/sbin/a2enmod remoteip',
+    }
+
+    file { '/etc/apache2/conf-available/cloudflare.conf':
+        ensure  => present,
+        path    => '/etc/apache2/conf-available/cloudflare.conf',
+        source  => 'puppet:///modules/apache/cloudflare.conf',
+        mode    => '774',
+        owner   => root,
+        group   => root,
+    }
+    -> exec { 'conf_cloudflare':
+        creates => '/etc/apache2/conf-enabled/cloudflare.conf',
+        require => Package['apache2'],
+        command => '/usr/sbin/a2enconf cloudflare',
+    }
+
     file { '/etc/apache2/sites-available/mirahezebots.org-le-ssl.conf':
         ensure  => present,
         path    => '/etc/apache2/sites-available/mirahezebots.org-le-ssl.conf',
