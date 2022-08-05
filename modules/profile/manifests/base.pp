@@ -11,6 +11,10 @@ class profile::base {
         provider => pip3,
     }
 
+    package { 'ccze':
+        ensure => present,
+    }
+
     package { 'pipdeptree':
         ensure => present,
         name => pipdeptree,
