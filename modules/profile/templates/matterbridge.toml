@@ -105,6 +105,18 @@
     channel = "#miraheze-sre"
     
 [[gateway]]
+    name = "mh.tech"
+    enable=true
+
+    [[gateway.inout]]
+    account = "discord.miraheze"
+    channel="ID:1006789349498699827"
+
+    [[gateway.inout]]
+    account ="irc.libera"
+    channel = "#miraheze-tech"
+    
+[[gateway]]
     name = "mh.cvtprivate"
     enable=true
 
