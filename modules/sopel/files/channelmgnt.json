@@ -88,6 +88,11 @@
          "MacFan4000"
       ]
    },
+   "#miraheze-tech":{
+      "inherits-from":[
+         "#miraheze-sre"
+      ]
+   },
    "#miraheze-testwiki":{
       "chanops":[
          "Reception123",
