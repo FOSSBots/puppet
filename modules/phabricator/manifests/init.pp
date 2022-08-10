@@ -44,6 +44,11 @@ class phabricator {
     $phab_yaml = loadyaml("${module_path}/data/config.yaml")
     $phab_private = {
         'mysql.pass' => lookup('passwords::db::phabricator'),
+        'amazon-s3.access-key' => lookup('passwords::s3::access'),
+        'amazon-s3.secret-key' => lookup('passwords::s3::secret'),
+        'amazon-s3.region' => lookup('passwords::s3::region'),
+        'amazon-s3.endpoint' => lookup('passwords::s3::endpoint'),
+        'storage.s3.bucket' => lookup('passwords::s3::bucket'),
     }
 
     $phab_setting = {
