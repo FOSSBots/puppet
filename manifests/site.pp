@@ -17,3 +17,6 @@ node 'tools3001.fossbots.org' {
 node 'db3001.fossbots.org' {
   include role::dbserver
 }
+node 'pm4001.fossbots.org' {
+  include ::profile::base
+}
