@@ -2,7 +2,7 @@ class profile::base {
     include users
     include puppet
     include motd
-    include ufw
+    #include ufw
     $hostname = lookup('icinga::nodename')
 
     package { 'python3-pip':
