@@ -5,6 +5,10 @@ class profile::base {
     include ufw
     $hostname = lookup('icinga::nodename')
 
+    package { 'python3-pip':
+        ensure => present,
+    }
+
     package { 'wheel':
         ensure => present,
         name => wheel,

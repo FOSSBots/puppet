@@ -5,10 +5,6 @@
 class profile::web(
 ){
     include apache
-    
-    package { 'python3-pip':
-        ensure => present,
-    }
 
     package { 'Flask':
         ensure => present,
