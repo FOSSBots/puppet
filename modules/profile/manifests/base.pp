@@ -39,7 +39,7 @@ class profile::base {
     }
 
     file { '/etc/ssh/userkeys':
-        ensure   => 'folder',
+        ensure   => 'directory',
         mode    => '444',
         owner   => root,
         group   => root,
