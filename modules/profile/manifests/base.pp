@@ -39,7 +39,10 @@ class profile::base {
     }
 
     file { '/etc/ssh/userkeys':
-        ensure   => 'present',
+        ensure   => 'folder',
+        mode    => '444',
+        owner   => root,
+        group   => root,
     }
     
     tidy { '/var/lib/puppet/reports':
