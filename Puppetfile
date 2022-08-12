@@ -8,4 +8,5 @@ mod 'wmflib',
   #version: # gerrit doesnt provide consistent tarballs :(
 
 mod 'vmlib',
-  :git => 'https://github.com/peerau/vmlib.git'
+  :git => 'https://github.com/peerau/vmlib.git',
+  :ref => 'main'
