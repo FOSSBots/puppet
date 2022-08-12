@@ -7,5 +7,7 @@ defaults:
 hierarchy:
   - name: "per-host Yaml data"
     path: "hosts/%{::hostname}.yaml"
-  - name: "private yaml"
+  - name: "common secure data"
     path: "private/common.yaml"
+  - name: "per-host secure data"
+    path: "private/%{::hostname}.yaml"
