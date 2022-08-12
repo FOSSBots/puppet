@@ -1,0 +1,1 @@
+forge 'forge.puppetlabs.com'
