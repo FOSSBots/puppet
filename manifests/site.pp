@@ -8,13 +8,13 @@ node 'tools2002.fossbots.org' {
 node 'db2002.fossbots.org' {
   include role::dbserver
 }
-node 'bots[34]001.fossbots.org' {
+node /^bots[34]001\.fossbots\.org$/ {
   include role::botserver
 }
-node 'tools[34]001.fossbots.org' {
+node /^tools[34]001\.fossbots\.org$/ {
   include role::toolserver
 }
-node 'db[34]001.fossbots.org' {
+node /^db[34]001\.fossbots\.org$/ {
   include role::dbserver
 }
 
