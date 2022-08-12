@@ -80,7 +80,7 @@ class phabricator {
 
     file { '/var/phab-deploy/phabricator/conf/local/local.json':
         ensure  => present,
-        content => template('phabricator/local.json.erb'),
+        content => to_json_pretty($phab_settings),
         require => Git::Clone['phab-fork'],
         mode    => '444',
         owner   => www-data,
