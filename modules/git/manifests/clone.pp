@@ -65,7 +65,7 @@ define git::clone(
     $mode=undef,
     $source='github') {
 
-    require_package('git')
+    ensure_packages('git')
 
     $default_url_format = $source ? {
         'github'     =>  'https://github.com/%s.git',

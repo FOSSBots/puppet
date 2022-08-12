@@ -1,7 +1,7 @@
 # class: phabricator
 class phabricator {
 
-    require_package(['python3-pygments', 'subversion'])
+    ensure_packages(['python3-pygments', 'subversion'])
 
     git::clone{ 'phab-fork':
         ensure    => present,
