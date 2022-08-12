@@ -38,6 +38,13 @@ groups:
                  'ALL = (ALL) NOPASSWD: /usr/bin/puppet-run *']
 
 users:
+  root:
+    ensure: present
+    uid: 0
+    name: root
+    ssh_keys:
+       - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILgx9KhB+3feMgwykyMuETZwWHvKaVXF2z6WNMdABjEW root@pm4001.fossbots.org
+
   macfan:
     ensure: absent
     uid: 1001
