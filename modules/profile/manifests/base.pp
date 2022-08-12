@@ -28,6 +28,7 @@ class profile::base {
         ensure  => running,
         require => File['/etc/ssh/sshd_config'],
     }
+
     file { "/etc/ssh/sshd_config":
         ensure  => present,
         source => 'puppet:///modules/profile/sshd_config',
@@ -35,6 +36,10 @@ class profile::base {
         mode    => '444',
         owner   => root,
         group   => root,
+    }
+
+    file { '/etc/ssh/userkeys':
+        ensure   => 'present',
     }
     
     tidy { '/var/lib/puppet/reports':
