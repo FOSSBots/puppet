@@ -2,7 +2,7 @@ groups:
   ops:
     gid: 2000
     description: roots, sudo everywhere
-    members: [rhinosf1, void, sario, peer]
+    members: [puppet-control, rhinosf1, void, sario, peer]
     privileges: ['ALL = (ALL) NOPASSWD: ALL']
   botroots:
     gid: 2001
@@ -38,10 +38,11 @@ groups:
                  'ALL = (ALL) NOPASSWD: /usr/bin/puppet-run *']
 
 users:
-  root:
+  puppet-control:
     ensure: present
-    uid: 0
-    name: root
+    uid: 1011
+    name: puppet
+    realname: 'Puppetmaster SSH user'
     ssh_keys:
        - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILgx9KhB+3feMgwykyMuETZwWHvKaVXF2z6WNMdABjEW root@pm4001.fossbots.org
 
