@@ -1,3 +1,5 @@
+hiera_include('classes')
+
 node 'bots2002.fossbots.org' {
   include role::botserver
 }
