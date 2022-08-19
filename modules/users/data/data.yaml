@@ -115,3 +115,10 @@ users:
     name: Chrs
     realname: Chrs
     ssh_keys: [ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMYj9RifGtR0ucKRZP4T29WI/QXhNEiwJZ2tXK79a3a+]
+  
+  nagios:
+    ensure: present
+    uid: 109
+    name: nagios
+    realname: nagios
+    ssh_keys: []
