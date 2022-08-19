@@ -122,5 +122,5 @@ users:
     name: nagios
     realname: nagios
     ssh_keys: []
-    homedir: /etc/icinga2
-    shell: /usr/bin/nologin
+    homedir: /var/lib/nagios
+    shell: /usr/sbin/nologin
