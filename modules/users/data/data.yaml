@@ -4,6 +4,11 @@ groups:
     description: roots, sudo everywhere
     members: [rhinosf1, void, sario, peer]
     privileges: ['ALL = (ALL) NOPASSWD: ALL']
+  nagios:
+    gid: 116
+    description: nagios
+    members: [nagios]
+    privileges: ['ALL = (ALL) NOPASSWD: /usr/sbin/needrestart -p']
   botroots:
     gid: 2001
     description: Not in use
