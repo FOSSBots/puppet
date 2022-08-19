@@ -122,3 +122,4 @@ users:
     name: nagios
     realname: nagios
     ssh_keys: []
+    homedir: /usr/bin/nologin
