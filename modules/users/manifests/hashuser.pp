@@ -24,6 +24,7 @@ define users::hashuser(
         comment    => $uinfo['realname'],
         shell      => $uinfo['shell'],
         privileges => $uinfo['privileges'],
+        homedir    => $uinfo['homedir'],
         ssh_keys   => $key_set,
     }
 }
