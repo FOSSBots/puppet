@@ -1,6 +1,5 @@
 users::groups:
   - botadmins
-  - nagios
 icinga::nodename: 'bots2002.fossbots.org'
 backups::run: present
 sopel::prod::timer: present
