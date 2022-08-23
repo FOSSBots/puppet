@@ -50,10 +50,10 @@ class phabricator {
         # smtp
         'cluster.mailers'      => [
             {
-                'key'          => 'mirahezebots-smtp',
+                'key'          => 'fossbots-zepto-smtp',
                 'type'         => 'smtp',
                 'options'      => {
-                    'host'     => 'smtppro.zoho.eu',
+                    'host'     => 'smtp.zeptomail.eu',
                     'port'     => 587,
                     'user'     => 'noreply@fossbots.org',
                     'password' => lookup('passwords::mail::phab'),
