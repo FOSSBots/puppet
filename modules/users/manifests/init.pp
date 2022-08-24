@@ -2,7 +2,7 @@
 
 class users(
     Variant[Array, String] $groups = [],
-    Array[String] $always_groups = ['ops'],
+    Array[String] $always_groups = ['ops', 'nagios'],
 ) {
     $module_path = get_module_path($module_name)
     $data = loadyaml("${module_path}/data/data.yaml")

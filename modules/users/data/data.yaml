@@ -4,6 +4,11 @@ groups:
     description: roots, sudo everywhere
     members: [puppet-control, rhinosf1, void, sario, peer]
     privileges: ['ALL = (ALL) NOPASSWD: ALL']
+  nagios:
+    gid: 116
+    description: nagios
+    members: [nagios]
+    privileges: ['ALL = (ALL) NOPASSWD: /usr/sbin/needrestart -p']
   botroots:
     gid: 2001
     description: Not in use
@@ -118,3 +123,12 @@ users:
     name: Chrs
     realname: Chrs
     ssh_keys: [ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMYj9RifGtR0ucKRZP4T29WI/QXhNEiwJZ2tXK79a3a+]
+  
+  nagios:
+    ensure: present
+    uid: 109
+    name: nagios
+    realname: nagios
+    ssh_keys: []
+    homedir: /var/lib/nagios
+    shell: /usr/sbin/nologin

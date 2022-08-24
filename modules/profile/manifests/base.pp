@@ -18,6 +18,10 @@ class profile::base {
     package { 'ccze':
         ensure => present,
     }
+    
+    package { 'needrestart':
+        ensure => present,
+    }
 
     package { 'pipdeptree':
         ensure => present,
