@@ -7,8 +7,7 @@
          "Voidwalker",
          "CosmicAlpha",
          "JohnLewis",
-         "paladox",
-         "raidarr"
+         "paladox"
       ],
       "log_channel":"#fossbots-alerts"
    },
@@ -31,7 +30,6 @@
       "chanops":[
          "Voidwalker",
          "Reception123",
-         "raidarr",
          "Agent",
          "JohnLewis"
       ]
@@ -71,7 +69,6 @@
          "paladox",
          "Agent",
          "MacFan4000",
-         "raidarr"
       ]
    },
    "#miraheze-offtopic":{
