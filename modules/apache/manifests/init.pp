@@ -94,7 +94,7 @@ class apache {
         }
     }
 
-    if $trusted['hostname'] == 'tools3001.fossbots.org' or $trusted['hostname'] == 'tools2002.fossbots.org' {
+    if $trusted['hostname'] == 'tools3001.fossbots.org' {
 
         file { '/etc/apache2/sites-available/icinga.mirahezebots.org-le-ssl.conf':
             ensure  => present,
