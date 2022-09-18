@@ -2,10 +2,13 @@
    "default":{
       "host":"https://phabricator.miraheze.org/api"
    },
-   "#miraheze-bots":{
+   "#fossbots":{
       "host":"https://phab.fossbots.org/api"
    },
-   "#miraheze-bots-testing":{
+   "#fossbots-testing":{
+      "host":"https://phab.fossbots.org/api"
+   },
+   "#fossbots-private-sre":{
       "host":"https://phab.fossbots.org/api"
    },
    "https://phabricator.miraheze.org/api":{
