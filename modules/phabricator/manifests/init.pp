@@ -37,25 +37,12 @@ class phabricator {
             owner   => root,
             group   => root,
         }
-    git::clone{ 'phab-fork':
-        ensure    => absent,
-        directory => '/var/phab-deploy',
-        origin    => 'https://github.com/FOSSBots/phabricator-deployment.git',
-        branch    => 'wmf/stable',
-        recurse_submodules => true,
-    }
     
     file { '/var/phorge-deploy':
         ensure => directory,
         mode   => '0755',
         owner  => 'www-data',
         group  => 'www-data',
-    }
-
-    file { '/var/phab-deploy/phabricator/src/extensions':
-        ensure => absent,
-        target => '/var/phab-deploy/libext/misc'
-        
     }
     
     git::clone { 'phorge-arcanist':
@@ -152,15 +139,7 @@ class phabricator {
 
     $phab_settings = merge($phab_yaml, $phab_private, $phab_setting)
 
-    file { '/var/phab-deploy/phabricator/conf/local/local.json':
-        ensure  => absent,
-        content => template('phabricator/local.json.erb'),
-        require => Git::Clone['phab-fork'],
-        mode    => '440',
-        owner   => www-data,
-        group   => www-data,
-        
-    }
+
     file { '/var/phorge-deploy/phorge/conf/local/local.json':
         ensure  => present,
         content => template('phabricator/local.json.erb'),
