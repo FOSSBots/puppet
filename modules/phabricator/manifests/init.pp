@@ -2,7 +2,41 @@
 class phabricator {
 
     require_package(['python3-pygments', 'subversion'])
+    
+    file { '/etc/apache2/sites-available/phab.mirahezebots.org-le-ssl.conf':
+            ensure  => present,
+            path    => '/etc/apache2/sites-available/phab.mirahezebots.org-le-ssl.conf',
+            source  => 'puppet:///modules/apache/phab.mirahezebots.org-le-ssl.conf',
+            mode    => '774',
+            owner   => root,
+            group   => root,
+        }
 
+        file { '/etc/apache2/sites-available/phab-storage.mirahezebots.org-le-ssl.conf':
+            ensure  => present,
+            path    => '/etc/apache2/sites-available/phab-storage.mirahezebots.org-le-ssl.conf',
+            source  => 'puppet:///modules/apache/phab-storage.mirahezebots.org-le-ssl.conf',
+            mode    => '774',
+            owner   => root,
+            group   => root,
+        }
+        file { '/etc/apache2/sites-available/phab.fossbots.org-le-ssl.conf':
+            ensure  => present,
+            path    => '/etc/apache2/sites-available/phab.fossbots.org-le-ssl.conf',
+            source  => 'puppet:///modules/apache/phab.fossbots.org-le-ssl.conf',
+            mode    => '774',
+            owner   => root,
+            group   => root,
+        }
+
+        file { '/etc/apache2/sites-available/phab-storage.fossbots.org-le-ssl.conf':
+            ensure  => present,
+            path    => '/etc/apache2/sites-available/phab-storage.fossbots.org-le-ssl.conf',
+            source  => 'puppet:///modules/apache/phab-storage.fossbots.org-le-ssl.conf',
+            mode    => '774',
+            owner   => root,
+            group   => root,
+        }
     git::clone{ 'phab-fork':
         ensure    => present,
         directory => '/var/phab-deploy',
