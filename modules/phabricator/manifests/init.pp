@@ -1,20 +1,81 @@
 # class: phabricator
 class phabricator {
 
-    ensure_packages(['python3-pygments', 'subversion'])
+    require_package(['python3-pygments', 'subversion'])
+    
+    file { '/etc/apache2/sites-available/phab.mirahezebots.org-le-ssl.conf':
+            ensure  => present,
+            path    => '/etc/apache2/sites-available/phab.mirahezebots.org-le-ssl.conf',
+            source  => 'puppet:///modules/apache/phab.mirahezebots.org-le-ssl.conf',
+            mode    => '774',
+            owner   => root,
+            group   => root,
+        }
 
-    git::clone{ 'phab-fork':
+        file { '/etc/apache2/sites-available/phab-storage.mirahezebots.org-le-ssl.conf':
+            ensure  => present,
+            path    => '/etc/apache2/sites-available/phab-storage.mirahezebots.org-le-ssl.conf',
+            source  => 'puppet:///modules/apache/phab-storage.mirahezebots.org-le-ssl.conf',
+            mode    => '774',
+            owner   => root,
+            group   => root,
+        }
+        file { '/etc/apache2/sites-available/phab.fossbots.org-le-ssl.conf':
+            ensure  => present,
+            path    => '/etc/apache2/sites-available/phab.fossbots.org-le-ssl.conf',
+            source  => 'puppet:///modules/apache/phab.fossbots.org-le-ssl.conf',
+            mode    => '774',
+            owner   => root,
+            group   => root,
+        }
+
+        file { '/etc/apache2/sites-available/phab-storage.fossbots.org-le-ssl.conf':
+            ensure  => present,
+            path    => '/etc/apache2/sites-available/phab-storage.fossbots.org-le-ssl.conf',
+            source  => 'puppet:///modules/apache/phab-storage.fossbots.org-le-ssl.conf',
+            mode    => '774',
+            owner   => root,
+            group   => root,
+        }
+    
+    file { '/var/phorge-deploy':
+        ensure => directory,
+        mode   => '0755',
+        owner  => 'www-data',
+        group  => 'www-data',
+    }
+    
+    git::clone { 'phorge-arcanist':
         ensure    => present,
-        directory => '/var/phab-deploy',
-        origin    => 'https://github.com/FOSSBots/phabricator-deployment.git',
-        branch    => 'wmf/stable',
-        recurse_submodules => true,
+        directory => '/var/phorge-deploy/arcanist',
+        origin    => 'https://we.phorge.it/source/arcanist.git',
     }
 
-    file { '/var/phab-deploy/phabricator/src/extensions':
-        ensure => link,
-        target => '/var/phab-deploy/libext/misc'
-        
+    git::clone { 'phorge':
+        ensure    => present,
+        directory => '/var/phorge-deploy/phorge',
+        origin    => 'https://we.phorge.it/source/phorge.git',
+    }
+
+    exec { "chk_phorge_ext_git_exist":
+        command => 'true',
+        path    =>  ['/usr/bin', '/usr/sbin', '/bin'],
+        onlyif  => 'test ! -d /var/phorge-deploy/phorge/src/extensions/.git'
+    }
+
+    file {'remove_phorge_ext_dir_if_no_git':
+        ensure  => absent,
+        path    => '/var/phorge-deploy/phorge/src/extensions',
+        recurse => true,
+        purge   => true,
+        force   => true,
+        require => Exec['chk_phorge_ext_git_exist'],
+    }
+
+    git::clone { 'phorge-extensions':
+        ensure    => latest,
+        directory => '/var/phorge-deploy/phorge/src/extensions',
+        origin    => 'https://github.com/FOSSBots/phabricator-extensions.git',
     }
 
     file { '/var/phab':
@@ -78,11 +139,12 @@ class phabricator {
 
     $phab_settings = merge($phab_yaml, $phab_private, $phab_setting)
 
-    file { '/var/phab-deploy/phabricator/conf/local/local.json':
+
+    file { '/var/phorge-deploy/phorge/conf/local/local.json':
         ensure  => present,
-        content => to_json_pretty($phab_settings),
-        require => Git::Clone['phab-fork'],
-        mode    => '444',
+        content => template('phabricator/local.json.erb'),
+        require => Git::Clone['phorge'],
+        mode    => '440',
         owner   => www-data,
         group   => www-data,
         

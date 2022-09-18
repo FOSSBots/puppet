@@ -21,6 +21,7 @@ policy.allow-public: true
 user.require-real-name: false
 storage.local-disk.path: "/var/phab/"
 phd.user: 'www-data'
+storage.default-namespace: 'phabricator'
 
 # Maniphest priorities
 maniphest.priorities:
