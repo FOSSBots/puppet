@@ -15,7 +15,10 @@ node /^tools[34]001\.fossbots\.org$/ {
   include role::toolserver
   include ::icinga2::node
 }
-node /^db[34]001\.fossbots\.org$/ {
+node /^db[345]00[12]\.fossbots\.org$/ {
   include role::dbserver
 }
 
+node /^pm[45]001\.fossbots\.org$/ {
+  include role::dbserver
+}
