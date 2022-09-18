@@ -16,6 +16,39 @@ class phabricator {
         target => '/var/phab-deploy/libext/misc'
         
     }
+    
+    git::clone { 'phorge-arcanist':
+        ensure    => present,
+        directory => '/var/phorge/arcanist',
+        origin    => 'https://we.phorge.it/source/arcanist.git',
+    }
+
+    git::clone { 'phorge':
+        ensure    => present,
+        directory => '/var/phorge',
+        origin    => 'https://we.phorge.it/source/phorge.git',
+    }
+
+    exec { "chk_phorge_ext_git_exist":
+        command => 'true',
+        path    =>  ['/usr/bin', '/usr/sbin', '/bin'],
+        onlyif  => 'test ! -d /var/phabricator/src/extensions/.git'
+    }
+
+    file {'remove_phorge_ext_dir_if_no_git':
+        ensure  => absent,
+        path    => '/var/phorge/src/extensions',
+        recurse => true,
+        purge   => true,
+        force   => true,
+        require => Exec['chk_phab_ext_git_exist'],
+    }
+
+    git::clone { 'phorge-extensions':
+        ensure    => latest,
+        directory => '/var/phorge/src/extensions',
+        origin    => 'https://github.com/FOSSBots/phabricator-extensions.git',
+    }
 
     file { '/var/phab':
         ensure => directory,
