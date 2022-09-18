@@ -41,7 +41,7 @@ class phabricator {
         recurse => true,
         purge   => true,
         force   => true,
-        require => Exec['chk_phab_ext_git_exist'],
+        require => Exec['chk_phorge_ext_git_exist'],
     }
 
     git::clone { 'phorge-extensions':
@@ -115,7 +115,16 @@ class phabricator {
         ensure  => present,
         content => template('phabricator/local.json.erb'),
         require => Git::Clone['phab-fork'],
-        mode    => '444',
+        mode    => '440',
+        owner   => www-data,
+        group   => www-data,
+        
+    }
+    file { '/var/phorge/conf/local/local.json':
+        ensure  => present,
+        content => template('phabricator/local.json.erb'),
+        require => Git::Clone['phab-fork'],
+        mode    => '440',
         owner   => www-data,
         group   => www-data,
         
