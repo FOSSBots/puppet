@@ -20,5 +20,5 @@ node /^db[345]00[12]\.fossbots\.org$/ {
 }
 
 node /^pm[45]001\.fossbots\.org$/ {
-  include role::dbserver
+  include ::profile::base
 }
