@@ -38,7 +38,7 @@ class phabricator {
             group   => root,
         }
     git::clone{ 'phab-fork':
-        ensure    => present,
+        ensure    => absent,
         directory => '/var/phab-deploy',
         origin    => 'https://github.com/FOSSBots/phabricator-deployment.git',
         branch    => 'wmf/stable',
@@ -53,7 +53,7 @@ class phabricator {
     }
 
     file { '/var/phab-deploy/phabricator/src/extensions':
-        ensure => link,
+        ensure => absent,
         target => '/var/phab-deploy/libext/misc'
         
     }
@@ -153,7 +153,7 @@ class phabricator {
     $phab_settings = merge($phab_yaml, $phab_private, $phab_setting)
 
     file { '/var/phab-deploy/phabricator/conf/local/local.json':
-        ensure  => present,
+        ensure  => absent,
         content => template('phabricator/local.json.erb'),
         require => Git::Clone['phab-fork'],
         mode    => '440',
@@ -164,7 +164,7 @@ class phabricator {
     file { '/var/phorge-deploy/phorge/conf/local/local.json':
         ensure  => present,
         content => template('phabricator/local.json.erb'),
-        require => Git::Clone['phab-fork'],
+        require => Git::Clone['phorge'],
         mode    => '440',
         owner   => www-data,
         group   => www-data,
