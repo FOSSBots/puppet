@@ -19,25 +19,25 @@ class phabricator {
     
     git::clone { 'phorge-arcanist':
         ensure    => present,
-        directory => '/var/phorge/arcanist',
+        directory => '/var/phorge-deploy/arcanist',
         origin    => 'https://we.phorge.it/source/arcanist.git',
     }
 
     git::clone { 'phorge':
         ensure    => present,
-        directory => '/var/phorge',
+        directory => '/var/phorge-deploy/phorge',
         origin    => 'https://we.phorge.it/source/phorge.git',
     }
 
     exec { "chk_phorge_ext_git_exist":
         command => 'true',
         path    =>  ['/usr/bin', '/usr/sbin', '/bin'],
-        onlyif  => 'test ! -d /var/phabricator/src/extensions/.git'
+        onlyif  => 'test ! -d /var/phorge-deploy/phorge/src/extensions/.git'
     }
 
     file {'remove_phorge_ext_dir_if_no_git':
         ensure  => absent,
-        path    => '/var/phorge/src/extensions',
+        path    => '/var/phorge-deploy/phorge/src/extensions',
         recurse => true,
         purge   => true,
         force   => true,
@@ -46,7 +46,7 @@ class phabricator {
 
     git::clone { 'phorge-extensions':
         ensure    => latest,
-        directory => '/var/phorge/src/extensions',
+        directory => '/var/phorge-deploy/phorge/src/extensions',
         origin    => 'https://github.com/FOSSBots/phabricator-extensions.git',
     }
 
@@ -120,7 +120,7 @@ class phabricator {
         group   => www-data,
         
     }
-    file { '/var/phorge/conf/local/local.json':
+    file { '/var/phorge-deploy/phorge/conf/local/local.json':
         ensure  => present,
         content => template('phabricator/local.json.erb'),
         require => Git::Clone['phab-fork'],
