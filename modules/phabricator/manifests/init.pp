@@ -145,7 +145,7 @@ class phabricator {
             {
                  'host'  => 'db3001.fossbots.org',
                  'role' => 'replica',
-                 'disabled' => true,
+                 'disabled' => false,
             },
         ],
     }
