@@ -10,6 +10,13 @@ class phabricator {
         branch    => 'wmf/stable',
         recurse_submodules => true,
     }
+    
+    file { '/var/phorge-deploy':
+        ensure => directory,
+        mode   => '0755',
+        owner  => 'www-data',
+        group  => 'www-data',
+    }
 
     file { '/var/phab-deploy/phabricator/src/extensions':
         ensure => link,
