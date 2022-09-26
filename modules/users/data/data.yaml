@@ -56,7 +56,6 @@ users:
     name: RhinosF1
     realname: RhinosF1
     ssh_keys:
-       - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGiq54OYNxhcxAHOvAWed8B07/sfFB/gbwZ64KHv0N4E rhinosf1@miraheze.org
        - ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKvj3kGYQcq24eWZERcx1XrPXEPg18aXLtpu0tWaAzXOoZMHGWcoOfa8D6u5y9zXhW4CbcBxVKPSjs8PL25JciI= samuelkirwin@Samuels-Air
   zppix:
     ensure: absent
