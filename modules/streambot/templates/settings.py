@@ -7,4 +7,4 @@ nickserv_password = '<%= @streambot_pass %>'
 
 nickname = 'StreamBotMH'
 
-authorized_users = ('miraheze/RhinosF1', 'wikimedia/MacFan4000', 'miraheze/Void', 'fosshost/cdo/Sario')
+authorized_users = ('miraheze/RhinosF1', 'wikimedia/MacFan4000', 'miraheze/Void', 'user/Sario')
