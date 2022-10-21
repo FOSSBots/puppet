@@ -179,11 +179,10 @@
    },
     "#miraheze-dev":{
       "chanops":[
+         "CosmicAlpha",
          "dmehus",
-         "MacFan4000",
          "Naleksuh",
-         "Reception123",
-         "CosmicAlpha"
+         "Reception123"
       ]
    },
    "#miraheze-feed-dev":{
