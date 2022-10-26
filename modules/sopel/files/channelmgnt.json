@@ -180,7 +180,6 @@
     "#miraheze-dev":{
       "chanops":[
          "CosmicAlpha",
-         "dmehus",
          "Naleksuh",
          "Reception123"
       ]
@@ -192,9 +191,9 @@
    },
     "#miraheze-feed-login":{
       "chanops":[
+         "CosmicAlpha",
          "MacFan4000",
          "Reception123",
-         "CosmicAlpha",
          "Voidwalker",
          "Agent"
       ]
