@@ -7,7 +7,8 @@
          "Voidwalker",
          "CosmicAlpha",
          "JohnLewis",
-         "paladox"
+         "paladox",
+         "Agent"
       ],
       "log_channel":"#fossbots-alerts"
    },
@@ -31,7 +32,8 @@
          "Voidwalker",
          "Reception123",
          "Agent",
-         "JohnLewis"
+         "JohnLewis",
+         "CosmicAlpha"
       ]
    },
    "##RhinosF1":{
