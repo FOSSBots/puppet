@@ -3,7 +3,7 @@ sopel==7.1.9
 sopel-plugins.adminlist==1.0.7
 sopel-plugins.channelmgnt==2.1.2
 sopel-plugins.joinall==1.0.4
-pipdeptree==2.3.1
+pipdeptree==2.3.3
 sopel-dns==0.3.1
 sopel-help==0.4.0
 sopel-modules.quotes==1.2.1
