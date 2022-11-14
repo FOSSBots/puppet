@@ -7,7 +7,7 @@ pipdeptree==2.3.3
 sopel-dns==0.3.1
 sopel-help==0.4.0
 sopel-modules.quotes==1.2.1
-sopel-modules.stocks==1.2.0
+sopel-modules.stocks==1.2.1
 sopel-modules.twitter==0.4.1
 sopel-modules.weather==1.4.0
 sopel-modules.youtube==0.5.1
