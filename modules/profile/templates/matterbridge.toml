@@ -210,7 +210,7 @@
     
     [[gateway.inout]]
     account ="irc.libera"
-    channel + "##yell-at-hammy"
+    channel = "##yell-at-hammy"
 
 [[gateway]]
     name = "buffalonas.main"
