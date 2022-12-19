@@ -6,7 +6,7 @@ sopel-modules.weather==1.4.0
 sopel-modules.youtube==0.5.1
 sopel-modules.stocks==1.2.1
 sopel-modules.chanlogs==0.2.2
-sopel-modules.github==0.4.7
+sopel-modules.github==0.4.8
 emoji==2.2.0
 six==1.16.0
 praw==5.4.0
