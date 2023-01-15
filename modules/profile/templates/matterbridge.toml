@@ -17,7 +17,7 @@
     Server="Miraheze"
     RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
     UseUserName=true
-    EditSuffix=" (edited)"
+    EditDisable=true
     
     [discord.fosshost]
     Token="<%= @discordfh_token %>"
@@ -50,7 +50,7 @@
 
     [[gateway.inout]]
     account = "discord.miraheze"
-    channel="ID:435711390544560128"
+    channel="ID:407537962553966603"
 
     [[gateway.inout]]
     account ="irc.libera"
