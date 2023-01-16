@@ -24,6 +24,6 @@ pyasn1-modules==0.2.8
 geoip2==4.6.0
 maxminddb==2.2.0
 urllib3==1.26.14
-dnspython==2.2.1
+dnspython==2.3.0
 build==0.10.0
 mysqlclient==2.1.1
