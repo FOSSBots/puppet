@@ -147,7 +147,7 @@
     
     [[gateway.inout]]
     account = "discord.miraheze"
-    channe l= "ID:1029629996664365126"
+    channel = "ID:1029629996664365126"
     
     [[gateway.inout]]
     account = "irc.libera"
