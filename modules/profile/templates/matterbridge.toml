@@ -18,6 +18,7 @@
     RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
     UseUserName=true
     EditDisable=true
+    IgnoreNicks="WikiAuthBot"
     
     [discord.fosshost]
     Token="<%= @discordfh_token %>"
@@ -139,6 +140,18 @@
     [[gateway.inout]]
     account ="irc.libera"
     channel = "#miraheze-meetings"
+    
+[[gateway]]
+    name = "mh.wikicreators"
+    enable = true
+    
+    [[gateway.inout]]
+    account = "discord.miraheze"
+    channel = "ID:1029629996664365126"
+    
+    [[gateway.inout]]
+    account = "irc.libera"
+    channel = "#miraheze-wikicreators"
     
 [[gateway]]
     name = "fh.main"
