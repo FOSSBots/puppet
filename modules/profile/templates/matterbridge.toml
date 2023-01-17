@@ -18,6 +18,7 @@
     RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
     UseUserName=true
     EditDisable=true
+    IgnoreNicks="WikiAuthBot"
     
     [discord.fosshost]
     Token="<%= @discordfh_token %>"
