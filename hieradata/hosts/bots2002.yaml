@@ -5,4 +5,4 @@ backups::run: present
 sopel::prod::timer: present
 sopel::dev::timer: present
 streambot::timer: present
-bridgebot::timer: present
+bridgebot::timer: absent
