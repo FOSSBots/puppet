@@ -126,12 +126,12 @@ class phabricator {
         'cluster.databases'    => [
             {
                  'host'  => 'db2002.fossbots.org',
-                 'role' => 'master',
-                 'disabled' => false,
+                 'role' => 'replica',
+                 'disabled' => true,
             },
             {
                  'host'  => 'db3001.fossbots.org',
-                 'role' => 'replica',
+                 'role' => 'master',
                  'disabled' => false,
             },
         ],
