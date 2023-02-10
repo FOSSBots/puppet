@@ -3,6 +3,6 @@ users::groups:
 icinga::nodename: 'bots2002.fossbots.org'
 backups::run: present
 sopel::prod::timer: present
-sopel::dev::timer: present
+sopel::dev::timer: absent
 streambot::timer: present
 bridgebot::timer: absent
