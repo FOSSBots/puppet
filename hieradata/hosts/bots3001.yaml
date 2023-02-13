@@ -2,7 +2,7 @@ users::groups:
   - botadmins
 icinga::nodename: 'bots3001.fossbots.org'
 backups::run: present
-sopel::prod::timer: absent
+sopel::prod::timer: present
 sopel::dev::timer: present
 streambot::timer: present
 bridgebot::timer: present
