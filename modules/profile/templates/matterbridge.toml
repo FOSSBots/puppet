@@ -20,8 +20,8 @@
     EditDisable=true
     IgnoreNicks="WikiAuthBot"
 
-    [discord.miraheze2]
-    Token="<%= @discordmh2_token %>"
+    [discord.mirahezeprivate]
+    Token="<%= @discordmhprivate_token %>"
     Server="Miraheze"
     RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
     UseUserName=true
@@ -141,7 +141,7 @@
     enable=true
 
     [[gateway.inout]]
-    account = "discord.miraheze2"
+    account = "discord.mirahezeprivate"
     channel="ID:1006800494943019019"
 
     [[gateway.inout]]
@@ -153,7 +153,7 @@
     enable = true
     
     [[gateway.inout]]
-    account = "discord.miraheze2"
+    account = "discord.mirahezeprivate"
     channel = "ID:1076591067912208496"
     
     [[gateway.inout]]
