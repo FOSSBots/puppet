@@ -19,6 +19,13 @@
     UseUserName=true
     EditDisable=true
     IgnoreNicks="WikiAuthBot"
+
+    [discord.miraheze2]
+    Token="<%= @discordmh2_token %>"
+    Server="Miraheze"
+    RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
+    UseUserName=true
+    EditSuffix=" (edited)"
     
     [discord.fosshost]
     Token="<%= @discordfh_token %>"
@@ -118,18 +125,6 @@
     channel = "#miraheze-tech"
     
 [[gateway]]
-    name = "mh.cvtprivate"
-    enable=true
-
-    [[gateway.inout]]
-    account = "discord.miraheze"
-    channel="ID:450276085708619786"
-
-    [[gateway.inout]]
-    account ="irc.libera"
-    channel = "#miraheze-cvt-private"
-    
-[[gateway]]
     name = "mh.meetings"
     enable=true
 
@@ -142,12 +137,24 @@
     channel = "#miraheze-meetings"
     
 [[gateway]]
+    name = "mh.cvtprivate"
+    enable=true
+
+    [[gateway.inout]]
+    account = "discord.miraheze2"
+    channel="ID:1006800494943019019"
+
+    [[gateway.inout]]
+    account ="irc.libera"
+    channel = "#miraheze-cvt-private"
+    
+[[gateway]]
     name = "mh.wikicreators"
     enable = true
     
     [[gateway.inout]]
-    account = "discord.miraheze"
-    channel = "ID:1029629996664365126"
+    account = "discord.miraheze2"
+    channel = "ID:1076591067912208496"
     
     [[gateway.inout]]
     account = "irc.libera"
