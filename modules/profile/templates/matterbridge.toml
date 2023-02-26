@@ -14,7 +14,7 @@
 [discord]
     [discord.miraheze]
     Token="<%= @discordmh_token %>"
-    Server="Miraheze Community Roles"
+    Server="Miraheze"
     RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
     UseUserName=true
     EditDisable=true
@@ -22,7 +22,7 @@
 
     [discord.mirahezeprivate]
     Token="<%= @discordmhprivate_token %>"
-    Server="Miraheze"
+    Server="Miraheze Community Roles"
     RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
     UseUserName=true
     EditSuffix=" (edited)"
