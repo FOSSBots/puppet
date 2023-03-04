@@ -16,7 +16,7 @@
     Token="<%= @discordmh_token %>"
     Server="Miraheze"
     RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
-    UseUserName=true
+    UseUserName=false
     EditDisable=true
     IgnoreNicks="WikiAuthBot"
 
