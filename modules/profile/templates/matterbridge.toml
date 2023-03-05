@@ -8,7 +8,7 @@
     UseSASL=true
     SkipTLSVerify=false
     RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
-    IgnoreNicks="icinga-miraheze MirahezeBot wm-bot botifico"
+    IgnoreNicks="botifico icinga-miraheze MirahezeBot wm-bot"
     JoinDelay=1000
 
 [discord]
