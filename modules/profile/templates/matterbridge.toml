@@ -8,7 +8,7 @@
     UseSASL=true
     SkipTLSVerify=false
     RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
-    IgnoreNicks="icinga-miraheze MirahezeBot wm-bot"
+    IgnoreNicks="icinga-miraheze MirahezeBot wm-bot botifico"
     JoinDelay=1000
 
 [discord]
@@ -24,7 +24,7 @@
     Token="<%= @discordmhprivate_token %>"
     Server="Miraheze Community Roles"
     RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
-    UseUserName=true
+    UseUserName=false
     EditSuffix=" (edited)"
     
     [discord.fosshost]
