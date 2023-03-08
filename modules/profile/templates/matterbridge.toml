@@ -8,25 +8,10 @@
     UseSASL=true
     SkipTLSVerify=false
     RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
-    IgnoreNicks="botifico icinga-miraheze MirahezeBot wm-bot"
+    IgnoreNicks="wm-bot"
     JoinDelay=1000
 
 [discord]
-    [discord.miraheze]
-    Token="<%= @discordmh_token %>"
-    Server="Miraheze"
-    RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
-    UseUserName=false
-    EditDisable=true
-    IgnoreNicks="WikiAuthBot"
-
-    [discord.mirahezeprivate]
-    Token="<%= @discordmhprivate_token %>"
-    Server="Miraheze Community Roles"
-    RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
-    UseUserName=false
-    EditSuffix=" (edited)"
-    
     [discord.fosshost]
     Token="<%= @discordfh_token %>"
     Server="Fosshost"
@@ -52,114 +37,6 @@
     Server="https://temp-community-phab.zulipchat.com"
     RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
 
-[[gateway]]
-    name = "mh.main"
-    enable=true
-
-    [[gateway.inout]]
-    account = "discord.miraheze"
-    channel="ID:407537962553966603"
-
-    [[gateway.inout]]
-    account ="irc.libera"
-    channel = "#miraheze"
-    
-[[gateway]]
-    name = "mh.cvt"
-    enable=true
-
-    [[gateway.inout]]
-    account = "discord.miraheze"
-    channel="ID:443926951292567562"
-
-    [[gateway.inout]]
-    account ="irc.libera"
-    channel = "#miraheze-cvt"
-    
-[[gateway]]
-    name = "mh.offtopic"
-    enable=true
-
-    [[gateway.inout]]
-    account = "discord.miraheze"
-    channel="ID:615786602454581249"
-
-    [[gateway.inout]]
-    account ="irc.libera"
-    channel = "#miraheze-offtopic"
-    
-[[gateway]]
-    name = "mh.cvtfeed"
-    enable=true
-
-    [[gateway.inout]]
-    account = "discord.miraheze"
-    channel="ID:743072681057845378"
-
-    [[gateway.inout]]
-    account ="irc.libera"
-    channel = "#miraheze-cvt-feed"
-    
-[[gateway]]
-    name = "mh.sre"
-    enable=true
-
-    [[gateway.inout]]
-    account = "discord.miraheze"
-    channel="ID:808001911868489748"
-
-    [[gateway.inout]]
-    account ="irc.libera"
-    channel = "#miraheze-sre"
-    
-[[gateway]]
-    name = "mh.tech"
-    enable=true
-
-    [[gateway.inout]]
-    account = "discord.miraheze"
-    channel="ID:1006789349498699827"
-
-    [[gateway.inout]]
-    account ="irc.libera"
-    channel = "#miraheze-tech"
-    
-[[gateway]]
-    name = "mh.meetings"
-    enable=true
-
-    [[gateway.inout]]
-    account = "discord.miraheze"
-    channel="ID:903395171981459507"
-
-    [[gateway.inout]]
-    account ="irc.libera"
-    channel = "#miraheze-meetings"
-    
-[[gateway]]
-    name = "mh.cvtprivate"
-    enable=true
-
-    [[gateway.inout]]
-    account = "discord.mirahezeprivate"
-    channel="ID:1006800494943019019"
-
-    [[gateway.inout]]
-    account ="irc.libera"
-    channel = "#miraheze-cvt-private"
-    
-[[gateway]]
-    name = "mh.wikicreators"
-    enable = true
-    
-    [[gateway.inout]]
-    account = "discord.mirahezeprivate"
-    channel = "ID:1076591067912208496"
-    
-    [[gateway.inout]]
-    account = "irc.libera"
-    channel = "#miraheze-wikicreators"
-    
 [[gateway]]
     name = "fh.main"
     enable=true
