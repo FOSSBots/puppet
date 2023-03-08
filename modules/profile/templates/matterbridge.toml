@@ -30,13 +30,6 @@
     RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
     UseUserName=true
 
-[zulip]
-    [zulip.phorge]
-    Token="<%= @zulipphorge_token %>"
-    Login="phorgebridge-bot@temp-community-phab.zulipchat.com"
-    Server="https://temp-community-phab.zulipchat.com"
-    RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
-
 [[gateway]]
     name = "fh.main"
     enable=true
@@ -156,15 +149,3 @@
     [[gateway.inout]]
     account ="irc.libera"
     channel = "#miraheze-ballmedia-polcompball-feed"
-
-[[gateway]]
-    name = "phorge.main"
-    enable=true
-
-    [[gateway.inout]]
-    account = "zulip.phorge"
-    channel="general/topic:bridge"
-
-    [[gateway.inout]]
-    account ="irc.libera"
-    channel = "#phorge"
