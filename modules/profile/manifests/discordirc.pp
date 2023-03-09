@@ -1,7 +1,6 @@
 class profile::discordirc(){
     $discordmhlibera_password = lookup('passwords::irc::mhlibera')
     $discordfh_token = lookup('passwords::discord::fh')
-    $discordbuff_token = lookup('passwords::discord::buff')
     $ensure = lookup('bridgebot::timer')
 
     users::user { 'relays':

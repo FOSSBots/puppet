@@ -17,12 +17,6 @@
     Server="Fosshost"
     RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
     UseUserName=true
-    
-    [discord.buffalonas]
-    Token="<%= @discordbuff_token %>"
-    Server="BuffaloNAS"
-    RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
-    UseUserName=true
 
 [[gateway]]
     name = "fh.main"
@@ -95,15 +89,3 @@
     [[gateway.inout]]
     account ="irc.libera"
     channel = "##yell-at-hammy"
-
-[[gateway]]
-    name = "buffalonas.main"
-    enable=true
-
-    [[gateway.inout]]
-    account = "discord.buffalonas"
-    channel="ID:844193280974389270"
-
-    [[gateway.inout]]
-    account ="irc.libera"
-    channel = "#miraheze-buffalonas"
