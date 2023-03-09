@@ -23,12 +23,6 @@
     Server="BuffaloNAS"
     RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
     UseUserName=true
-    
-    [discord.ballmedia]
-    Token="<%= @discordballmedia_token %>"
-    Server="Ballmedia"
-    RemoteNickFormat="[{PROTOCOL}] <{NICK}> "
-    UseUserName=true
 
 [[gateway]]
     name = "fh.main"
@@ -113,39 +107,3 @@
     [[gateway.inout]]
     account ="irc.libera"
     channel = "#miraheze-buffalonas"
-
-[[gateway]]
-    name = "ballmedia.feed"
-    enable=true
-
-    [[gateway.inout]]
-    account = "discord.ballmedia"
-    channel="ID:898084590508445696"
-
-    [[gateway.inout]]
-    account ="irc.libera"
-    channel = "#miraheze-ballmedia-feed"
-
-[[gateway]]
-    name = "ballmedia.polandball"
-    enable=true
-
-    [[gateway.inout]]
-    account = "discord.ballmedia"
-    channel="ID:900548603989336064"
-
-    [[gateway.inout]]
-    account ="irc.libera"
-    channel = "#miraheze-ballmedia-polandball-feed"
-
-[[gateway]]
-    name = "ballmedia.polcompball"
-    enable=true
-
-    [[gateway.inout]]
-    account = "discord.ballmedia"
-    channel="ID:894597880306884679"
-
-    [[gateway.inout]]
-    account ="irc.libera"
-    channel = "#miraheze-ballmedia-polcompball-feed"
