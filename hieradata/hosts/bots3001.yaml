@@ -4,5 +4,5 @@ icinga::nodename: 'bots3001.fossbots.org'
 backups::run: present
 sopel::prod::timer: present
 sopel::dev::timer: absent
-streambot::timer: present
+streambot::timer: absent
 bridgebot::timer: present
