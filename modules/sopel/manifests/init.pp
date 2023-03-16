@@ -4,7 +4,7 @@
 #
 class sopel(
 ){
-    include sopel::dev
+    #include sopel::dev
     include sopel::prod
     
     file { '/srv/sopelbots':
