@@ -3,7 +3,7 @@ class profile::phabdigest(
 ){
     $ensure = lookup('digests::timer')
     git::clone { 'FOSSBots/phabdigests':
-        ensure    => 'latest',
+        ensure    => $ensure,
         directory => $install_dir,
         branch    => 'main',
         shared    => true,
