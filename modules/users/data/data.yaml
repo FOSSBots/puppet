@@ -7,7 +7,7 @@ groups:
   nagios:
     gid: 116
     description: nagios
-    members: [nagios]
+    members: []
     privileges: ['ALL = (ALL) NOPASSWD: /usr/sbin/needrestart -p']
   botroots:
     gid: 2001
@@ -17,7 +17,7 @@ groups:
   botadmins:
     gid: 2002
     description: Shell on bots2002, rights will expand soon.
-    members: [chrs]
+    members: []
     privileges: ['ALL = (sopel) NOPASSWD: ALL',
                  'ALL = (relays) NOPASSWD: ALL',
                  'ALL = (streambot) NOPASSWD: ALL',
@@ -26,7 +26,7 @@ groups:
   toolsadmins:
     gid: 2003
     description: Access to do basic stuff on tools2002
-    members: [chrs]
+    members: []
     privileges: ['ALL = (ALL) NOPASSWD: /usr/sbin/service *',
                  'ALL = (ALL) NOPASSWD: /var/phabricator/bin/*',
                  'ALL = (ALL) NOPASSWD: /usr/bin/puppet *',
@@ -110,14 +110,14 @@ users:
     ssh_keys: [ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKoaoGwuX2cx0FYeOybU5Q/VcHoOouRq0lbXDdNzqiOw peer@globaL-CURVE-2020]
 
   chrs:
-    ensure: present
+    ensure: absent
     uid: 1010
     name: Chrs
     realname: Chrs
     ssh_keys: [ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMYj9RifGtR0ucKRZP4T29WI/QXhNEiwJZ2tXK79a3a+]
   
   nagios:
-    ensure: present
+    ensure: absent
     uid: 109
     name: nagios
     realname: nagios
