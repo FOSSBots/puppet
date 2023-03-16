@@ -2,14 +2,14 @@ class sopel::dev(
 ){
 $ensure = lookup('sopel::dev::timer')
 file { 'dev-venv':
-        ensure  => directory,
+        ensure  => $ensure,
         path    => '/srv/sopelbots/devvenv/',
         mode    => '770',
         owner   => sopel,
         group   => sopel,
     }
     file { 'dev-require':
-        ensure  => file,
+        ensure  => $ensure,
         path    => '/srv/sopelbots/devrequire.txt',
         source  => 'puppet:///modules/sopel/devrequire.txt',
         mode    => '770',
@@ -25,7 +25,7 @@ file { 'dev-venv':
           require     => File['dev-venv', 'dev-require']
     }
     file { 'dev-directory':
-        ensure  => directory,
+        ensure  => d$ensure,
         path    => '/srv/sopelbots/devcode/',
         mode    => '770',
         owner   => sopel,
@@ -34,7 +34,7 @@ file { 'dev-venv':
     $repos = ['MirahezeBots', 'sopel-adminlist', 'sopel-channelmgnt', 'jsonparser', 'sopel-joinall', 'sopel']
     $repos.each |$repo| {
       git::clone { "FOSSBots/${repo}":
-          ensure    => 'latest',
+          ensure    => $ensure,
           directory => "/srv/sopelbots/devcode/${repo}",
           branch    => 'dev',
           mode      => '770',
