@@ -1,5 +1,5 @@
 users::groups:
   - dbadmins
 icinga::nodename: 'db3001.fossbots.org'
-backups::run: asent
+backups::run: absent
 mariadb::id: 2
