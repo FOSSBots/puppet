@@ -1,5 +1,0 @@
-users::groups:
-  - dbadmins
-icinga::nodename: 'db4001.fossbots.org'
-backups::run: absent
-mariadb::id: 3
