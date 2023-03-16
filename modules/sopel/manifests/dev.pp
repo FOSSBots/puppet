@@ -25,7 +25,7 @@ file { 'dev-venv':
           require     => File['dev-venv', 'dev-require']
     }
     file { 'dev-directory':
-        ensure  => d$ensure,
+        ensure  => $ensure,
         path    => '/srv/sopelbots/devcode/',
         mode    => '770',
         owner   => sopel,
