@@ -11,14 +11,14 @@ class sopel::prod(
         restart => true,
     }
   file { 'prod-venv':
-        ensure  => directory,
+        ensure  => $ensure,
         path    => '/srv/sopelbots/prodvenv/',
         mode    => '770',
         owner   => sopel,
         group   => sopel,
     }
     file { 'prod-require':
-        ensure  => file,
+        ensure  => $ensure,
         path    => '/srv/sopelbots/prodrequire.txt',
         source  => 'puppet:///modules/sopel/prodrequire.txt',
         mode    => '770',
