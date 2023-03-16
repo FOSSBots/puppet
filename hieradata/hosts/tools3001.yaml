@@ -1,5 +1,5 @@
 users::groups:
   - toolsadmins
 icinga::nodename: 'tools3001.fossbots.org'
-backups::run: present
-digests::timer: present
+backups::run: absent
+digests::timer: absent
