@@ -5,7 +5,7 @@ class icinga2::node(){
     }
 
     service { 'icinga2':
-        ensure  => absent,
+        ensure  => stopped,
         require => Package['icinga2'],
     }
 
