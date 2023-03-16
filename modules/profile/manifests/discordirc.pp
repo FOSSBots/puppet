@@ -4,7 +4,7 @@ class profile::discordirc(){
     $ensure = lookup('bridgebot::timer')
 
     users::user { 'relays':
-        ensure     => present,
+        ensure     => $ensure,
         uid        => 996,
         comment    => 'Discord<->IRC Relay System Account',
         system     => true,
@@ -13,7 +13,7 @@ class profile::discordirc(){
     }
 
     file { "/srv/matterbridge/matterbridge.toml":
-        ensure  => present,
+        ensure  => $ensure,
         content => template("profile/matterbridge.toml"),
         notify  => Service["matterbridge"],
         mode    => '770',
